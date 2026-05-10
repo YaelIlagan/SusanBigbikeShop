@@ -36,5 +36,15 @@ namespace SusanBigbikeShop
         {
 
         }
+
+        private void toolStripLabel12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblusername_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
