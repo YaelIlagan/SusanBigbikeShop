@@ -20,3 +20,11 @@ C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\o
 C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.pdb
 C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.MainForm.resources
 C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.SalesForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.BookingForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.InventoryForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.MainFormOwner.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.RepairsAndMaintenanceFormcs.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.MainCustomerForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.MainStaffForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.NewJobOrderForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.RestockItemForm.resources

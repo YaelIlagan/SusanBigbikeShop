@@ -31,5 +31,15 @@ namespace SusanBigbikeShop
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlsalescart_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

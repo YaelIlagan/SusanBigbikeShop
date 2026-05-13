@@ -58,14 +58,56 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainCustomerForm.Designer.cs">
+      <DependentUpon>MainCustomerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainFormOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormOwner.Designer.cs">
+      <DependentUpon>MainFormOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainStaffForm.Designer.cs">
+      <DependentUpon>MainStaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewJobOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewJobOrderForm.Designer.cs">
+      <DependentUpon>NewJobOrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepairsAndMaintenanceFormcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepairsAndMaintenanceFormcs.Designer.cs">
+      <DependentUpon>RepairsAndMaintenanceFormcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestockItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestockItemForm.Designer.cs">
+      <DependentUpon>RestockItemForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,8 +120,23 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainCustomerForm.resx">
+      <DependentUpon>MainCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormOwner.resx">
+      <DependentUpon>MainFormOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainStaffForm.resx">
+      <DependentUpon>MainStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewJobOrderForm.resx">
+      <DependentUpon>NewJobOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +147,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RepairsAndMaintenanceFormcs.resx">
+      <DependentUpon>RepairsAndMaintenanceFormcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestockItemForm.resx">
+      <DependentUpon>RestockItemForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </EmbeddedResource>
