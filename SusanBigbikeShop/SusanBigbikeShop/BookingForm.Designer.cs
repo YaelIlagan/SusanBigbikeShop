@@ -1,6 +1,6 @@
 ﻿namespace SusanBigbikeShop
 {
-    partial class Form1
+    partial class BookingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pnlsales = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlBackPanel = new System.Windows.Forms.Panel();
+            this.pnlModuleName = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pboxprofile = new System.Windows.Forms.PictureBox();
-            this.lblusername = new System.Windows.Forms.Label();
             this.pnlitemsales = new System.Windows.Forms.Panel();
             this.pnlsalescart = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,43 +53,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnldashboard = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pnldashboardinside = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbl2x1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tbl4x1 = new System.Windows.Forms.TableLayoutPanel();
-            this.toolStripLabel10 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel12 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel9 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.btndashboard = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel13 = new System.Windows.Forms.ToolStripLabel();
-            this.btnsales = new System.Windows.Forms.ToolStripButton();
-            this.bntrepairs = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.btninventory = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel11 = new System.Windows.Forms.ToolStripLabel();
-            this.btnproductmanagement = new System.Windows.Forms.ToolStripButton();
-            this.btnreports = new System.Windows.Forms.ToolStripButton();
-            this.tstripnavbar = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel14 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.pnlbooking = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -126,50 +93,46 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.pnlsales.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxprofile)).BeginInit();
+            this.pnlBackPanel.SuspendLayout();
+            this.pnlModuleName.SuspendLayout();
             this.pnlitemsales.SuspendLayout();
             this.pnlsalescart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.pnlitemdata.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            this.pnldashboard.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnldashboardinside.SuspendLayout();
-            this.tstripnavbar.SuspendLayout();
-            this.pnlbooking.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlsales
+            // pnlBackPanel
             // 
-            this.pnlsales.BackColor = System.Drawing.Color.Black;
-            this.pnlsales.Controls.Add(this.panel3);
-            this.pnlsales.Controls.Add(this.pnlitemsales);
-            this.pnlsales.Location = new System.Drawing.Point(347, 0);
-            this.pnlsales.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlsales.Name = "pnlsales";
-            this.pnlsales.Size = new System.Drawing.Size(1339, 838);
-            this.pnlsales.TabIndex = 1;
+            this.pnlBackPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
+            this.pnlBackPanel.Controls.Add(this.pnlModuleName);
+            this.pnlBackPanel.Controls.Add(this.pnlitemsales);
+            this.pnlBackPanel.Location = new System.Drawing.Point(12, 12);
+            this.pnlBackPanel.Name = "pnlBackPanel";
+            this.pnlBackPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlBackPanel.Size = new System.Drawing.Size(1469, 938);
+            this.pnlBackPanel.TabIndex = 4;
             // 
-            // panel3
+            // pnlModuleName
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.pboxprofile);
-            this.panel3.Controls.Add(this.lblusername);
-            this.panel3.Location = new System.Drawing.Point(9, 12);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1320, 62);
-            this.panel3.TabIndex = 2;
+            this.pnlModuleName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
+            this.pnlModuleName.Controls.Add(this.label3);
+            this.pnlModuleName.Location = new System.Drawing.Point(9, 9);
+            this.pnlModuleName.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlModuleName.Name = "pnlModuleName";
+            this.pnlModuleName.Size = new System.Drawing.Size(1451, 66);
+            this.pnlModuleName.TabIndex = 2;
             // 
             // label3
             // 
@@ -179,44 +142,20 @@
             this.label3.Location = new System.Drawing.Point(8, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 45);
+            this.label3.Size = new System.Drawing.Size(158, 45);
             this.label3.TabIndex = 4;
-            this.label3.Text = "SALES";
-            // 
-            // pboxprofile
-            // 
-            this.pboxprofile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pboxprofile.BackgroundImage")));
-            this.pboxprofile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pboxprofile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pboxprofile.Location = new System.Drawing.Point(1252, 6);
-            this.pboxprofile.Margin = new System.Windows.Forms.Padding(4);
-            this.pboxprofile.Name = "pboxprofile";
-            this.pboxprofile.Size = new System.Drawing.Size(53, 49);
-            this.pboxprofile.TabIndex = 3;
-            this.pboxprofile.TabStop = false;
-            // 
-            // lblusername
-            // 
-            this.lblusername.AutoSize = true;
-            this.lblusername.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblusername.ForeColor = System.Drawing.Color.White;
-            this.lblusername.Location = new System.Drawing.Point(1184, 17);
-            this.lblusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(58, 29);
-            this.lblusername.TabIndex = 1;
-            this.lblusername.Text = "User";
-            this.lblusername.Click += new System.EventHandler(this.lblusername_Click);
+            this.label3.Text = "BOOKING";
             // 
             // pnlitemsales
             // 
             this.pnlitemsales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
             this.pnlitemsales.Controls.Add(this.pnlsalescart);
             this.pnlitemsales.Controls.Add(this.pnlitemdata);
-            this.pnlitemsales.Location = new System.Drawing.Point(9, 84);
+            this.pnlitemsales.Location = new System.Drawing.Point(9, 83);
             this.pnlitemsales.Margin = new System.Windows.Forms.Padding(4);
             this.pnlitemsales.Name = "pnlitemsales";
-            this.pnlitemsales.Size = new System.Drawing.Size(1320, 742);
+            this.pnlitemsales.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlitemsales.Size = new System.Drawing.Size(1451, 846);
             this.pnlitemsales.TabIndex = 0;
             // 
             // pnlsalescart
@@ -232,17 +171,18 @@
             this.pnlsalescart.Controls.Add(this.button5);
             this.pnlsalescart.Controls.Add(this.label2);
             this.pnlsalescart.Controls.Add(this.dataGridView2);
-            this.pnlsalescart.Location = new System.Drawing.Point(857, 10);
+            this.pnlsalescart.Location = new System.Drawing.Point(939, 9);
             this.pnlsalescart.Margin = new System.Windows.Forms.Padding(4);
             this.pnlsalescart.Name = "pnlsalescart";
-            this.pnlsalescart.Size = new System.Drawing.Size(451, 721);
+            this.pnlsalescart.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlsalescart.Size = new System.Drawing.Size(503, 828);
             this.pnlsalescart.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(313, 533);
+            this.label6.Location = new System.Drawing.Point(375, 639);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 37);
@@ -252,10 +192,10 @@
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(9, 516);
+            this.label7.Location = new System.Drawing.Point(7, 628);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(433, 2);
+            this.label7.Size = new System.Drawing.Size(487, 2);
             this.label7.TabIndex = 16;
             // 
             // button8
@@ -266,7 +206,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button8.Location = new System.Drawing.Point(336, 12);
+            this.button8.Location = new System.Drawing.Point(388, 14);
             this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(100, 37);
@@ -281,10 +221,10 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button7.Location = new System.Drawing.Point(228, 614);
+            this.button7.Location = new System.Drawing.Point(254, 725);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(213, 37);
+            this.button7.Size = new System.Drawing.Size(240, 37);
             this.button7.TabIndex = 13;
             this.button7.Text = "ONLINE";
             this.button7.UseVisualStyleBackColor = false;
@@ -293,7 +233,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 585);
+            this.label5.Location = new System.Drawing.Point(4, 696);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 25);
@@ -307,10 +247,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button6.Location = new System.Drawing.Point(8, 614);
+            this.button6.Location = new System.Drawing.Point(8, 725);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(213, 37);
+            this.button6.Size = new System.Drawing.Size(240, 37);
             this.button6.TabIndex = 10;
             this.button6.Text = "CASH";
             this.button6.UseVisualStyleBackColor = false;
@@ -319,7 +259,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(4, 533);
+            this.label4.Location = new System.Drawing.Point(7, 639);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 37);
@@ -333,10 +273,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(8, 661);
+            this.button5.Location = new System.Drawing.Point(8, 770);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(433, 49);
+            this.button5.Size = new System.Drawing.Size(486, 49);
             this.button5.TabIndex = 6;
             this.button5.Text = "PROCEED PAYMENT";
             this.button5.UseVisualStyleBackColor = false;
@@ -349,7 +289,7 @@
             this.label2.Location = new System.Drawing.Point(7, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(436, 46);
+            this.label2.Size = new System.Drawing.Size(487, 46);
             this.label2.TabIndex = 5;
             this.label2.Text = " CART";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -362,7 +302,7 @@
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(431, 434);
+            this.dataGridView2.Size = new System.Drawing.Size(485, 547);
             this.dataGridView2.TabIndex = 0;
             // 
             // pnlitemdata
@@ -374,10 +314,11 @@
             this.pnlitemdata.Controls.Add(this.dataGridView1);
             this.pnlitemdata.Controls.Add(this.flowLayoutPanel1);
             this.pnlitemdata.Controls.Add(this.label1);
-            this.pnlitemdata.Location = new System.Drawing.Point(9, 10);
+            this.pnlitemdata.Location = new System.Drawing.Point(9, 9);
             this.pnlitemdata.Margin = new System.Windows.Forms.Padding(4);
             this.pnlitemdata.Name = "pnlitemdata";
-            this.pnlitemdata.Size = new System.Drawing.Size(840, 721);
+            this.pnlitemdata.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlitemdata.Size = new System.Drawing.Size(922, 828);
             this.pnlitemdata.TabIndex = 0;
             // 
             // label9
@@ -386,7 +327,7 @@
             this.label9.Location = new System.Drawing.Point(9, 113);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(824, 2);
+            this.label9.Size = new System.Drawing.Size(904, 2);
             this.label9.TabIndex = 17;
             // 
             // btnsalessearch
@@ -396,7 +337,7 @@
             this.btnsalessearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalessearch.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalessearch.ForeColor = System.Drawing.Color.White;
-            this.btnsalessearch.Location = new System.Drawing.Point(684, 66);
+            this.btnsalessearch.Location = new System.Drawing.Point(764, 65);
             this.btnsalessearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnsalessearch.Name = "btnsalessearch";
             this.btnsalessearch.Size = new System.Drawing.Size(149, 38);
@@ -411,7 +352,7 @@
             this.textBox1.Location = new System.Drawing.Point(8, 65);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(667, 40);
+            this.textBox1.Size = new System.Drawing.Size(748, 40);
             this.textBox1.TabIndex = 3;
             // 
             // dataGridView1
@@ -422,7 +363,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(823, 540);
+            this.dataGridView1.Size = new System.Drawing.Size(902, 649);
             this.dataGridView1.TabIndex = 2;
             // 
             // flowLayoutPanel1
@@ -430,10 +371,11 @@
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Controls.Add(this.button2);
             this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 121);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 121);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(829, 49);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(906, 49);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // button1
@@ -443,10 +385,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(4, 4);
+            this.button1.Location = new System.Drawing.Point(6, 6);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 37);
+            this.button1.Size = new System.Drawing.Size(292, 37);
             this.button1.TabIndex = 0;
             this.button1.Text = "PARTS";
             this.button1.UseVisualStyleBackColor = false;
@@ -458,10 +400,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(280, 4);
+            this.button2.Location = new System.Drawing.Point(306, 6);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(268, 37);
+            this.button2.Size = new System.Drawing.Size(292, 37);
             this.button2.TabIndex = 1;
             this.button2.Text = "PARTS";
             this.button2.UseVisualStyleBackColor = false;
@@ -473,10 +415,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(556, 4);
+            this.button3.Location = new System.Drawing.Point(606, 6);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(269, 37);
+            this.button3.Size = new System.Drawing.Size(292, 37);
             this.button3.TabIndex = 2;
             this.button3.Text = "PARTS";
             this.button3.UseVisualStyleBackColor = false;
@@ -489,31 +431,34 @@
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(824, 46);
+            this.label1.Size = new System.Drawing.Size(904, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "ITEMS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pnldashboard
-            // 
-            this.pnldashboard.BackColor = System.Drawing.Color.Black;
-            this.pnldashboard.Controls.Add(this.panel1);
-            this.pnldashboard.Controls.Add(this.pnldashboardinside);
-            this.pnldashboard.Location = new System.Drawing.Point(347, 0);
-            this.pnldashboard.Margin = new System.Windows.Forms.Padding(4);
-            this.pnldashboard.Name = "pnldashboard";
-            this.pnldashboard.Size = new System.Drawing.Size(1339, 838);
-            this.pnldashboard.TabIndex = 3;
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(8, 12);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Location = new System.Drawing.Point(20, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1320, 62);
-            this.panel1.TabIndex = 4;
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
+            this.panel1.Size = new System.Drawing.Size(1469, 938);
+            this.panel1.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Location = new System.Drawing.Point(9, 9);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1451, 66);
+            this.panel2.TabIndex = 2;
             // 
             // label8
             // 
@@ -523,415 +468,81 @@
             this.label8.Location = new System.Drawing.Point(8, 9);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(207, 45);
+            this.label8.Size = new System.Drawing.Size(111, 45);
             this.label8.TabIndex = 4;
-            this.label8.Text = "DASHBOARD";
+            this.label8.Text = "SALES";
             // 
-            // pnldashboardinside
+            // panel3
             // 
-            this.pnldashboardinside.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.pnldashboardinside.Controls.Add(this.label11);
-            this.pnldashboardinside.Controls.Add(this.label10);
-            this.pnldashboardinside.Controls.Add(this.tbl2x1);
-            this.pnldashboardinside.Controls.Add(this.tbl4x1);
-            this.pnldashboardinside.Location = new System.Drawing.Point(8, 84);
-            this.pnldashboardinside.Margin = new System.Windows.Forms.Padding(4);
-            this.pnldashboardinside.Name = "pnldashboardinside";
-            this.pnldashboardinside.Size = new System.Drawing.Size(1320, 742);
-            this.pnldashboardinside.TabIndex = 3;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(5, 299);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(156, 34);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "DASHBOARD";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(5, 10);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(156, 34);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "DASHBOARD";
-            // 
-            // tbl2x1
-            // 
-            this.tbl2x1.BackColor = System.Drawing.Color.Silver;
-            this.tbl2x1.ColumnCount = 2;
-            this.tbl2x1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl2x1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbl2x1.Location = new System.Drawing.Point(11, 335);
-            this.tbl2x1.Margin = new System.Windows.Forms.Padding(4);
-            this.tbl2x1.Name = "tbl2x1";
-            this.tbl2x1.RowCount = 1;
-            this.tbl2x1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl2x1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 332F));
-            this.tbl2x1.Size = new System.Drawing.Size(1299, 332);
-            this.tbl2x1.TabIndex = 1;
-            // 
-            // tbl4x1
-            // 
-            this.tbl4x1.BackColor = System.Drawing.Color.Silver;
-            this.tbl4x1.ColumnCount = 4;
-            this.tbl4x1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tbl4x1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tbl4x1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tbl4x1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tbl4x1.Location = new System.Drawing.Point(11, 48);
-            this.tbl4x1.Margin = new System.Windows.Forms.Padding(4);
-            this.tbl4x1.Name = "tbl4x1";
-            this.tbl4x1.RowCount = 1;
-            this.tbl4x1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl4x1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 222F));
-            this.tbl4x1.Size = new System.Drawing.Size(1299, 222);
-            this.tbl4x1.TabIndex = 0;
-            // 
-            // toolStripLabel10
-            // 
-            this.toolStripLabel10.AutoSize = false;
-            this.toolStripLabel10.Name = "toolStripLabel10";
-            this.toolStripLabel10.Size = new System.Drawing.Size(250, 15);
-            // 
-            // toolStripLabel12
-            // 
-            this.toolStripLabel12.Font = new System.Drawing.Font("Britannic Bold", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.toolStripLabel12.Name = "toolStripLabel12";
-            this.toolStripLabel12.Size = new System.Drawing.Size(343, 50);
-            this.toolStripLabel12.Text = "SUSAN BIGBIKE";
-            this.toolStripLabel12.Click += new System.EventHandler(this.toolStripLabel12_Click);
-            // 
-            // toolStripLabel9
-            // 
-            this.toolStripLabel9.AutoSize = false;
-            this.toolStripLabel9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.toolStripLabel9.Name = "toolStripLabel9";
-            this.toolStripLabel9.Size = new System.Drawing.Size(250, 20);
-            this.toolStripLabel9.Text = "Service Management POS";
-            this.toolStripLabel9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.AutoSize = false;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(250, 25);
-            // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.AutoSize = false;
-            this.toolStripLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel3.ForeColor = System.Drawing.Color.White;
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(250, 25);
-            this.toolStripLabel3.Text = " OVERVIEW";
-            this.toolStripLabel3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // btndashboard
-            // 
-            this.btndashboard.AutoSize = false;
-            this.btndashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.btndashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btndashboard.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndashboard.ForeColor = System.Drawing.Color.White;
-            this.btndashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btndashboard.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btndashboard.Name = "btndashboard";
-            this.btndashboard.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btndashboard.Size = new System.Drawing.Size(245, 40);
-            this.btndashboard.Text = "Dashboard";
-            // 
-            // toolStripLabel8
-            // 
-            this.toolStripLabel8.AutoSize = false;
-            this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(250, 5);
-            // 
-            // toolStripLabel13
-            // 
-            this.toolStripLabel13.AutoSize = false;
-            this.toolStripLabel13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel13.ForeColor = System.Drawing.Color.White;
-            this.toolStripLabel13.Name = "toolStripLabel13";
-            this.toolStripLabel13.Size = new System.Drawing.Size(250, 25);
-            this.toolStripLabel13.Text = " OPERATIONS";
-            this.toolStripLabel13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // btnsales
-            // 
-            this.btnsales.AutoSize = false;
-            this.btnsales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.btnsales.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnsales.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsales.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnsales.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnsales.Name = "btnsales";
-            this.btnsales.Size = new System.Drawing.Size(245, 40);
-            this.btnsales.Text = "Sales";
-            // 
-            // bntrepairs
-            // 
-            this.bntrepairs.AutoSize = false;
-            this.bntrepairs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.bntrepairs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.bntrepairs.Font = new System.Drawing.Font("Impact", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntrepairs.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bntrepairs.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.bntrepairs.Name = "bntrepairs";
-            this.bntrepairs.Size = new System.Drawing.Size(245, 40);
-            this.bntrepairs.Text = "Repairs and Maintenance";
-            // 
-            // toolStripLabel4
-            // 
-            this.toolStripLabel4.AutoSize = false;
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(250, 5);
-            // 
-            // btninventory
-            // 
-            this.btninventory.AutoSize = false;
-            this.btninventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.btninventory.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btninventory.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btninventory.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btninventory.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btninventory.Name = "btninventory";
-            this.btninventory.Size = new System.Drawing.Size(245, 40);
-            this.btninventory.Text = "Inventory Management";
-            // 
-            // toolStripLabel6
-            // 
-            this.toolStripLabel6.AutoSize = false;
-            this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(253, 0);
-            // 
-            // toolStripLabel11
-            // 
-            this.toolStripLabel11.AutoSize = false;
-            this.toolStripLabel11.Name = "toolStripLabel11";
-            this.toolStripLabel11.Size = new System.Drawing.Size(250, 5);
-            // 
-            // btnproductmanagement
-            // 
-            this.btnproductmanagement.AutoSize = false;
-            this.btnproductmanagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.btnproductmanagement.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnproductmanagement.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnproductmanagement.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnproductmanagement.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnproductmanagement.Name = "btnproductmanagement";
-            this.btnproductmanagement.Size = new System.Drawing.Size(245, 40);
-            this.btnproductmanagement.Text = "Product Management";
-            // 
-            // btnreports
-            // 
-            this.btnreports.AutoSize = false;
-            this.btnreports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.btnreports.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnreports.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreports.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnreports.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnreports.Name = "btnreports";
-            this.btnreports.Size = new System.Drawing.Size(245, 40);
-            this.btnreports.Text = "Reports";
-            // 
-            // tstripnavbar
-            // 
-            this.tstripnavbar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tstripnavbar.AutoSize = false;
-            this.tstripnavbar.BackColor = System.Drawing.Color.Black;
-            this.tstripnavbar.Dock = System.Windows.Forms.DockStyle.None;
-            this.tstripnavbar.GripMargin = new System.Windows.Forms.Padding(0);
-            this.tstripnavbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.tstripnavbar.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.tstripnavbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel10,
-            this.toolStripLabel12,
-            this.toolStripLabel9,
-            this.toolStripLabel1,
-            this.toolStripLabel3,
-            this.btndashboard,
-            this.toolStripLabel8,
-            this.toolStripLabel13,
-            this.btnsales,
-            this.toolStripLabel7,
-            this.bntrepairs,
-            this.toolStripLabel4,
-            this.btninventory,
-            this.toolStripLabel6,
-            this.toolStripLabel11,
-            this.btnproductmanagement,
-            this.toolStripLabel5,
-            this.toolStripLabel14,
-            this.btnreports,
-            this.toolStripLabel2});
-            this.tstripnavbar.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.tstripnavbar.Location = new System.Drawing.Point(0, 97);
-            this.tstripnavbar.Name = "tstripnavbar";
-            this.tstripnavbar.Padding = new System.Windows.Forms.Padding(0);
-            this.tstripnavbar.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tstripnavbar.Size = new System.Drawing.Size(344, 882);
-            this.tstripnavbar.TabIndex = 0;
-            this.tstripnavbar.Text = "toolStrip1";
-            // 
-            // toolStripLabel7
-            // 
-            this.toolStripLabel7.AutoSize = false;
-            this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(250, 5);
-            // 
-            // toolStripLabel5
-            // 
-            this.toolStripLabel5.AutoSize = false;
-            this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(250, 5);
-            // 
-            // toolStripLabel14
-            // 
-            this.toolStripLabel14.AutoSize = false;
-            this.toolStripLabel14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel14.ForeColor = System.Drawing.Color.White;
-            this.toolStripLabel14.Name = "toolStripLabel14";
-            this.toolStripLabel14.Size = new System.Drawing.Size(250, 25);
-            this.toolStripLabel14.Text = " RECORDS";
-            this.toolStripLabel14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.AutoSize = false;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(250, 5);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button9.Location = new System.Drawing.Point(13, 786);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(324, 42);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Log Out";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // pnlbooking
-            // 
-            this.pnlbooking.BackColor = System.Drawing.Color.Black;
-            this.pnlbooking.Controls.Add(this.panel4);
-            this.pnlbooking.Controls.Add(this.panel5);
-            this.pnlbooking.Location = new System.Drawing.Point(347, 0);
-            this.pnlbooking.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlbooking.Name = "pnlbooking";
-            this.pnlbooking.Size = new System.Drawing.Size(1339, 838);
-            this.pnlbooking.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(8, 12);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1320, 62);
-            this.panel4.TabIndex = 4;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(8, 9);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(158, 45);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "BOOKING";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.panel2);
-            this.panel5.ForeColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(8, 84);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1320, 742);
-            this.panel5.TabIndex = 3;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Location = new System.Drawing.Point(9, 83);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(5);
+            this.panel3.Size = new System.Drawing.Size(1451, 846);
+            this.panel3.TabIndex = 0;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(241)))));
             this.panel6.Controls.Add(this.dataGridView3);
-            this.panel6.Location = new System.Drawing.Point(28, 412);
+            this.panel6.Location = new System.Drawing.Point(9, 465);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1267, 319);
-            this.panel6.TabIndex = 18;
+            this.panel6.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.panel6.Size = new System.Drawing.Size(1433, 372);
+            this.panel6.TabIndex = 20;
             // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(25, 52);
+            this.dataGridView3.Location = new System.Drawing.Point(14, 48);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(1224, 228);
+            this.dataGridView3.Size = new System.Drawing.Size(1127, 295);
             this.dataGridView3.TabIndex = 0;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(241)))));
-            this.panel2.Controls.Add(this.comboBox5);
-            this.panel2.Controls.Add(this.comboBox4);
-            this.panel2.Controls.Add(this.flowLayoutPanel2);
-            this.panel2.Controls.Add(this.label26);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.label22);
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.textBox10);
-            this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.label21);
-            this.panel2.Controls.Add(this.label24);
-            this.panel2.Controls.Add(this.label25);
-            this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Location = new System.Drawing.Point(28, 9);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1267, 396);
-            this.panel2.TabIndex = 17;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(241)))));
+            this.panel4.Controls.Add(this.comboBox5);
+            this.panel4.Controls.Add(this.comboBox4);
+            this.panel4.Controls.Add(this.flowLayoutPanel2);
+            this.panel4.Controls.Add(this.label26);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.comboBox3);
+            this.panel4.Controls.Add(this.dateTimePicker1);
+            this.panel4.Controls.Add(this.comboBox2);
+            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.label22);
+            this.panel4.Controls.Add(this.textBox9);
+            this.panel4.Controls.Add(this.textBox10);
+            this.panel4.Controls.Add(this.label23);
+            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.label24);
+            this.panel4.Controls.Add(this.label25);
+            this.panel4.Controls.Add(this.label20);
+            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Controls.Add(this.textBox6);
+            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.textBox7);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Location = new System.Drawing.Point(9, 9);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(10);
+            this.panel4.Size = new System.Drawing.Size(1433, 405);
+            this.panel4.TabIndex = 19;
             // 
             // comboBox5
             // 
@@ -1010,10 +621,10 @@
             this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(48)))));
             this.label26.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label26.Location = new System.Drawing.Point(667, 14);
+            this.label26.Location = new System.Drawing.Point(688, 10);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(583, 46);
+            this.label26.Size = new System.Drawing.Size(731, 46);
             this.label26.TabIndex = 49;
             this.label26.Text = "ITEMS";
             this.label26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1023,10 +634,10 @@
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(48)))));
             this.label13.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Location = new System.Drawing.Point(17, 14);
+            this.label13.Location = new System.Drawing.Point(14, 10);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(628, 46);
+            this.label13.Size = new System.Drawing.Size(666, 46);
             this.label13.TabIndex = 48;
             this.label13.Text = "ITEMS";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1077,7 +688,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(672, 158);
+            this.label22.Location = new System.Drawing.Point(682, 168);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(140, 29);
@@ -1108,7 +719,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(672, 197);
+            this.label23.Location = new System.Drawing.Point(682, 207);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(159, 29);
@@ -1120,7 +731,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(672, 114);
+            this.label21.Location = new System.Drawing.Point(682, 124);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(137, 29);
@@ -1132,7 +743,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(672, 276);
+            this.label24.Location = new System.Drawing.Point(682, 286);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(170, 29);
@@ -1144,7 +755,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(672, 236);
+            this.label25.Location = new System.Drawing.Point(682, 246);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(110, 29);
@@ -1156,7 +767,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(672, 75);
+            this.label20.Location = new System.Drawing.Point(682, 85);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(116, 29);
@@ -1184,12 +795,11 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(195, 75);
+            this.textBox2.Location = new System.Drawing.Point(195, 73);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(449, 30);
             this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox7
             // 
@@ -1205,7 +815,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(20, 75);
+            this.label14.Location = new System.Drawing.Point(14, 74);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(133, 29);
@@ -1217,7 +827,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(20, 114);
+            this.label15.Location = new System.Drawing.Point(16, 115);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(69, 29);
@@ -1238,7 +848,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(20, 158);
+            this.label17.Location = new System.Drawing.Point(16, 159);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(75, 29);
@@ -1259,7 +869,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(20, 197);
+            this.label16.Location = new System.Drawing.Point(14, 198);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(66, 29);
@@ -1271,7 +881,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(20, 276);
+            this.label18.Location = new System.Drawing.Point(16, 276);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(95, 29);
@@ -1283,33 +893,24 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(20, 236);
+            this.label19.Location = new System.Drawing.Point(16, 237);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(123, 29);
             this.label19.TabIndex = 10;
             this.label19.Text = "Motorcycle";
             // 
-            // Form1
+            // BookingForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.tstripnavbar);
-            this.Controls.Add(this.pnlbooking);
-            this.Controls.Add(this.pnlsales);
-            this.Controls.Add(this.pnldashboard);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.pnlsales.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxprofile)).EndInit();
+            this.ClientSize = new System.Drawing.Size(1493, 962);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlBackPanel);
+            this.Name = "BookingForm";
+            this.Text = "BookingForm";
+            this.pnlBackPanel.ResumeLayout(false);
+            this.pnlModuleName.ResumeLayout(false);
+            this.pnlModuleName.PerformLayout();
             this.pnlitemsales.ResumeLayout(false);
             this.pnlsalescart.ResumeLayout(false);
             this.pnlsalescart.PerformLayout();
@@ -1318,101 +919,62 @@
             this.pnlitemdata.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.pnldashboard.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.pnldashboardinside.ResumeLayout(false);
-            this.pnldashboardinside.PerformLayout();
-            this.tstripnavbar.ResumeLayout(false);
-            this.tstripnavbar.PerformLayout();
-            this.pnlbooking.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnlsales;
+
+        private System.Windows.Forms.Panel pnlBackPanel;
+        private System.Windows.Forms.Panel pnlModuleName;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnlitemsales;
-        private System.Windows.Forms.Panel pnlitemdata;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnsalessearch;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlsalescart;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.PictureBox pboxprofile;
-        private System.Windows.Forms.Label lblusername;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Panel pnldashboard;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel10;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel12;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel9;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.ToolStripButton btndashboard;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel8;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel13;
-        private System.Windows.Forms.ToolStripButton btnsales;
-        private System.Windows.Forms.ToolStripButton bntrepairs;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripButton btninventory;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel6;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel11;
-        private System.Windows.Forms.ToolStripButton btnproductmanagement;
-        private System.Windows.Forms.ToolStripButton btnreports;
-        private System.Windows.Forms.ToolStrip tstripnavbar;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel14;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Panel pnlitemdata;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnsalessearch;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel7;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel pnldashboardinside;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TableLayoutPanel tbl2x1;
-        private System.Windows.Forms.TableLayoutPanel tbl4x1;
-        private System.Windows.Forms.Panel pnlbooking;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -1425,17 +987,17 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
     }
 }
-

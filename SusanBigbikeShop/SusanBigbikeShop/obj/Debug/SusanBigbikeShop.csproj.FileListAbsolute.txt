@@ -8,3 +8,15 @@ C:\Users\Admin\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBi
 C:\Users\Admin\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.exe
 C:\Users\Admin\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.pdb
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\bin\Debug\SusanBigbikeShop.exe.config
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\bin\Debug\SusanBigbikeShop.exe
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\bin\Debug\SusanBigbikeShop.pdb
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.csproj.AssemblyReference.cache
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.Form1.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.Properties.Resources.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.csproj.GenerateResource.cache
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.csproj.CoreCompileInputs.cache
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.exe
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.pdb
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.MainForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.SalesForm.resources
