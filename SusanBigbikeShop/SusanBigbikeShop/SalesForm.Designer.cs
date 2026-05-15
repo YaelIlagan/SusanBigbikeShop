@@ -30,30 +30,32 @@
         {
             this.pnlBackPanel = new System.Windows.Forms.Panel();
             this.pnlModuleName = new System.Windows.Forms.Panel();
+            this.pictureboxSalesUser = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlitemsales = new System.Windows.Forms.Panel();
             this.pnlsalescart = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSalesProceedPayment = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnSalesClearCart = new System.Windows.Forms.Button();
+            this.btnSalesOnlinePayment = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnSalesCashPayment = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.pnlitemdata = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnsalessearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSalesSearchItem = new System.Windows.Forms.Button();
+            this.txtSalesSearchItem = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSalesCategory = new System.Windows.Forms.Button();
+            this.btnSalesCategory1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlBackPanel.SuspendLayout();
             this.pnlModuleName.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxSalesUser)).BeginInit();
             this.pnlitemsales.SuspendLayout();
             this.pnlsalescart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -67,7 +69,7 @@
             this.pnlBackPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
+            this.pnlBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.pnlBackPanel.Controls.Add(this.pnlModuleName);
             this.pnlBackPanel.Controls.Add(this.pnlitemsales);
             this.pnlBackPanel.Location = new System.Drawing.Point(12, 12);
@@ -78,13 +80,22 @@
             // 
             // pnlModuleName
             // 
-            this.pnlModuleName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
+            this.pnlModuleName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.pnlModuleName.Controls.Add(this.pictureboxSalesUser);
             this.pnlModuleName.Controls.Add(this.label3);
             this.pnlModuleName.Location = new System.Drawing.Point(9, 9);
             this.pnlModuleName.Margin = new System.Windows.Forms.Padding(4);
             this.pnlModuleName.Name = "pnlModuleName";
             this.pnlModuleName.Size = new System.Drawing.Size(922, 50);
             this.pnlModuleName.TabIndex = 2;
+            // 
+            // pictureboxSalesUser
+            // 
+            this.pictureboxSalesUser.Location = new System.Drawing.Point(871, 5);
+            this.pictureboxSalesUser.Name = "pictureboxSalesUser";
+            this.pictureboxSalesUser.Size = new System.Drawing.Size(40, 40);
+            this.pictureboxSalesUser.TabIndex = 5;
+            this.pictureboxSalesUser.TabStop = false;
             // 
             // label3
             // 
@@ -100,7 +111,7 @@
             // 
             // pnlitemsales
             // 
-            this.pnlitemsales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
+            this.pnlitemsales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnlitemsales.Controls.Add(this.pnlsalescart);
             this.pnlitemsales.Controls.Add(this.pnlitemdata);
             this.pnlitemsales.Location = new System.Drawing.Point(9, 67);
@@ -112,14 +123,14 @@
             // 
             // pnlsalescart
             // 
-            this.pnlsalescart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(241)))));
-            this.pnlsalescart.Controls.Add(this.button5);
+            this.pnlsalescart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(234)))));
+            this.pnlsalescart.Controls.Add(this.btnSalesProceedPayment);
             this.pnlsalescart.Controls.Add(this.label6);
             this.pnlsalescart.Controls.Add(this.label7);
-            this.pnlsalescart.Controls.Add(this.button8);
-            this.pnlsalescart.Controls.Add(this.button7);
+            this.pnlsalescart.Controls.Add(this.btnSalesClearCart);
+            this.pnlsalescart.Controls.Add(this.btnSalesOnlinePayment);
             this.pnlsalescart.Controls.Add(this.label5);
-            this.pnlsalescart.Controls.Add(this.button6);
+            this.pnlsalescart.Controls.Add(this.btnSalesCashPayment);
             this.pnlsalescart.Controls.Add(this.label4);
             this.pnlsalescart.Controls.Add(this.label2);
             this.pnlsalescart.Controls.Add(this.dataGridView2);
@@ -131,20 +142,20 @@
             this.pnlsalescart.TabIndex = 1;
             this.pnlsalescart.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlsalescart_Paint);
             // 
-            // button5
+            // btnSalesProceedPayment
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(112)))), ((int)(((byte)(30)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(10, 520);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(295, 35);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "PROCEED PAYMENT";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSalesProceedPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.btnSalesProceedPayment.FlatAppearance.BorderSize = 0;
+            this.btnSalesProceedPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesProceedPayment.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesProceedPayment.ForeColor = System.Drawing.Color.White;
+            this.btnSalesProceedPayment.Location = new System.Drawing.Point(10, 516);
+            this.btnSalesProceedPayment.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalesProceedPayment.Name = "btnSalesProceedPayment";
+            this.btnSalesProceedPayment.Size = new System.Drawing.Size(295, 40);
+            this.btnSalesProceedPayment.TabIndex = 18;
+            this.btnSalesProceedPayment.Text = "PROCEED PAYMENT";
+            this.btnSalesProceedPayment.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -166,62 +177,62 @@
             this.label7.Size = new System.Drawing.Size(295, 2);
             this.label7.TabIndex = 16;
             // 
-            // button8
+            // btnSalesClearCart
             // 
-            this.button8.BackColor = System.Drawing.Color.IndianRed;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button8.Location = new System.Drawing.Point(220, 14);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(76, 30);
-            this.button8.TabIndex = 15;
-            this.button8.Text = "CLEAR";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnSalesClearCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.btnSalesClearCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalesClearCart.FlatAppearance.BorderSize = 0;
+            this.btnSalesClearCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesClearCart.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesClearCart.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSalesClearCart.Location = new System.Drawing.Point(220, 15);
+            this.btnSalesClearCart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalesClearCart.Name = "btnSalesClearCart";
+            this.btnSalesClearCart.Size = new System.Drawing.Size(76, 30);
+            this.btnSalesClearCart.TabIndex = 15;
+            this.btnSalesClearCart.Text = "CLEAR";
+            this.btnSalesClearCart.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnSalesOnlinePayment
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button7.Location = new System.Drawing.Point(160, 473);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(145, 35);
-            this.button7.TabIndex = 13;
-            this.button7.Text = "ONLINE";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnSalesOnlinePayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnSalesOnlinePayment.FlatAppearance.BorderSize = 0;
+            this.btnSalesOnlinePayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesOnlinePayment.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesOnlinePayment.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSalesOnlinePayment.Location = new System.Drawing.Point(160, 472);
+            this.btnSalesOnlinePayment.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalesOnlinePayment.Name = "btnSalesOnlinePayment";
+            this.btnSalesOnlinePayment.Size = new System.Drawing.Size(145, 35);
+            this.btnSalesOnlinePayment.TabIndex = 13;
+            this.btnSalesOnlinePayment.Text = "ONLINE";
+            this.btnSalesOnlinePayment.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 446);
+            this.label5.Location = new System.Drawing.Point(6, 445);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 21);
             this.label5.TabIndex = 12;
             this.label5.Text = "Payment Method";
             // 
-            // button6
+            // btnSalesCashPayment
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button6.Location = new System.Drawing.Point(10, 473);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(145, 35);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "CASH";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnSalesCashPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnSalesCashPayment.FlatAppearance.BorderSize = 0;
+            this.btnSalesCashPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesCashPayment.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesCashPayment.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSalesCashPayment.Location = new System.Drawing.Point(10, 472);
+            this.btnSalesCashPayment.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalesCashPayment.Name = "btnSalesCashPayment";
+            this.btnSalesCashPayment.Size = new System.Drawing.Size(145, 35);
+            this.btnSalesCashPayment.TabIndex = 10;
+            this.btnSalesCashPayment.Text = "CASH";
+            this.btnSalesCashPayment.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -237,7 +248,7 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(48)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
             this.label2.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(7, 9);
@@ -250,7 +261,7 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(10, 54);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
@@ -261,10 +272,10 @@
             // 
             // pnlitemdata
             // 
-            this.pnlitemdata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(241)))));
+            this.pnlitemdata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(234)))));
             this.pnlitemdata.Controls.Add(this.label9);
-            this.pnlitemdata.Controls.Add(this.btnsalessearch);
-            this.pnlitemdata.Controls.Add(this.textBox1);
+            this.pnlitemdata.Controls.Add(this.btnSalesSearchItem);
+            this.pnlitemdata.Controls.Add(this.txtSalesSearchItem);
             this.pnlitemdata.Controls.Add(this.dataGridView1);
             this.pnlitemdata.Controls.Add(this.flowLayoutPanel1);
             this.pnlitemdata.Controls.Add(this.label1);
@@ -284,34 +295,34 @@
             this.label9.Size = new System.Drawing.Size(567, 2);
             this.label9.TabIndex = 17;
             // 
-            // btnsalessearch
+            // btnSalesSearchItem
             // 
-            this.btnsalessearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.btnsalessearch.FlatAppearance.BorderSize = 0;
-            this.btnsalessearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsalessearch.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalessearch.ForeColor = System.Drawing.Color.White;
-            this.btnsalessearch.Location = new System.Drawing.Point(463, 54);
-            this.btnsalessearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnsalessearch.Name = "btnsalessearch";
-            this.btnsalessearch.Size = new System.Drawing.Size(113, 36);
-            this.btnsalessearch.TabIndex = 4;
-            this.btnsalessearch.Text = "SEARCH";
-            this.btnsalessearch.UseVisualStyleBackColor = false;
+            this.btnSalesSearchItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnSalesSearchItem.FlatAppearance.BorderSize = 0;
+            this.btnSalesSearchItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesSearchItem.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesSearchItem.ForeColor = System.Drawing.Color.White;
+            this.btnSalesSearchItem.Location = new System.Drawing.Point(463, 54);
+            this.btnSalesSearchItem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalesSearchItem.Name = "btnSalesSearchItem";
+            this.btnSalesSearchItem.Size = new System.Drawing.Size(113, 36);
+            this.btnSalesSearchItem.TabIndex = 4;
+            this.btnSalesSearchItem.Text = "SEARCH";
+            this.btnSalesSearchItem.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtSalesSearchItem
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(10, 54);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(445, 36);
-            this.textBox1.TabIndex = 3;
+            this.txtSalesSearchItem.BackColor = System.Drawing.Color.White;
+            this.txtSalesSearchItem.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalesSearchItem.Location = new System.Drawing.Point(10, 54);
+            this.txtSalesSearchItem.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSalesSearchItem.Name = "txtSalesSearchItem";
+            this.txtSalesSearchItem.Size = new System.Drawing.Size(445, 36);
+            this.txtSalesSearchItem.TabIndex = 3;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 155);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
@@ -322,8 +333,8 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
+            this.flowLayoutPanel1.Controls.Add(this.btnSalesCategory);
+            this.flowLayoutPanel1.Controls.Add(this.btnSalesCategory1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 105);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -331,39 +342,39 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(568, 49);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // button2
+            // btnSalesCategory
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(5, 5);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(274, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "PARTS";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSalesCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnSalesCategory.FlatAppearance.BorderSize = 0;
+            this.btnSalesCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesCategory.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesCategory.ForeColor = System.Drawing.Color.White;
+            this.btnSalesCategory.Location = new System.Drawing.Point(5, 5);
+            this.btnSalesCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalesCategory.Name = "btnSalesCategory";
+            this.btnSalesCategory.Size = new System.Drawing.Size(274, 37);
+            this.btnSalesCategory.TabIndex = 1;
+            this.btnSalesCategory.Text = "PARTS";
+            this.btnSalesCategory.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnSalesCategory1
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(287, 5);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(274, 37);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "PARTS";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSalesCategory1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnSalesCategory1.FlatAppearance.BorderSize = 0;
+            this.btnSalesCategory1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesCategory1.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesCategory1.ForeColor = System.Drawing.Color.White;
+            this.btnSalesCategory1.Location = new System.Drawing.Point(287, 5);
+            this.btnSalesCategory1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalesCategory1.Name = "btnSalesCategory1";
+            this.btnSalesCategory1.Size = new System.Drawing.Size(274, 37);
+            this.btnSalesCategory1.TabIndex = 2;
+            this.btnSalesCategory1.Text = "PARTS";
+            this.btnSalesCategory1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(48)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
             this.label1.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(9, 9);
@@ -377,7 +388,7 @@
             // SalesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(8)))), ((int)(((byte)(10)))));
             this.ClientSize = new System.Drawing.Size(964, 682);
             this.Controls.Add(this.pnlBackPanel);
             this.Name = "SalesForm";
@@ -387,6 +398,7 @@
             this.pnlBackPanel.ResumeLayout(false);
             this.pnlModuleName.ResumeLayout(false);
             this.pnlModuleName.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxSalesUser)).EndInit();
             this.pnlitemsales.ResumeLayout(false);
             this.pnlsalescart.ResumeLayout(false);
             this.pnlsalescart.PerformLayout();
@@ -408,22 +420,23 @@
         private System.Windows.Forms.Panel pnlsalescart;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnSalesClearCart;
+        private System.Windows.Forms.Button btnSalesOnlinePayment;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSalesCashPayment;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel pnlitemdata;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnsalessearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSalesSearchItem;
+        private System.Windows.Forms.TextBox txtSalesSearchItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSalesCategory;
+        private System.Windows.Forms.Button btnSalesCategory1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSalesProceedPayment;
+        private System.Windows.Forms.PictureBox pictureboxSalesUser;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

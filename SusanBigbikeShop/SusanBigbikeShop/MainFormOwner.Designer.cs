@@ -28,40 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnDashboardOwner = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnLogOutOwner = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnReportsOwner = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBookingOwner = new System.Windows.Forms.Button();
+            this.btnInventoryManagementOwner = new System.Windows.Forms.Button();
+            this.btnRepairsAndMaintenanceOwner = new System.Windows.Forms.Button();
+            this.btnProductManagementOwner = new System.Windows.Forms.Button();
+            this.btnSalesOwner = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button5
+            // btnDashboardOwner
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(7, 31);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(208, 40);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Dashboard";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnDashboardOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnDashboardOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDashboardOwner.FlatAppearance.BorderSize = 0;
+            this.btnDashboardOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboardOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboardOwner.ForeColor = System.Drawing.Color.White;
+            this.btnDashboardOwner.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboardOwner.Location = new System.Drawing.Point(7, 31);
+            this.btnDashboardOwner.Name = "btnDashboardOwner";
+            this.btnDashboardOwner.Size = new System.Drawing.Size(208, 40);
+            this.btnDashboardOwner.TabIndex = 5;
+            this.btnDashboardOwner.Text = "Dashboard";
+            this.btnDashboardOwner.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -75,43 +77,44 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Overview";
             // 
-            // button7
+            // btnLogOutOwner
             // 
-            this.button7.BackColor = System.Drawing.Color.Maroon;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(7, 10);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(208, 40);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "Log Out";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnLogOutOwner.BackColor = System.Drawing.Color.Maroon;
+            this.btnLogOutOwner.FlatAppearance.BorderSize = 0;
+            this.btnLogOutOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOutOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutOwner.ForeColor = System.Drawing.Color.White;
+            this.btnLogOutOwner.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOutOwner.Location = new System.Drawing.Point(7, 10);
+            this.btnLogOutOwner.Name = "btnLogOutOwner";
+            this.btnLogOutOwner.Size = new System.Drawing.Size(208, 40);
+            this.btnLogOutOwner.TabIndex = 15;
+            this.btnLogOutOwner.Text = "Log Out";
+            this.btnLogOutOwner.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.button8);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel1.Controls.Add(this.btnReportsOwner);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(5, 383);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(222, 87);
             this.panel1.TabIndex = 16;
             // 
-            // button8
+            // btnReportsOwner
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(7, 33);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(208, 40);
-            this.button8.TabIndex = 16;
-            this.button8.Text = "Reports";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnReportsOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnReportsOwner.FlatAppearance.BorderSize = 0;
+            this.btnReportsOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportsOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportsOwner.ForeColor = System.Drawing.Color.White;
+            this.btnReportsOwner.Location = new System.Drawing.Point(7, 33);
+            this.btnReportsOwner.Name = "btnReportsOwner";
+            this.btnReportsOwner.Size = new System.Drawing.Size(208, 40);
+            this.btnReportsOwner.TabIndex = 16;
+            this.btnReportsOwner.Text = "Reports";
+            this.btnReportsOwner.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -127,12 +130,12 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel2.Controls.Add(this.btnBookingOwner);
+            this.panel2.Controls.Add(this.btnInventoryManagementOwner);
+            this.panel2.Controls.Add(this.btnRepairsAndMaintenanceOwner);
+            this.panel2.Controls.Add(this.btnProductManagementOwner);
+            this.panel2.Controls.Add(this.btnSalesOwner);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(5, 104);
             this.panel2.Name = "panel2";
@@ -140,61 +143,75 @@
             this.panel2.Size = new System.Drawing.Size(222, 270);
             this.panel2.TabIndex = 17;
             // 
-            // button4
+            // btnBookingOwner
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(7, 125);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(208, 40);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Inventory Management";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnBookingOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnBookingOwner.FlatAppearance.BorderSize = 0;
+            this.btnBookingOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookingOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookingOwner.ForeColor = System.Drawing.Color.White;
+            this.btnBookingOwner.Location = new System.Drawing.Point(7, 219);
+            this.btnBookingOwner.Name = "btnBookingOwner";
+            this.btnBookingOwner.Size = new System.Drawing.Size(208, 40);
+            this.btnBookingOwner.TabIndex = 19;
+            this.btnBookingOwner.Text = "Booking";
+            this.btnBookingOwner.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnInventoryManagementOwner
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(7, 77);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(208, 40);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Repairs and Maintenance";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnInventoryManagementOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnInventoryManagementOwner.FlatAppearance.BorderSize = 0;
+            this.btnInventoryManagementOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventoryManagementOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventoryManagementOwner.ForeColor = System.Drawing.Color.White;
+            this.btnInventoryManagementOwner.Location = new System.Drawing.Point(7, 125);
+            this.btnInventoryManagementOwner.Name = "btnInventoryManagementOwner";
+            this.btnInventoryManagementOwner.Size = new System.Drawing.Size(208, 40);
+            this.btnInventoryManagementOwner.TabIndex = 18;
+            this.btnInventoryManagementOwner.Text = "Inventory Management";
+            this.btnInventoryManagementOwner.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnRepairsAndMaintenanceOwner
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(7, 173);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 40);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Product Management";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnRepairsAndMaintenanceOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnRepairsAndMaintenanceOwner.FlatAppearance.BorderSize = 0;
+            this.btnRepairsAndMaintenanceOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRepairsAndMaintenanceOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRepairsAndMaintenanceOwner.ForeColor = System.Drawing.Color.White;
+            this.btnRepairsAndMaintenanceOwner.Location = new System.Drawing.Point(7, 77);
+            this.btnRepairsAndMaintenanceOwner.Name = "btnRepairsAndMaintenanceOwner";
+            this.btnRepairsAndMaintenanceOwner.Size = new System.Drawing.Size(208, 40);
+            this.btnRepairsAndMaintenanceOwner.TabIndex = 16;
+            this.btnRepairsAndMaintenanceOwner.Text = "Repairs and Maintenance";
+            this.btnRepairsAndMaintenanceOwner.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnProductManagementOwner
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(7, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 40);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Sales";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnProductManagementOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnProductManagementOwner.FlatAppearance.BorderSize = 0;
+            this.btnProductManagementOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductManagementOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductManagementOwner.ForeColor = System.Drawing.Color.White;
+            this.btnProductManagementOwner.Location = new System.Drawing.Point(7, 173);
+            this.btnProductManagementOwner.Name = "btnProductManagementOwner";
+            this.btnProductManagementOwner.Size = new System.Drawing.Size(208, 40);
+            this.btnProductManagementOwner.TabIndex = 17;
+            this.btnProductManagementOwner.Text = "Product Management";
+            this.btnProductManagementOwner.UseVisualStyleBackColor = false;
+            // 
+            // btnSalesOwner
+            // 
+            this.btnSalesOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnSalesOwner.FlatAppearance.BorderSize = 0;
+            this.btnSalesOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesOwner.ForeColor = System.Drawing.Color.White;
+            this.btnSalesOwner.Location = new System.Drawing.Point(7, 29);
+            this.btnSalesOwner.Name = "btnSalesOwner";
+            this.btnSalesOwner.Size = new System.Drawing.Size(208, 40);
+            this.btnSalesOwner.TabIndex = 15;
+            this.btnSalesOwner.Text = "Sales";
+            this.btnSalesOwner.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -211,8 +228,8 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.panel3.Controls.Add(this.button5);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel3.Controls.Add(this.btnDashboardOwner);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(5, 8);
             this.panel3.Name = "panel3";
@@ -221,31 +238,17 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.panel4.Controls.Add(this.button7);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel4.Controls.Add(this.btnLogOutOwner);
             this.panel4.Location = new System.Drawing.Point(5, 510);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(222, 60);
             this.panel4.TabIndex = 19;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(7, 219);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(208, 40);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Product Management";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // MainFormOwner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(8)))), ((int)(((byte)(10)))));
             this.ClientSize = new System.Drawing.Size(232, 575);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -267,20 +270,20 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnDashboardOwner;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnLogOutOwner;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnReportsOwner;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInventoryManagementOwner;
+        private System.Windows.Forms.Button btnRepairsAndMaintenanceOwner;
+        private System.Windows.Forms.Button btnProductManagementOwner;
+        private System.Windows.Forms.Button btnSalesOwner;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnBookingOwner;
     }
 }

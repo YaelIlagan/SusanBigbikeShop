@@ -52,6 +52,12 @@
     <Compile Include="BookingForm.Designer.cs">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DasboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DasboardForm.Designer.cs">
+      <DependentUpon>DasboardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     <Compile Include="RepairsAndMaintenanceFormcs.Designer.cs">
       <DependentUpon>RepairsAndMaintenanceFormcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RestockItemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DasboardForm.resx">
+      <DependentUpon>DasboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -149,6 +164,9 @@
     </Compile>
     <EmbeddedResource Include="RepairsAndMaintenanceFormcs.resx">
       <DependentUpon>RepairsAndMaintenanceFormcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RestockItemForm.resx">
       <DependentUpon>RestockItemForm.cs</DependentUpon>

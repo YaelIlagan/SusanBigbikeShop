@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnBookingCustomer = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnLogOutCustomer = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button5
+            // btnBookingCustomer
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(7, 31);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(208, 40);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Booking";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnBookingCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnBookingCustomer.FlatAppearance.BorderSize = 0;
+            this.btnBookingCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookingCustomer.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookingCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnBookingCustomer.Location = new System.Drawing.Point(7, 31);
+            this.btnBookingCustomer.Name = "btnBookingCustomer";
+            this.btnBookingCustomer.Size = new System.Drawing.Size(208, 40);
+            this.btnBookingCustomer.TabIndex = 5;
+            this.btnBookingCustomer.Text = "Booking";
+            this.btnBookingCustomer.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -63,24 +63,24 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Operations";
             // 
-            // button7
+            // btnLogOutCustomer
             // 
-            this.button7.BackColor = System.Drawing.Color.Maroon;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(7, 10);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(208, 40);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "Log Out";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnLogOutCustomer.BackColor = System.Drawing.Color.Maroon;
+            this.btnLogOutCustomer.FlatAppearance.BorderSize = 0;
+            this.btnLogOutCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOutCustomer.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnLogOutCustomer.Location = new System.Drawing.Point(7, 10);
+            this.btnLogOutCustomer.Name = "btnLogOutCustomer";
+            this.btnLogOutCustomer.Size = new System.Drawing.Size(208, 40);
+            this.btnLogOutCustomer.TabIndex = 15;
+            this.btnLogOutCustomer.Text = "Log Out";
+            this.btnLogOutCustomer.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.panel4.Controls.Add(this.button7);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel4.Controls.Add(this.btnLogOutCustomer);
             this.panel4.Location = new System.Drawing.Point(5, 508);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(222, 60);
@@ -88,8 +88,8 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.panel3.Controls.Add(this.button5);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel3.Controls.Add(this.btnBookingCustomer);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(5, 8);
             this.panel3.Name = "panel3";
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(8)))), ((int)(((byte)(10)))));
             this.ClientSize = new System.Drawing.Size(232, 575);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -115,9 +115,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnBookingCustomer;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnLogOutCustomer;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
     }

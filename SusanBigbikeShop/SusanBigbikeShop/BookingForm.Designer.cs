@@ -39,8 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cboxBookingAMPM = new System.Windows.Forms.ComboBox();
+            this.cboxBookingMinutes = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -48,27 +48,27 @@
             this.button12 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboxBookingHour = new System.Windows.Forms.ComboBox();
+            this.datetimepickerBookingbookingdate = new System.Windows.Forms.DateTimePicker();
+            this.cboxBookingMechanic = new System.Windows.Forms.ComboBox();
+            this.cboxBookingServicetype = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtBookingNotes = new System.Windows.Forms.TextBox();
+            this.txtBookingbookingID = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtBookingEmail = new System.Windows.Forms.TextBox();
+            this.txtBookingPlateNumber = new System.Windows.Forms.TextBox();
+            this.txtBookingCustomerID = new System.Windows.Forms.TextBox();
+            this.txtBookingMotorcycle = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtBookingPhoneNumber = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtBookingName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@
             // 
             // pnlbooking
             // 
-            this.pnlbooking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
+            this.pnlbooking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.pnlbooking.Controls.Add(this.panel4);
             this.pnlbooking.Controls.Add(this.panel5);
             this.pnlbooking.Location = new System.Drawing.Point(12, 12);
@@ -95,7 +95,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.panel4.Controls.Add(this.label12);
             this.panel4.Location = new System.Drawing.Point(8, 9);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
@@ -117,7 +117,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.panel2);
             this.panel5.ForeColor = System.Drawing.Color.Black;
@@ -130,7 +130,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(241)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(234)))));
             this.panel6.Controls.Add(this.button2);
             this.panel6.Controls.Add(this.comboBox6);
             this.panel6.Controls.Add(this.textBox1);
@@ -145,7 +145,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,9 +181,9 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(48)))));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Impact", 16F);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(9, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -195,7 +195,7 @@
             // 
             // dataGridView3
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(9, 51);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
@@ -206,33 +206,33 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(241)))));
-            this.panel2.Controls.Add(this.comboBox5);
-            this.panel2.Controls.Add(this.comboBox4);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(234)))));
+            this.panel2.Controls.Add(this.cboxBookingAMPM);
+            this.panel2.Controls.Add(this.cboxBookingMinutes);
             this.panel2.Controls.Add(this.flowLayoutPanel2);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cboxBookingHour);
+            this.panel2.Controls.Add(this.datetimepickerBookingbookingdate);
+            this.panel2.Controls.Add(this.cboxBookingMechanic);
+            this.panel2.Controls.Add(this.cboxBookingServicetype);
             this.panel2.Controls.Add(this.label22);
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.textBox10);
+            this.panel2.Controls.Add(this.txtBookingNotes);
+            this.panel2.Controls.Add(this.txtBookingbookingID);
             this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.txtBookingEmail);
+            this.panel2.Controls.Add(this.txtBookingPlateNumber);
+            this.panel2.Controls.Add(this.txtBookingCustomerID);
+            this.panel2.Controls.Add(this.txtBookingMotorcycle);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txtBookingPhoneNumber);
             this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtBookingName);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label19);
@@ -243,26 +243,26 @@
             this.panel2.Size = new System.Drawing.Size(905, 384);
             this.panel2.TabIndex = 17;
             // 
-            // comboBox5
+            // cboxBookingAMPM
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(819, 165);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(77, 33);
-            this.comboBox5.TabIndex = 52;
+            this.cboxBookingAMPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxBookingAMPM.FormattingEnabled = true;
+            this.cboxBookingAMPM.Location = new System.Drawing.Point(819, 165);
+            this.cboxBookingAMPM.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxBookingAMPM.Name = "cboxBookingAMPM";
+            this.cboxBookingAMPM.Size = new System.Drawing.Size(77, 33);
+            this.cboxBookingAMPM.TabIndex = 52;
             // 
-            // comboBox4
+            // cboxBookingMinutes
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(703, 165);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(109, 33);
-            this.comboBox4.TabIndex = 51;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.cboxBookingMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxBookingMinutes.FormattingEnabled = true;
+            this.cboxBookingMinutes.Location = new System.Drawing.Point(703, 165);
+            this.cboxBookingMinutes.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxBookingMinutes.Name = "cboxBookingMinutes";
+            this.cboxBookingMinutes.Size = new System.Drawing.Size(109, 33);
+            this.cboxBookingMinutes.TabIndex = 51;
+            this.cboxBookingMinutes.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // flowLayoutPanel2
             // 
@@ -339,7 +339,7 @@
             // 
             // label26
             // 
-            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(48)))));
+            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
             this.label26.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label26.Location = new System.Drawing.Point(418, 5);
@@ -352,7 +352,7 @@
             // 
             // label13
             // 
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(48)))));
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
             this.label13.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label13.Location = new System.Drawing.Point(9, 5);
@@ -363,78 +363,79 @@
             this.label13.Text = "ITEMS";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox3
+            // cboxBookingHour
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(577, 164);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(118, 33);
-            this.comboBox3.TabIndex = 45;
+            this.cboxBookingHour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxBookingHour.FormattingEnabled = true;
+            this.cboxBookingHour.Location = new System.Drawing.Point(577, 164);
+            this.cboxBookingHour.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxBookingHour.Name = "cboxBookingHour";
+            this.cboxBookingHour.Size = new System.Drawing.Size(118, 33);
+            this.cboxBookingHour.TabIndex = 45;
             // 
-            // dateTimePicker1
+            // datetimepickerBookingbookingdate
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(577, 121);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.MinDate = new System.DateTime(2026, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(320, 32);
-            this.dateTimePicker1.TabIndex = 44;
+            this.datetimepickerBookingbookingdate.CalendarFont = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetimepickerBookingbookingdate.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetimepickerBookingbookingdate.Location = new System.Drawing.Point(577, 121);
+            this.datetimepickerBookingbookingdate.Margin = new System.Windows.Forms.Padding(4);
+            this.datetimepickerBookingbookingdate.MinDate = new System.DateTime(2026, 1, 1, 0, 0, 0, 0);
+            this.datetimepickerBookingbookingdate.Name = "datetimepickerBookingbookingdate";
+            this.datetimepickerBookingbookingdate.Size = new System.Drawing.Size(320, 32);
+            this.datetimepickerBookingbookingdate.TabIndex = 44;
             // 
-            // comboBox2
+            // cboxBookingMechanic
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(577, 201);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(320, 33);
-            this.comboBox2.TabIndex = 43;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cboxBookingMechanic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxBookingMechanic.FormattingEnabled = true;
+            this.cboxBookingMechanic.Location = new System.Drawing.Point(577, 203);
+            this.cboxBookingMechanic.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxBookingMechanic.Name = "cboxBookingMechanic";
+            this.cboxBookingMechanic.Size = new System.Drawing.Size(320, 33);
+            this.cboxBookingMechanic.TabIndex = 43;
+            this.cboxBookingMechanic.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // comboBox1
+            // cboxBookingServicetype
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(577, 78);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(320, 33);
-            this.comboBox1.TabIndex = 36;
+            this.cboxBookingServicetype.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxBookingServicetype.FormattingEnabled = true;
+            this.cboxBookingServicetype.Location = new System.Drawing.Point(577, 78);
+            this.cboxBookingServicetype.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxBookingServicetype.Name = "cboxBookingServicetype";
+            this.cboxBookingServicetype.Size = new System.Drawing.Size(320, 33);
+            this.cboxBookingServicetype.TabIndex = 36;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(418, 124);
+            this.label22.Location = new System.Drawing.Point(418, 126);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(140, 29);
             this.label22.TabIndex = 38;
             this.label22.Text = "Booking Date";
             // 
-            // textBox9
+            // txtBookingNotes
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(423, 282);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(473, 93);
-            this.textBox9.TabIndex = 42;
+            this.txtBookingNotes.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtBookingNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookingNotes.Location = new System.Drawing.Point(423, 282);
+            this.txtBookingNotes.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookingNotes.Multiline = true;
+            this.txtBookingNotes.Name = "txtBookingNotes";
+            this.txtBookingNotes.Size = new System.Drawing.Size(473, 93);
+            this.txtBookingNotes.TabIndex = 42;
             // 
-            // textBox10
+            // txtBookingbookingID
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(577, 39);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(320, 30);
-            this.textBox10.TabIndex = 34;
+            this.txtBookingbookingID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookingbookingID.Location = new System.Drawing.Point(577, 44);
+            this.txtBookingbookingID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookingbookingID.Name = "txtBookingbookingID";
+            this.txtBookingbookingID.Size = new System.Drawing.Size(320, 30);
+            this.txtBookingbookingID.TabIndex = 34;
             // 
             // label23
             // 
@@ -496,41 +497,41 @@
             this.label20.TabIndex = 35;
             this.label20.Text = "Booking ID";
             // 
-            // textBox4
+            // txtBookingEmail
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(152, 164);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(250, 30);
-            this.textBox4.TabIndex = 14;
+            this.txtBookingEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookingEmail.Location = new System.Drawing.Point(152, 164);
+            this.txtBookingEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookingEmail.Name = "txtBookingEmail";
+            this.txtBookingEmail.Size = new System.Drawing.Size(250, 30);
+            this.txtBookingEmail.TabIndex = 14;
             // 
-            // textBox6
+            // txtBookingPlateNumber
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(152, 243);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(250, 30);
-            this.textBox6.TabIndex = 16;
+            this.txtBookingPlateNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookingPlateNumber.Location = new System.Drawing.Point(152, 243);
+            this.txtBookingPlateNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookingPlateNumber.Name = "txtBookingPlateNumber";
+            this.txtBookingPlateNumber.Size = new System.Drawing.Size(250, 30);
+            this.txtBookingPlateNumber.TabIndex = 16;
             // 
-            // textBox2
+            // txtBookingCustomerID
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(152, 42);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 30);
-            this.textBox2.TabIndex = 1;
+            this.txtBookingCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookingCustomerID.Location = new System.Drawing.Point(152, 42);
+            this.txtBookingCustomerID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookingCustomerID.Name = "txtBookingCustomerID";
+            this.txtBookingCustomerID.Size = new System.Drawing.Size(250, 30);
+            this.txtBookingCustomerID.TabIndex = 1;
             // 
-            // textBox7
+            // txtBookingMotorcycle
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(152, 203);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(250, 30);
-            this.textBox7.TabIndex = 15;
+            this.txtBookingMotorcycle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookingMotorcycle.Location = new System.Drawing.Point(152, 203);
+            this.txtBookingMotorcycle.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookingMotorcycle.Name = "txtBookingMotorcycle";
+            this.txtBookingMotorcycle.Size = new System.Drawing.Size(250, 30);
+            this.txtBookingMotorcycle.TabIndex = 15;
             // 
             // label14
             // 
@@ -557,14 +558,15 @@
             this.label15.TabIndex = 7;
             this.label15.Text = "Name";
             // 
-            // textBox5
+            // txtBookingPhoneNumber
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(152, 125);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(250, 30);
-            this.textBox5.TabIndex = 13;
+            this.txtBookingPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookingPhoneNumber.Location = new System.Drawing.Point(152, 125);
+            this.txtBookingPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookingPhoneNumber.Name = "txtBookingPhoneNumber";
+            this.txtBookingPhoneNumber.Size = new System.Drawing.Size(250, 30);
+            this.txtBookingPhoneNumber.TabIndex = 13;
+            this.txtBookingPhoneNumber.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label17
             // 
@@ -578,14 +580,14 @@
             this.label17.TabIndex = 8;
             this.label17.Text = "Phone";
             // 
-            // textBox3
+            // txtBookingName
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(152, 81);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 30);
-            this.textBox3.TabIndex = 12;
+            this.txtBookingName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookingName.Location = new System.Drawing.Point(152, 81);
+            this.txtBookingName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookingName.Name = "txtBookingName";
+            this.txtBookingName.Size = new System.Drawing.Size(250, 30);
+            this.txtBookingName.TabIndex = 12;
             // 
             // label16
             // 
@@ -626,7 +628,7 @@
             // BookingForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(8)))), ((int)(((byte)(10)))));
             this.ClientSize = new System.Drawing.Size(964, 682);
             this.Controls.Add(this.pnlbooking);
             this.Name = "BookingForm";
@@ -654,35 +656,35 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cboxBookingAMPM;
+        private System.Windows.Forms.ComboBox cboxBookingMinutes;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboxBookingHour;
+        private System.Windows.Forms.DateTimePicker datetimepickerBookingbookingdate;
+        private System.Windows.Forms.ComboBox cboxBookingMechanic;
+        private System.Windows.Forms.ComboBox cboxBookingServicetype;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtBookingNotes;
+        private System.Windows.Forms.TextBox txtBookingbookingID;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtBookingEmail;
+        private System.Windows.Forms.TextBox txtBookingPlateNumber;
+        private System.Windows.Forms.TextBox txtBookingCustomerID;
+        private System.Windows.Forms.TextBox txtBookingMotorcycle;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBookingPhoneNumber;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBookingName;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;

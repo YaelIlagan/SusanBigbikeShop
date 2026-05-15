@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnDashboardStaff = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnLogOutStaff = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBookingStaff = new System.Windows.Forms.Button();
+            this.btnInventoryManagementStaff = new System.Windows.Forms.Button();
+            this.btnRepairsAndManagementStaff = new System.Windows.Forms.Button();
+            this.btnProductManagementStaff = new System.Windows.Forms.Button();
+            this.btnSalesStaff = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button5
+            // btnDashboardStaff
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(7, 31);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(208, 40);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Dashboard";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnDashboardStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnDashboardStaff.FlatAppearance.BorderSize = 0;
+            this.btnDashboardStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboardStaff.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboardStaff.ForeColor = System.Drawing.Color.White;
+            this.btnDashboardStaff.Location = new System.Drawing.Point(7, 31);
+            this.btnDashboardStaff.Name = "btnDashboardStaff";
+            this.btnDashboardStaff.Size = new System.Drawing.Size(208, 40);
+            this.btnDashboardStaff.TabIndex = 5;
+            this.btnDashboardStaff.Text = "Dashboard";
+            this.btnDashboardStaff.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -71,28 +71,28 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Overview";
             // 
-            // button7
+            // btnLogOutStaff
             // 
-            this.button7.BackColor = System.Drawing.Color.Maroon;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(7, 10);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(208, 40);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "Log Out";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnLogOutStaff.BackColor = System.Drawing.Color.Maroon;
+            this.btnLogOutStaff.FlatAppearance.BorderSize = 0;
+            this.btnLogOutStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOutStaff.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutStaff.ForeColor = System.Drawing.Color.White;
+            this.btnLogOutStaff.Location = new System.Drawing.Point(7, 10);
+            this.btnLogOutStaff.Name = "btnLogOutStaff";
+            this.btnLogOutStaff.Size = new System.Drawing.Size(208, 40);
+            this.btnLogOutStaff.TabIndex = 15;
+            this.btnLogOutStaff.Text = "Log Out";
+            this.btnLogOutStaff.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel2.Controls.Add(this.btnBookingStaff);
+            this.panel2.Controls.Add(this.btnInventoryManagementStaff);
+            this.panel2.Controls.Add(this.btnRepairsAndManagementStaff);
+            this.panel2.Controls.Add(this.btnProductManagementStaff);
+            this.panel2.Controls.Add(this.btnSalesStaff);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(5, 104);
             this.panel2.Name = "panel2";
@@ -100,61 +100,75 @@
             this.panel2.Size = new System.Drawing.Size(222, 270);
             this.panel2.TabIndex = 21;
             // 
-            // button4
+            // btnBookingStaff
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(7, 125);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(208, 40);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Inventory Management";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnBookingStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnBookingStaff.FlatAppearance.BorderSize = 0;
+            this.btnBookingStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookingStaff.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookingStaff.ForeColor = System.Drawing.Color.White;
+            this.btnBookingStaff.Location = new System.Drawing.Point(7, 219);
+            this.btnBookingStaff.Name = "btnBookingStaff";
+            this.btnBookingStaff.Size = new System.Drawing.Size(208, 40);
+            this.btnBookingStaff.TabIndex = 19;
+            this.btnBookingStaff.Text = "Booking";
+            this.btnBookingStaff.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnInventoryManagementStaff
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(7, 77);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(208, 40);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Repairs and Maintenance";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnInventoryManagementStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnInventoryManagementStaff.FlatAppearance.BorderSize = 0;
+            this.btnInventoryManagementStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventoryManagementStaff.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventoryManagementStaff.ForeColor = System.Drawing.Color.White;
+            this.btnInventoryManagementStaff.Location = new System.Drawing.Point(7, 125);
+            this.btnInventoryManagementStaff.Name = "btnInventoryManagementStaff";
+            this.btnInventoryManagementStaff.Size = new System.Drawing.Size(208, 40);
+            this.btnInventoryManagementStaff.TabIndex = 18;
+            this.btnInventoryManagementStaff.Text = "Inventory Management";
+            this.btnInventoryManagementStaff.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnRepairsAndManagementStaff
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(7, 173);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 40);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Product Management";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnRepairsAndManagementStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnRepairsAndManagementStaff.FlatAppearance.BorderSize = 0;
+            this.btnRepairsAndManagementStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRepairsAndManagementStaff.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRepairsAndManagementStaff.ForeColor = System.Drawing.Color.White;
+            this.btnRepairsAndManagementStaff.Location = new System.Drawing.Point(7, 77);
+            this.btnRepairsAndManagementStaff.Name = "btnRepairsAndManagementStaff";
+            this.btnRepairsAndManagementStaff.Size = new System.Drawing.Size(208, 40);
+            this.btnRepairsAndManagementStaff.TabIndex = 16;
+            this.btnRepairsAndManagementStaff.Text = "Repairs and Maintenance";
+            this.btnRepairsAndManagementStaff.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnProductManagementStaff
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(7, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 40);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Sales";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnProductManagementStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnProductManagementStaff.FlatAppearance.BorderSize = 0;
+            this.btnProductManagementStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductManagementStaff.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductManagementStaff.ForeColor = System.Drawing.Color.White;
+            this.btnProductManagementStaff.Location = new System.Drawing.Point(7, 173);
+            this.btnProductManagementStaff.Name = "btnProductManagementStaff";
+            this.btnProductManagementStaff.Size = new System.Drawing.Size(208, 40);
+            this.btnProductManagementStaff.TabIndex = 17;
+            this.btnProductManagementStaff.Text = "Product Management";
+            this.btnProductManagementStaff.UseVisualStyleBackColor = false;
+            // 
+            // btnSalesStaff
+            // 
+            this.btnSalesStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnSalesStaff.FlatAppearance.BorderSize = 0;
+            this.btnSalesStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalesStaff.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesStaff.ForeColor = System.Drawing.Color.White;
+            this.btnSalesStaff.Location = new System.Drawing.Point(7, 29);
+            this.btnSalesStaff.Name = "btnSalesStaff";
+            this.btnSalesStaff.Size = new System.Drawing.Size(208, 40);
+            this.btnSalesStaff.TabIndex = 15;
+            this.btnSalesStaff.Text = "Sales";
+            this.btnSalesStaff.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -170,8 +184,8 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.panel4.Controls.Add(this.button7);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel4.Controls.Add(this.btnLogOutStaff);
             this.panel4.Location = new System.Drawing.Point(5, 508);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(222, 60);
@@ -179,33 +193,19 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(64)))));
-            this.panel3.Controls.Add(this.button5);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel3.Controls.Add(this.btnDashboardStaff);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(5, 8);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(222, 87);
             this.panel3.TabIndex = 22;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(7, 219);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(208, 40);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Booking";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // MainStaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(8)))), ((int)(((byte)(10)))));
             this.ClientSize = new System.Drawing.Size(232, 575);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
@@ -224,17 +224,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnDashboardStaff;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnLogOutStaff;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInventoryManagementStaff;
+        private System.Windows.Forms.Button btnRepairsAndManagementStaff;
+        private System.Windows.Forms.Button btnProductManagementStaff;
+        private System.Windows.Forms.Button btnSalesStaff;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnBookingStaff;
     }
 }

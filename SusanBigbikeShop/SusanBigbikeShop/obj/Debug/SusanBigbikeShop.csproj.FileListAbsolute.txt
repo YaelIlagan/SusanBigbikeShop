@@ -28,3 +28,4 @@ C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\o
 C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.MainStaffForm.resources
 C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.NewJobOrderForm.resources
 C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.RestockItemForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.ReportsForm.resources
