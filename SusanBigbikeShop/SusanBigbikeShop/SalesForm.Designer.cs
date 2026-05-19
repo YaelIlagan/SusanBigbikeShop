@@ -105,7 +105,7 @@
             this.label3.Location = new System.Drawing.Point(8, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 45);
+            this.label3.Size = new System.Drawing.Size(87, 36);
             this.label3.TabIndex = 4;
             this.label3.Text = "SALES";
             // 
@@ -140,7 +140,6 @@
             this.pnlsalescart.Padding = new System.Windows.Forms.Padding(5);
             this.pnlsalescart.Size = new System.Drawing.Size(311, 564);
             this.pnlsalescart.TabIndex = 1;
-            this.pnlsalescart.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlsalescart_Paint);
             // 
             // btnSalesProceedPayment
             // 
@@ -156,6 +155,7 @@
             this.btnSalesProceedPayment.TabIndex = 18;
             this.btnSalesProceedPayment.Text = "PROCEED PAYMENT";
             this.btnSalesProceedPayment.UseVisualStyleBackColor = false;
+            this.btnSalesProceedPayment.Click += new System.EventHandler(this.btnSalesProceedPayment_Click);
             // 
             // label6
             // 
@@ -164,7 +164,7 @@
             this.label6.Location = new System.Drawing.Point(213, 400);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 28);
+            this.label6.Size = new System.Drawing.Size(74, 23);
             this.label6.TabIndex = 17;
             this.label6.Text = "1,000.00";
             // 
@@ -192,6 +192,7 @@
             this.btnSalesClearCart.TabIndex = 15;
             this.btnSalesClearCart.Text = "CLEAR";
             this.btnSalesClearCart.UseVisualStyleBackColor = false;
+            this.btnSalesClearCart.Click += new System.EventHandler(this.btnSalesClearCart_Click);
             // 
             // btnSalesOnlinePayment
             // 
@@ -207,6 +208,7 @@
             this.btnSalesOnlinePayment.TabIndex = 13;
             this.btnSalesOnlinePayment.Text = "ONLINE";
             this.btnSalesOnlinePayment.UseVisualStyleBackColor = false;
+            this.btnSalesOnlinePayment.Click += new System.EventHandler(this.btnSalesOnlinePayment_Click);
             // 
             // label5
             // 
@@ -215,7 +217,7 @@
             this.label5.Location = new System.Drawing.Point(6, 445);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 21);
+            this.label5.Size = new System.Drawing.Size(100, 18);
             this.label5.TabIndex = 12;
             this.label5.Text = "Payment Method";
             // 
@@ -233,6 +235,7 @@
             this.btnSalesCashPayment.TabIndex = 10;
             this.btnSalesCashPayment.Text = "CASH";
             this.btnSalesCashPayment.UseVisualStyleBackColor = false;
+            this.btnSalesCashPayment.Click += new System.EventHandler(this.btnSalesCashPayment_Click);
             // 
             // label4
             // 
@@ -241,10 +244,9 @@
             this.label4.Location = new System.Drawing.Point(9, 402);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 25);
+            this.label4.Size = new System.Drawing.Size(41, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Total";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
             // 
@@ -309,6 +311,7 @@
             this.btnSalesSearchItem.TabIndex = 4;
             this.btnSalesSearchItem.Text = "SEARCH";
             this.btnSalesSearchItem.UseVisualStyleBackColor = false;
+            this.btnSalesSearchItem.Click += new System.EventHandler(this.btnSalesSearchItem_Click);
             // 
             // txtSalesSearchItem
             // 
@@ -317,7 +320,7 @@
             this.txtSalesSearchItem.Location = new System.Drawing.Point(10, 54);
             this.txtSalesSearchItem.Margin = new System.Windows.Forms.Padding(4);
             this.txtSalesSearchItem.Name = "txtSalesSearchItem";
-            this.txtSalesSearchItem.Size = new System.Drawing.Size(445, 36);
+            this.txtSalesSearchItem.Size = new System.Drawing.Size(445, 30);
             this.txtSalesSearchItem.TabIndex = 3;
             // 
             // dataGridView1
@@ -356,6 +359,7 @@
             this.btnSalesCategory.TabIndex = 1;
             this.btnSalesCategory.Text = "PARTS";
             this.btnSalesCategory.UseVisualStyleBackColor = false;
+            this.btnSalesCategory.Click += new System.EventHandler(this.btnSalesCategory_Click);
             // 
             // btnSalesCategory1
             // 
@@ -371,6 +375,7 @@
             this.btnSalesCategory1.TabIndex = 2;
             this.btnSalesCategory1.Text = "PARTS";
             this.btnSalesCategory1.UseVisualStyleBackColor = false;
+            this.btnSalesCategory1.Click += new System.EventHandler(this.btnSalesCategory1_Click);
             // 
             // label1
             // 
@@ -392,9 +397,7 @@
             this.ClientSize = new System.Drawing.Size(964, 682);
             this.Controls.Add(this.pnlBackPanel);
             this.Name = "SalesForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "SalesForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.pnlBackPanel.ResumeLayout(false);
             this.pnlModuleName.ResumeLayout(false);
             this.pnlModuleName.PerformLayout();

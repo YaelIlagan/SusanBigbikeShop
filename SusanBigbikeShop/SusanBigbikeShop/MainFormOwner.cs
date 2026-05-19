@@ -12,24 +12,26 @@ namespace SusanBigbikeShop
 {
     public partial class MainFormOwner : Form
     {
-        public MainFormOwner()
+        private MainForm _main;
+        public MainFormOwner(MainForm main)
         {
             InitializeComponent();
+            _main = main;
         }
 
-        private void MainFormOwner_Load(object sender, EventArgs e)
+        private void btnDashboardOwner_Click(object sender, EventArgs e)
         {
-
+            _main.LoadContent(new DasboardForm());
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnSalesOwner_Click(object sender, EventArgs e)
         {
-
+            _main.LoadContent(new SalesForm());
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnRepairsAndMaintenanceOwner_Click(object sender, EventArgs e)
         {
-
+            _main.LoadContent(new RepairsAndMaintenanceFormcs());
         }
     }
 }

@@ -15,6 +15,42 @@ namespace SusanBigbikeShop
         public MainForm()
         {
             InitializeComponent();
+            LoadNavPanel("Owner");
+        }
+
+        public void LoadNavPanel(string role)
+        {
+            PnlNavBar.Controls.Clear();
+
+            Form navForm = null;
+
+            if (role == "Owner")
+            {
+                navForm = new MainFormOwner(this);
+            }
+
+            if (navForm != null)
+            {
+                navForm.FormBorderStyle = FormBorderStyle.None;
+                navForm.TopLevel = false;
+                navForm.Dock = DockStyle.Fill;
+                PnlNavBar.Controls.Add(navForm);
+                navForm.Show();
+            }
+        }
+
+        public void LoadContent(Form contentForm)
+        {
+            PnlRightPanel.Controls.Clear();
+
+            contentForm.TopLevel = false;
+            contentForm.FormBorderStyle = FormBorderStyle.None;
+            contentForm.Dock = DockStyle.Fill;
+            contentForm.TopMost = false;
+
+            PnlRightPanel.Controls.Add(contentForm);
+
+            contentForm.Show();
         }
     }
 }

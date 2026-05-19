@@ -64,6 +64,7 @@
             this.btnDashboardOwner.TabIndex = 5;
             this.btnDashboardOwner.Text = "Dashboard";
             this.btnDashboardOwner.UseVisualStyleBackColor = false;
+            this.btnDashboardOwner.Click += new System.EventHandler(this.btnDashboardOwner_Click);
             // 
             // label3
             // 
@@ -73,7 +74,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 21);
+            this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Overview";
             // 
@@ -124,7 +125,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(9, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 21);
+            this.label4.Size = new System.Drawing.Size(56, 18);
             this.label4.TabIndex = 15;
             this.label4.Text = "Records";
             // 
@@ -184,6 +185,7 @@
             this.btnRepairsAndMaintenanceOwner.TabIndex = 16;
             this.btnRepairsAndMaintenanceOwner.Text = "Repairs and Maintenance";
             this.btnRepairsAndMaintenanceOwner.UseVisualStyleBackColor = false;
+            this.btnRepairsAndMaintenanceOwner.Click += new System.EventHandler(this.btnRepairsAndMaintenanceOwner_Click);
             // 
             // btnProductManagementOwner
             // 
@@ -212,6 +214,7 @@
             this.btnSalesOwner.TabIndex = 15;
             this.btnSalesOwner.Text = "Sales";
             this.btnSalesOwner.UseVisualStyleBackColor = false;
+            this.btnSalesOwner.Click += new System.EventHandler(this.btnSalesOwner_Click);
             // 
             // label1
             // 
@@ -221,10 +224,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 21);
+            this.label1.Size = new System.Drawing.Size(71, 18);
             this.label1.TabIndex = 14;
             this.label1.Text = "Operations";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel3
             // 
@@ -257,7 +259,6 @@
             this.Name = "MainFormOwner";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Text = "MainFormOwner";
-            this.Load += new System.EventHandler(this.MainFormOwner_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
