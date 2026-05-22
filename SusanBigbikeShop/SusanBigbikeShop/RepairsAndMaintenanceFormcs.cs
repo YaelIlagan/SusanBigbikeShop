@@ -16,5 +16,16 @@ namespace SusanBigbikeShop
         {
             InitializeComponent();
         }
+
+        private void btnRepairsNewJobOrder_Click(object sender, EventArgs e)
+        {
+            NewJobOrderForm newJobOrder = new NewJobOrderForm();
+            newJobOrder.ShowDialog();
+        }
+
+        private void txtRepairsSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

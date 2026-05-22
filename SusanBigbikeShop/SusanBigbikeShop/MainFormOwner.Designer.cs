@@ -74,7 +74,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 21);
+            this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Overview";
             // 
@@ -116,6 +116,7 @@
             this.btnReportsOwner.TabIndex = 16;
             this.btnReportsOwner.Text = "Reports";
             this.btnReportsOwner.UseVisualStyleBackColor = false;
+            this.btnReportsOwner.Click += new System.EventHandler(this.btnReportsOwner_Click);
             // 
             // label4
             // 
@@ -125,7 +126,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(9, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 21);
+            this.label4.Size = new System.Drawing.Size(56, 18);
             this.label4.TabIndex = 15;
             this.label4.Text = "Records";
             // 
@@ -157,6 +158,7 @@
             this.btnBookingOwner.TabIndex = 19;
             this.btnBookingOwner.Text = "Booking";
             this.btnBookingOwner.UseVisualStyleBackColor = false;
+            this.btnBookingOwner.Click += new System.EventHandler(this.btnBookingOwner_Click);
             // 
             // btnInventoryManagementOwner
             // 
@@ -171,6 +173,7 @@
             this.btnInventoryManagementOwner.TabIndex = 18;
             this.btnInventoryManagementOwner.Text = "Inventory Management";
             this.btnInventoryManagementOwner.UseVisualStyleBackColor = false;
+            this.btnInventoryManagementOwner.Click += new System.EventHandler(this.btnInventoryManagementOwner_Click);
             // 
             // btnRepairsAndMaintenanceOwner
             // 
@@ -200,6 +203,7 @@
             this.btnProductManagementOwner.TabIndex = 17;
             this.btnProductManagementOwner.Text = "Product Management";
             this.btnProductManagementOwner.UseVisualStyleBackColor = false;
+            this.btnProductManagementOwner.Click += new System.EventHandler(this.btnProductManagementOwner_Click);
             // 
             // btnSalesOwner
             // 
@@ -224,7 +228,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 21);
+            this.label1.Size = new System.Drawing.Size(71, 18);
             this.label1.TabIndex = 14;
             this.label1.Text = "Operations";
             // 

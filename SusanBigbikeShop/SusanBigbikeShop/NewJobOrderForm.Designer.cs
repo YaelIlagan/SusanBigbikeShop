@@ -63,7 +63,7 @@
             this.txtPlateNumber.Location = new System.Drawing.Point(9, 307);
             this.txtPlateNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlateNumber.Name = "txtPlateNumber";
-            this.txtPlateNumber.Size = new System.Drawing.Size(392, 30);
+            this.txtPlateNumber.Size = new System.Drawing.Size(392, 26);
             this.txtPlateNumber.TabIndex = 45;
             // 
             // label4
@@ -74,7 +74,7 @@
             this.label4.Location = new System.Drawing.Point(4, 274);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 29);
+            this.label4.Size = new System.Drawing.Size(116, 23);
             this.label4.TabIndex = 46;
             this.label4.Text = "Plate Number";
             // 
@@ -84,7 +84,7 @@
             this.txtMotorcycleModel.Location = new System.Drawing.Point(9, 240);
             this.txtMotorcycleModel.Margin = new System.Windows.Forms.Padding(4);
             this.txtMotorcycleModel.Name = "txtMotorcycleModel";
-            this.txtMotorcycleModel.Size = new System.Drawing.Size(392, 30);
+            this.txtMotorcycleModel.Size = new System.Drawing.Size(392, 26);
             this.txtMotorcycleModel.TabIndex = 22;
             // 
             // label3
@@ -95,7 +95,7 @@
             this.label3.Location = new System.Drawing.Point(4, 207);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 29);
+            this.label3.Size = new System.Drawing.Size(151, 23);
             this.label3.TabIndex = 23;
             this.label3.Text = "Motorcycle Model";
             // 
@@ -105,7 +105,7 @@
             this.txtCustomerName.Location = new System.Drawing.Point(9, 104);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(392, 30);
+            this.txtCustomerName.Size = new System.Drawing.Size(392, 26);
             this.txtCustomerName.TabIndex = 18;
             // 
             // label14
@@ -116,7 +116,7 @@
             this.label14.Location = new System.Drawing.Point(4, 71);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(169, 29);
+            this.label14.Size = new System.Drawing.Size(136, 23);
             this.label14.TabIndex = 19;
             this.label14.Text = "Customer Name";
             // 
@@ -183,6 +183,7 @@
             this.btnCancel.TabIndex = 63;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSaveOrderJob
             // 
@@ -198,6 +199,7 @@
             this.btnSaveOrderJob.TabIndex = 62;
             this.btnSaveOrderJob.Text = "SAVE ORDER JOB";
             this.btnSaveOrderJob.UseVisualStyleBackColor = false;
+            this.btnSaveOrderJob.Click += new System.EventHandler(this.btnSaveOrderJob_Click);
             // 
             // cboxType
             // 
@@ -206,7 +208,7 @@
             this.cboxType.Location = new System.Drawing.Point(418, 240);
             this.cboxType.Margin = new System.Windows.Forms.Padding(4);
             this.cboxType.Name = "cboxType";
-            this.cboxType.Size = new System.Drawing.Size(404, 33);
+            this.cboxType.Size = new System.Drawing.Size(404, 28);
             this.cboxType.TabIndex = 61;
             // 
             // txtLaborCost
@@ -215,7 +217,7 @@
             this.txtLaborCost.Location = new System.Drawing.Point(418, 172);
             this.txtLaborCost.Margin = new System.Windows.Forms.Padding(4);
             this.txtLaborCost.Name = "txtLaborCost";
-            this.txtLaborCost.Size = new System.Drawing.Size(404, 30);
+            this.txtLaborCost.Size = new System.Drawing.Size(404, 26);
             this.txtLaborCost.TabIndex = 60;
             // 
             // txtIssueCocernsNote
@@ -236,7 +238,7 @@
             this.label5.Location = new System.Drawing.Point(416, 274);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 29);
+            this.label5.Size = new System.Drawing.Size(134, 23);
             this.label5.TabIndex = 59;
             this.label5.Text = "Issue / Concern";
             // 
@@ -248,7 +250,7 @@
             this.label6.Location = new System.Drawing.Point(413, 207);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 29);
+            this.label6.Size = new System.Drawing.Size(48, 23);
             this.label6.TabIndex = 57;
             this.label6.Text = "Type";
             // 
@@ -260,7 +262,7 @@
             this.label7.Location = new System.Drawing.Point(416, 139);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 29);
+            this.label7.Size = new System.Drawing.Size(93, 23);
             this.label7.TabIndex = 55;
             this.label7.Text = "Labor Cost";
             // 
@@ -270,7 +272,7 @@
             this.txtPartsUsed.Location = new System.Drawing.Point(418, 104);
             this.txtPartsUsed.Margin = new System.Windows.Forms.Padding(4);
             this.txtPartsUsed.Name = "txtPartsUsed";
-            this.txtPartsUsed.Size = new System.Drawing.Size(404, 30);
+            this.txtPartsUsed.Size = new System.Drawing.Size(404, 26);
             this.txtPartsUsed.TabIndex = 53;
             // 
             // label8
@@ -281,7 +283,7 @@
             this.label8.Location = new System.Drawing.Point(413, 71);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 29);
+            this.label8.Size = new System.Drawing.Size(94, 23);
             this.label8.TabIndex = 54;
             this.label8.Text = "Parts Used";
             // 
@@ -291,7 +293,7 @@
             this.txtContactNumber.Location = new System.Drawing.Point(9, 172);
             this.txtContactNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactNumber.Name = "txtContactNumber";
-            this.txtContactNumber.Size = new System.Drawing.Size(392, 30);
+            this.txtContactNumber.Size = new System.Drawing.Size(392, 26);
             this.txtContactNumber.TabIndex = 52;
             // 
             // label2
@@ -302,7 +304,7 @@
             this.label2.Location = new System.Drawing.Point(7, 139);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 29);
+            this.label2.Size = new System.Drawing.Size(137, 23);
             this.label2.TabIndex = 21;
             this.label2.Text = "Contact Number";
             // 
@@ -347,6 +349,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(876, 493);
             this.Controls.Add(this.pnlrestockbg);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NewJobOrderForm";
             this.Text = "NewJobOrderForm";
             this.pnlitemdata.ResumeLayout(false);

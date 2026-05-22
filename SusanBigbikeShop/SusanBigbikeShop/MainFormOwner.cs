@@ -33,5 +33,25 @@ namespace SusanBigbikeShop
         {
             _main.LoadContent(new RepairsAndMaintenanceFormcs());
         }
+
+        private void btnInventoryManagementOwner_Click(object sender, EventArgs e)
+        {
+            _main.LoadContent(new InventoryForm());
+        }
+
+        private void btnProductManagementOwner_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnBookingOwner_Click(object sender, EventArgs e)
+        {
+            _main.LoadContent(new BookingForm());
+        }
+
+        private void btnReportsOwner_Click(object sender, EventArgs e)
+        {
+            _main.LoadContent(new ReportsForm());
+        }
     }
 }

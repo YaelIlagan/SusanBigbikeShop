@@ -29,6 +29,8 @@ C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\o
 C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.NewJobOrderForm.resources
 C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.RestockItemForm.resources
 C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.ReportsForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.DasboardForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.LogIn.resources
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\bin\Debug\SusanBigbikeShop.exe.config
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\bin\Debug\SusanBigbikeShop.exe
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\bin\Debug\SusanBigbikeShop.pdb
@@ -36,6 +38,7 @@ C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBi
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.BookingForm.resources
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.DasboardForm.resources
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.Form1.resources
+C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.LogIn.resources
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.InventoryForm.resources
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.MainCustomerForm.resources
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.MainForm.resources
@@ -51,5 +54,3 @@ C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBi
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.csproj.CoreCompileInputs.cache
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.exe
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.pdb
-C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.DasboardForm.resources
-C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.LogIn.resources
