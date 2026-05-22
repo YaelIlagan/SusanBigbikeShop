@@ -74,7 +74,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 18);
+            this.label3.Size = new System.Drawing.Size(73, 21);
             this.label3.TabIndex = 8;
             this.label3.Text = "Overview";
             // 
@@ -98,7 +98,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.panel1.Controls.Add(this.btnReportsOwner);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(5, 383);
+            this.panel1.Location = new System.Drawing.Point(5, 391);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(222, 87);
             this.panel1.TabIndex = 16;
@@ -125,7 +125,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(9, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 18);
+            this.label4.Size = new System.Drawing.Size(68, 21);
             this.label4.TabIndex = 15;
             this.label4.Text = "Records";
             // 
@@ -224,7 +224,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 18);
+            this.label1.Size = new System.Drawing.Size(88, 21);
             this.label1.TabIndex = 14;
             this.label1.Text = "Operations";
             // 
@@ -233,7 +233,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.panel3.Controls.Add(this.btnDashboardOwner);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(5, 8);
+            this.panel3.Location = new System.Drawing.Point(5, 11);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(222, 87);
             this.panel3.TabIndex = 18;

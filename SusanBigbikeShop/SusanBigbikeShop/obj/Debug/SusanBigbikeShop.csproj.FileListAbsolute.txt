@@ -51,3 +51,5 @@ C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBi
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.csproj.CoreCompileInputs.cache
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.exe
 C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.pdb
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.DasboardForm.resources
+C:\Users\j0hnp\source\repos\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.LogIn.resources
