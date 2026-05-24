@@ -298,7 +298,7 @@ namespace SusanBigbikeShop
             btnOilsCategory.BackColor = System.Drawing.Color.DarkRed;
             btnPartsCategory.BackColor = System.Drawing.Color.FromArgb(58, 22, 30);
             btnAccessories.BackColor = System.Drawing.Color.FromArgb(58, 22, 30);
-            LoadProducts("Oils", txtSalesSearchItem.Text);
+            LoadProducts("Oils", txtSalesSearchItem.Text); 
         }
 
         private void btnAccessories_Click(object sender, EventArgs e)
