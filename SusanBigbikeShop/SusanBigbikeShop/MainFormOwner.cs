@@ -17,6 +17,7 @@ namespace SusanBigbikeShop
         {
             InitializeComponent();
             _main = main;
+            _main.LoadContent(new DasboardForm());
         }
 
         private void btnDashboardOwner_Click(object sender, EventArgs e)
@@ -52,6 +53,11 @@ namespace SusanBigbikeShop
         private void btnReportsOwner_Click(object sender, EventArgs e)
         {
             _main.LoadContent(new ReportsForm());
+        }
+
+        private void btnLogOutOwner_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

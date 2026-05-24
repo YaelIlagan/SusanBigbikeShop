@@ -35,7 +35,7 @@
             this.pnlitemsales = new System.Windows.Forms.Panel();
             this.pnlsalescart = new System.Windows.Forms.Panel();
             this.btnSalesProceedPayment = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSalesClearCart = new System.Windows.Forms.Button();
             this.btnSalesOnlinePayment = new System.Windows.Forms.Button();
@@ -43,24 +43,35 @@
             this.btnSalesCashPayment = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridCart = new System.Windows.Forms.DataGridView();
+            this.CartItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CartItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CartUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlitemdata = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSalesSearchItem = new System.Windows.Forms.Button();
             this.txtSalesSearchItem = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridItems = new System.Windows.Forms.DataGridView();
+            this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnSalesCategory = new System.Windows.Forms.Button();
-            this.btnSalesCategory1 = new System.Windows.Forms.Button();
+            this.btnPartsCategory = new System.Windows.Forms.Button();
+            this.btnOilsCategory = new System.Windows.Forms.Button();
+            this.btnAccessories = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlBackPanel.SuspendLayout();
             this.pnlModuleName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxSalesUser)).BeginInit();
             this.pnlitemsales.SuspendLayout();
             this.pnlsalescart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
             this.pnlitemdata.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +116,7 @@
             this.label3.Location = new System.Drawing.Point(8, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 36);
+            this.label3.Size = new System.Drawing.Size(111, 45);
             this.label3.TabIndex = 4;
             this.label3.Text = "SALES";
             // 
@@ -125,7 +136,7 @@
             // 
             this.pnlsalescart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(234)))));
             this.pnlsalescart.Controls.Add(this.btnSalesProceedPayment);
-            this.pnlsalescart.Controls.Add(this.label6);
+            this.pnlsalescart.Controls.Add(this.lblTotal);
             this.pnlsalescart.Controls.Add(this.label7);
             this.pnlsalescart.Controls.Add(this.btnSalesClearCart);
             this.pnlsalescart.Controls.Add(this.btnSalesOnlinePayment);
@@ -133,7 +144,7 @@
             this.pnlsalescart.Controls.Add(this.btnSalesCashPayment);
             this.pnlsalescart.Controls.Add(this.label4);
             this.pnlsalescart.Controls.Add(this.label2);
-            this.pnlsalescart.Controls.Add(this.dataGridView2);
+            this.pnlsalescart.Controls.Add(this.dataGridCart);
             this.pnlsalescart.Location = new System.Drawing.Point(602, 9);
             this.pnlsalescart.Margin = new System.Windows.Forms.Padding(4);
             this.pnlsalescart.Name = "pnlsalescart";
@@ -157,16 +168,17 @@
             this.btnSalesProceedPayment.UseVisualStyleBackColor = false;
             this.btnSalesProceedPayment.Click += new System.EventHandler(this.btnSalesProceedPayment_Click);
             // 
-            // label6
+            // lblTotal
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(213, 400);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 23);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "1,000.00";
+            this.lblTotal.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(146, 404);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTotal.Size = new System.Drawing.Size(159, 23);
+            this.lblTotal.TabIndex = 17;
+            this.lblTotal.Text = "00.00";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
@@ -217,7 +229,7 @@
             this.label5.Location = new System.Drawing.Point(6, 445);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 18);
+            this.label5.Size = new System.Drawing.Size(128, 21);
             this.label5.TabIndex = 12;
             this.label5.Text = "Payment Method";
             // 
@@ -244,7 +256,7 @@
             this.label4.Location = new System.Drawing.Point(9, 402);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 20);
+            this.label4.Size = new System.Drawing.Size(52, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Total";
             // 
@@ -261,16 +273,58 @@
             this.label2.Text = " CART";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dataGridView2
+            // dataGridCart
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(10, 54);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(292, 332);
-            this.dataGridView2.TabIndex = 0;
+            this.dataGridCart.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CartItemID,
+            this.CartItemName,
+            this.Quantity,
+            this.Subtotal,
+            this.CartUnitPrice});
+            this.dataGridCart.Location = new System.Drawing.Point(10, 54);
+            this.dataGridCart.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridCart.Name = "dataGridCart";
+            this.dataGridCart.RowHeadersWidth = 51;
+            this.dataGridCart.Size = new System.Drawing.Size(292, 332);
+            this.dataGridCart.TabIndex = 0;
+            // 
+            // CartItemID
+            // 
+            this.CartItemID.HeaderText = "ID";
+            this.CartItemID.MinimumWidth = 6;
+            this.CartItemID.Name = "CartItemID";
+            this.CartItemID.Visible = false;
+            this.CartItemID.Width = 125;
+            // 
+            // CartItemName
+            // 
+            this.CartItemName.HeaderText = "Product";
+            this.CartItemName.MinimumWidth = 6;
+            this.CartItemName.Name = "CartItemName";
+            this.CartItemName.Width = 125;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Qty";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 125;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.Width = 125;
+            // 
+            // CartUnitPrice
+            // 
+            this.CartUnitPrice.HeaderText = "Price";
+            this.CartUnitPrice.MinimumWidth = 6;
+            this.CartUnitPrice.Name = "CartUnitPrice";
+            this.CartUnitPrice.Width = 125;
             // 
             // pnlitemdata
             // 
@@ -278,7 +332,7 @@
             this.pnlitemdata.Controls.Add(this.label9);
             this.pnlitemdata.Controls.Add(this.btnSalesSearchItem);
             this.pnlitemdata.Controls.Add(this.txtSalesSearchItem);
-            this.pnlitemdata.Controls.Add(this.dataGridView1);
+            this.pnlitemdata.Controls.Add(this.dataGridItems);
             this.pnlitemdata.Controls.Add(this.flowLayoutPanel1);
             this.pnlitemdata.Controls.Add(this.label1);
             this.pnlitemdata.Location = new System.Drawing.Point(9, 9);
@@ -320,24 +374,67 @@
             this.txtSalesSearchItem.Location = new System.Drawing.Point(10, 54);
             this.txtSalesSearchItem.Margin = new System.Windows.Forms.Padding(4);
             this.txtSalesSearchItem.Name = "txtSalesSearchItem";
-            this.txtSalesSearchItem.Size = new System.Drawing.Size(445, 30);
+            this.txtSalesSearchItem.Size = new System.Drawing.Size(445, 36);
             this.txtSalesSearchItem.TabIndex = 3;
             // 
-            // dataGridView1
+            // dataGridItems
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 155);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(567, 400);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridItems.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemID,
+            this.ItemName,
+            this.Category,
+            this.UnitPrice,
+            this.Stock});
+            this.dataGridItems.Location = new System.Drawing.Point(9, 155);
+            this.dataGridItems.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridItems.Name = "dataGridItems";
+            this.dataGridItems.RowHeadersWidth = 51;
+            this.dataGridItems.Size = new System.Drawing.Size(567, 400);
+            this.dataGridItems.TabIndex = 2;
+            // 
+            // ItemID
+            // 
+            this.ItemID.HeaderText = "ID";
+            this.ItemID.MinimumWidth = 6;
+            this.ItemID.Name = "ItemID";
+            this.ItemID.Visible = false;
+            this.ItemID.Width = 125;
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "Product Name";
+            this.ItemName.MinimumWidth = 6;
+            this.ItemName.Name = "ItemName";
+            this.ItemName.Width = 170;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.MinimumWidth = 6;
+            this.Category.Name = "Category";
+            this.Category.Width = 150;
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.HeaderText = "Price";
+            this.UnitPrice.MinimumWidth = 6;
+            this.UnitPrice.Name = "UnitPrice";
+            this.UnitPrice.Width = 125;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.Width = 68;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnSalesCategory);
-            this.flowLayoutPanel1.Controls.Add(this.btnSalesCategory1);
+            this.flowLayoutPanel1.Controls.Add(this.btnPartsCategory);
+            this.flowLayoutPanel1.Controls.Add(this.btnOilsCategory);
+            this.flowLayoutPanel1.Controls.Add(this.btnAccessories);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 105);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -345,37 +442,53 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(568, 49);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // btnSalesCategory
+            // btnPartsCategory
             // 
-            this.btnSalesCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
-            this.btnSalesCategory.FlatAppearance.BorderSize = 0;
-            this.btnSalesCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalesCategory.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalesCategory.ForeColor = System.Drawing.Color.White;
-            this.btnSalesCategory.Location = new System.Drawing.Point(5, 5);
-            this.btnSalesCategory.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalesCategory.Name = "btnSalesCategory";
-            this.btnSalesCategory.Size = new System.Drawing.Size(274, 37);
-            this.btnSalesCategory.TabIndex = 1;
-            this.btnSalesCategory.Text = "PARTS";
-            this.btnSalesCategory.UseVisualStyleBackColor = false;
-            this.btnSalesCategory.Click += new System.EventHandler(this.btnSalesCategory_Click);
+            this.btnPartsCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnPartsCategory.FlatAppearance.BorderSize = 0;
+            this.btnPartsCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPartsCategory.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPartsCategory.ForeColor = System.Drawing.Color.White;
+            this.btnPartsCategory.Location = new System.Drawing.Point(5, 5);
+            this.btnPartsCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPartsCategory.Name = "btnPartsCategory";
+            this.btnPartsCategory.Size = new System.Drawing.Size(180, 37);
+            this.btnPartsCategory.TabIndex = 1;
+            this.btnPartsCategory.Text = "PARTS";
+            this.btnPartsCategory.UseVisualStyleBackColor = false;
+            this.btnPartsCategory.Click += new System.EventHandler(this.btnPartsCategory_Click);
             // 
-            // btnSalesCategory1
+            // btnOilsCategory
             // 
-            this.btnSalesCategory1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
-            this.btnSalesCategory1.FlatAppearance.BorderSize = 0;
-            this.btnSalesCategory1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalesCategory1.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalesCategory1.ForeColor = System.Drawing.Color.White;
-            this.btnSalesCategory1.Location = new System.Drawing.Point(287, 5);
-            this.btnSalesCategory1.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalesCategory1.Name = "btnSalesCategory1";
-            this.btnSalesCategory1.Size = new System.Drawing.Size(274, 37);
-            this.btnSalesCategory1.TabIndex = 2;
-            this.btnSalesCategory1.Text = "PARTS";
-            this.btnSalesCategory1.UseVisualStyleBackColor = false;
-            this.btnSalesCategory1.Click += new System.EventHandler(this.btnSalesCategory1_Click);
+            this.btnOilsCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnOilsCategory.FlatAppearance.BorderSize = 0;
+            this.btnOilsCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOilsCategory.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOilsCategory.ForeColor = System.Drawing.Color.White;
+            this.btnOilsCategory.Location = new System.Drawing.Point(193, 5);
+            this.btnOilsCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOilsCategory.Name = "btnOilsCategory";
+            this.btnOilsCategory.Size = new System.Drawing.Size(180, 37);
+            this.btnOilsCategory.TabIndex = 2;
+            this.btnOilsCategory.Text = "OILS";
+            this.btnOilsCategory.UseVisualStyleBackColor = false;
+            this.btnOilsCategory.Click += new System.EventHandler(this.btnOilsCategory_Click);
+            // 
+            // btnAccessories
+            // 
+            this.btnAccessories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnAccessories.FlatAppearance.BorderSize = 0;
+            this.btnAccessories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccessories.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccessories.ForeColor = System.Drawing.Color.White;
+            this.btnAccessories.Location = new System.Drawing.Point(381, 5);
+            this.btnAccessories.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAccessories.Name = "btnAccessories";
+            this.btnAccessories.Size = new System.Drawing.Size(180, 37);
+            this.btnAccessories.TabIndex = 2;
+            this.btnAccessories.Text = "ACCESSORIES";
+            this.btnAccessories.UseVisualStyleBackColor = false;
+            this.btnAccessories.Click += new System.EventHandler(this.btnAccessories_Click);
             // 
             // label1
             // 
@@ -405,10 +518,10 @@
             this.pnlitemsales.ResumeLayout(false);
             this.pnlsalescart.ResumeLayout(false);
             this.pnlsalescart.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).EndInit();
             this.pnlitemdata.ResumeLayout(false);
             this.pnlitemdata.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -421,7 +534,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnlitemsales;
         private System.Windows.Forms.Panel pnlsalescart;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSalesClearCart;
         private System.Windows.Forms.Button btnSalesOnlinePayment;
@@ -432,14 +545,25 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSalesSearchItem;
         private System.Windows.Forms.TextBox txtSalesSearchItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridItems;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnSalesCategory;
-        private System.Windows.Forms.Button btnSalesCategory1;
+        private System.Windows.Forms.Button btnPartsCategory;
+        private System.Windows.Forms.Button btnOilsCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSalesProceedPayment;
         private System.Windows.Forms.PictureBox pictureboxSalesUser;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridCart;
+        private System.Windows.Forms.Button btnAccessories;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CartItemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CartItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CartUnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
     }
 }

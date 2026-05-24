@@ -111,7 +111,6 @@
             // 
             // userTabControl
             // 
-            this.userTabControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.userTabControl.Controls.Add(this.tabCustomer);
             this.userTabControl.Controls.Add(this.tabStaff);
             this.userTabControl.Controls.Add(this.tabOwner);
@@ -172,7 +171,7 @@
             this.LlblForgotPassword.AutoSize = true;
             this.LlblForgotPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LlblForgotPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.LlblForgotPassword.Location = new System.Drawing.Point(220, 190);
+            this.LlblForgotPassword.Location = new System.Drawing.Point(125, 190);
             this.LlblForgotPassword.Name = "LlblForgotPassword";
             this.LlblForgotPassword.Size = new System.Drawing.Size(159, 23);
             this.LlblForgotPassword.TabIndex = 5;
@@ -658,7 +657,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(461, 592);
+            this.ClientSize = new System.Drawing.Size(465, 592);
             this.Controls.Add(this.userTabControl);
             this.Controls.Add(this.pnllogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

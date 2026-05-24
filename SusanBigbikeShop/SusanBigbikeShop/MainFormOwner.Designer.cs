@@ -51,6 +51,8 @@
             // 
             // btnDashboardOwner
             // 
+            this.btnDashboardOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDashboardOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.btnDashboardOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDashboardOwner.FlatAppearance.BorderSize = 0;
@@ -74,12 +76,14 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 18);
+            this.label3.Size = new System.Drawing.Size(73, 21);
             this.label3.TabIndex = 8;
             this.label3.Text = "Overview";
             // 
             // btnLogOutOwner
             // 
+            this.btnLogOutOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogOutOwner.BackColor = System.Drawing.Color.Maroon;
             this.btnLogOutOwner.FlatAppearance.BorderSize = 0;
             this.btnLogOutOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -92,9 +96,12 @@
             this.btnLogOutOwner.TabIndex = 15;
             this.btnLogOutOwner.Text = "Log Out";
             this.btnLogOutOwner.UseVisualStyleBackColor = false;
+            this.btnLogOutOwner.Click += new System.EventHandler(this.btnLogOutOwner_Click);
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.panel1.Controls.Add(this.btnReportsOwner);
             this.panel1.Controls.Add(this.label4);
@@ -105,6 +112,8 @@
             // 
             // btnReportsOwner
             // 
+            this.btnReportsOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReportsOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.btnReportsOwner.FlatAppearance.BorderSize = 0;
             this.btnReportsOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -126,12 +135,14 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(9, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 18);
+            this.label4.Size = new System.Drawing.Size(68, 21);
             this.label4.TabIndex = 15;
             this.label4.Text = "Records";
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.panel2.Controls.Add(this.btnBookingOwner);
             this.panel2.Controls.Add(this.btnInventoryManagementOwner);
@@ -147,6 +158,8 @@
             // 
             // btnBookingOwner
             // 
+            this.btnBookingOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBookingOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.btnBookingOwner.FlatAppearance.BorderSize = 0;
             this.btnBookingOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -162,6 +175,8 @@
             // 
             // btnInventoryManagementOwner
             // 
+            this.btnInventoryManagementOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInventoryManagementOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.btnInventoryManagementOwner.FlatAppearance.BorderSize = 0;
             this.btnInventoryManagementOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -177,6 +192,8 @@
             // 
             // btnRepairsAndMaintenanceOwner
             // 
+            this.btnRepairsAndMaintenanceOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRepairsAndMaintenanceOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.btnRepairsAndMaintenanceOwner.FlatAppearance.BorderSize = 0;
             this.btnRepairsAndMaintenanceOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -192,6 +209,8 @@
             // 
             // btnProductManagementOwner
             // 
+            this.btnProductManagementOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProductManagementOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.btnProductManagementOwner.FlatAppearance.BorderSize = 0;
             this.btnProductManagementOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -207,6 +226,8 @@
             // 
             // btnSalesOwner
             // 
+            this.btnSalesOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalesOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.btnSalesOwner.FlatAppearance.BorderSize = 0;
             this.btnSalesOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -228,12 +249,14 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 18);
+            this.label1.Size = new System.Drawing.Size(88, 21);
             this.label1.TabIndex = 14;
             this.label1.Text = "Operations";
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.panel3.Controls.Add(this.btnDashboardOwner);
             this.panel3.Controls.Add(this.label3);
@@ -244,6 +267,8 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.panel4.Controls.Add(this.btnLogOutOwner);
             this.panel4.Location = new System.Drawing.Point(5, 510);

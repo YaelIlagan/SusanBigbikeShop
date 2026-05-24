@@ -52,5 +52,10 @@ namespace SusanBigbikeShop
 
             contentForm.Show();
         }
+
+        private void PnlNavBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

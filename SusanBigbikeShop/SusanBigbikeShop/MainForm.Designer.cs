@@ -53,6 +53,7 @@
             this.PnlNavBar.Name = "PnlNavBar";
             this.PnlNavBar.Size = new System.Drawing.Size(250, 622);
             this.PnlNavBar.TabIndex = 1;
+            this.PnlNavBar.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlNavBar_Paint);
             // 
             // PnlRightPanel
             // 
@@ -68,7 +69,7 @@
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(1262, 753);
             this.Controls.Add(this.PnlRightPanel);
             this.Controls.Add(this.PnlNavBar);
