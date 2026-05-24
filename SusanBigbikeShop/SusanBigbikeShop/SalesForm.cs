@@ -48,13 +48,16 @@ namespace SusanBigbikeShop
                         {
                             while (reader.Read())
                             {
-                                dataGridItems.Rows.Add(
+                                int rowIndex = dataGridItems.Rows.Add(
                                     reader["item_id"].ToString(),
                                     reader["item_name"].ToString(),
                                     reader["category"].ToString(),
                                     Convert.ToDouble(reader["unit_price"]).ToString("N2"),
                                     reader["quantity_in_stock"].ToString()
                                 );
+
+                                dataGridItems.Rows[rowIndex]
+                                    .Cells["ProductToCart"].Value = "Add to Cart";
                             }
                         }
                     }
@@ -71,58 +74,68 @@ namespace SusanBigbikeShop
             }
         }
 
-        private void AddToCart()
+        private void AddToCart(int rowIndex)
         {
-            if (dataGridItems.SelectedRows.Count == 0)
+            try
             {
-                MessageBox.Show(
-                    "Please select a product to add.",
-                    "No Selection",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-                return;
-            }
+                DataGridViewRow selected = dataGridItems.Rows[rowIndex];
+                string itemId = selected.Cells["ItemID"].Value.ToString();
+                string itemName = selected.Cells["ItemName"].Value.ToString();
+                double unitPrice = double.Parse(
+                    selected.Cells["UnitPrice"].Value.ToString().Replace(",", ""));
+                int stock = int.Parse(selected.Cells["Stock"].Value.ToString());
 
-            DataGridViewRow selected = dataGridItems.SelectedRows[0];
-            string itemId = selected.Cells["ItemID"].Value.ToString();
-            string itemName = selected.Cells["ItemName"].Value.ToString();
-            double unitPrice = double.Parse(
-                selected.Cells["UnitPrice"].Value.ToString().Replace(",", ""));
-            int stock = int.Parse(selected.Cells["Stock"].Value.ToString());
-
-            foreach (DataGridViewRow row in dataGridCart.Rows)
-            {
-                if (row.Cells["CartItemID"].Value.ToString() == itemId)
+                foreach (DataGridViewRow row in dataGridCart.Rows)
                 {
-                    int currentQty = int.Parse(row.Cells["Quantity"].Value.ToString());
-                    if (currentQty >= stock)
+                    if (row.Cells["CartItemID"].Value != null &&
+                        row.Cells["CartItemID"].Value.ToString() == itemId)
                     {
-                        MessageBox.Show(
-                            "Not enough stock available.",
-                            "Stock Warning",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning
-                        );
+                        int currentQty = int.Parse(
+                            row.Cells["Quantity"].Value.ToString());
+
+                        if (currentQty >= stock)
+                        {
+                            MessageBox.Show(
+                                "Not enough stock available.",
+                                "Stock Warning",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                            );
+                            return;
+                        }
+
+                        currentQty++;
+                        row.Cells["Quantity"].Value = currentQty;
+                        row.Cells["Subtotal"].Value =
+                            (unitPrice * currentQty).ToString("N2");
+                        UpdateTotal();
                         return;
                     }
-                    currentQty++;
-                    row.Cells["Quantity"].Value = currentQty;
-                    row.Cells["Subtotal"].Value = (unitPrice * currentQty).ToString("N2");
-                    UpdateTotal();
-                    return;
                 }
+
+                DataGridViewRow newRow = new DataGridViewRow();
+                newRow.CreateCells(dataGridCart);
+
+                newRow.Cells[dataGridCart.Columns["CartItemID"].Index].Value = itemId;
+                newRow.Cells[dataGridCart.Columns["CartItemName"].Index].Value = itemName;
+                newRow.Cells[dataGridCart.Columns["CartUnitPrice"].Index].Value =
+                    unitPrice.ToString("N2");
+                newRow.Cells[dataGridCart.Columns["Quantity"].Index].Value = 1;
+                newRow.Cells[dataGridCart.Columns["Subtotal"].Index].Value =
+                    unitPrice.ToString("N2");
+
+                dataGridCart.Rows.Add(newRow);
+                UpdateTotal();
             }
-
-            dataGridCart.Rows.Add(
-                itemId,
-                itemName,
-                unitPrice.ToString("N2"),
-                1,
-                unitPrice.ToString("N2")
-            );
-
-            UpdateTotal();
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Error in AddToCart: " + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
         }
 
         private void UpdateTotal()
@@ -130,8 +143,11 @@ namespace SusanBigbikeShop
             cartTotal = 0;
             foreach (DataGridViewRow row in dataGridCart.Rows)
             {
-                cartTotal += double.Parse(
-                    row.Cells["Subtotal"].Value.ToString().Replace(",", ""));
+                if (row.Cells["Subtotal"].Value != null)
+                {
+                    cartTotal += double.Parse(
+                        row.Cells["Subtotal"].Value.ToString().Replace(",", ""));
+                }
             }
             lblTotal.Text = cartTotal.ToString("N2");
         }
@@ -143,7 +159,22 @@ namespace SusanBigbikeShop
 
         private void btnSalesClearCart_Click(object sender, EventArgs e)
         {
-            
+            if (dataGridCart.Rows.Count == 0)
+                return;
+
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to clear the cart?",
+                "Clear Cart",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                dataGridCart.Rows.Clear();
+                cartTotal = 0;
+                lblTotal.Text = "0.00";
+            }
         }
 
         private void btnSalesCashPayment_Click(object sender, EventArgs e)
@@ -186,7 +217,8 @@ namespace SusanBigbikeShop
             {
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(DBConnection.ConnectionString))
+                    using (SqlConnection conn =
+                        new SqlConnection(DBConnection.ConnectionString))
                     {
                         conn.Open();
                         SqlTransaction transaction = conn.BeginTransaction();
@@ -199,19 +231,27 @@ namespace SusanBigbikeShop
                                                 SELECT SCOPE_IDENTITY();";
 
                             int saleId;
-                            using (SqlCommand cmd = new SqlCommand(salesQuery, conn, transaction))
+                            using (SqlCommand cmd = new SqlCommand(
+                                salesQuery, conn, transaction))
                             {
                                 cmd.Parameters.AddWithValue("@totalAmount", cartTotal);
-                                cmd.Parameters.AddWithValue("@paymentMethod", selectedPayment);
+                                cmd.Parameters.AddWithValue(
+                                    "@paymentMethod", selectedPayment);
                                 saleId = Convert.ToInt32(cmd.ExecuteScalar());
                             }
 
                             foreach (DataGridViewRow row in dataGridCart.Rows)
                             {
-                                int itemId = int.Parse(row.Cells["CartItemID"].Value.ToString());
-                                double unitPrice = double.Parse(row.Cells["UnitPrice"].Value.ToString().Replace(",", ""));
-                                int qty = int.Parse(row.Cells["Quantity"].Value.ToString());
-                                double subtotal = double.Parse(row.Cells["Subtotal"].Value.ToString().Replace(",", ""));
+                                int itemId = int.Parse(
+                                    row.Cells["CartItemID"].Value.ToString());
+                                double unitPrice = double.Parse(
+                                    row.Cells["CartUnitPrice"].Value
+                                    .ToString().Replace(",", ""));
+                                int qty = int.Parse(
+                                    row.Cells["Quantity"].Value.ToString());
+                                double subtotal = double.Parse(
+                                    row.Cells["Subtotal"].Value
+                                    .ToString().Replace(",", ""));
 
                                 string itemQuery = @"INSERT INTO SalesItem
                                                     (sale_id, item_id, quantity,
@@ -307,6 +347,14 @@ namespace SusanBigbikeShop
             btnPartsCategory.BackColor = System.Drawing.Color.FromArgb(58, 22, 30);
             btnOilsCategory.BackColor = System.Drawing.Color.FromArgb(58, 22, 30);
             LoadProducts("Accessories", txtSalesSearchItem.Text);
+        }
+
+        private void dataGridItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dataGridItems.Columns[e.ColumnIndex].Name == "ProductToCart")
+            {
+                AddToCart(e.RowIndex);
+            }
         }
     }
 }

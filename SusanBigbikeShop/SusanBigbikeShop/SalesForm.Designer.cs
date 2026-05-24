@@ -44,26 +44,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridCart = new System.Windows.Forms.DataGridView();
-            this.CartItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CartItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CartUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlitemdata = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSalesSearchItem = new System.Windows.Forms.Button();
             this.txtSalesSearchItem = new System.Windows.Forms.TextBox();
             this.dataGridItems = new System.Windows.Forms.DataGridView();
-            this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnPartsCategory = new System.Windows.Forms.Button();
             this.btnOilsCategory = new System.Windows.Forms.Button();
             this.btnAccessories = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductToCart = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.CartItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CartItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CartUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBackPanel.SuspendLayout();
             this.pnlModuleName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxSalesUser)).BeginInit();
@@ -280,51 +281,15 @@
             this.dataGridCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CartItemID,
             this.CartItemName,
+            this.CartUnitPrice,
             this.Quantity,
-            this.Subtotal,
-            this.CartUnitPrice});
+            this.Subtotal});
             this.dataGridCart.Location = new System.Drawing.Point(10, 54);
             this.dataGridCart.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridCart.Name = "dataGridCart";
             this.dataGridCart.RowHeadersWidth = 51;
             this.dataGridCart.Size = new System.Drawing.Size(292, 332);
             this.dataGridCart.TabIndex = 0;
-            // 
-            // CartItemID
-            // 
-            this.CartItemID.HeaderText = "ID";
-            this.CartItemID.MinimumWidth = 6;
-            this.CartItemID.Name = "CartItemID";
-            this.CartItemID.Visible = false;
-            this.CartItemID.Width = 125;
-            // 
-            // CartItemName
-            // 
-            this.CartItemName.HeaderText = "Product";
-            this.CartItemName.MinimumWidth = 6;
-            this.CartItemName.Name = "CartItemName";
-            this.CartItemName.Width = 125;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Qty";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 125;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.Width = 125;
-            // 
-            // CartUnitPrice
-            // 
-            this.CartUnitPrice.HeaderText = "Price";
-            this.CartUnitPrice.MinimumWidth = 6;
-            this.CartUnitPrice.Name = "CartUnitPrice";
-            this.CartUnitPrice.Width = 125;
             // 
             // pnlitemdata
             // 
@@ -386,49 +351,15 @@
             this.ItemName,
             this.Category,
             this.UnitPrice,
-            this.Stock});
+            this.Stock,
+            this.ProductToCart});
             this.dataGridItems.Location = new System.Drawing.Point(9, 155);
             this.dataGridItems.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridItems.Name = "dataGridItems";
             this.dataGridItems.RowHeadersWidth = 51;
             this.dataGridItems.Size = new System.Drawing.Size(567, 400);
             this.dataGridItems.TabIndex = 2;
-            // 
-            // ItemID
-            // 
-            this.ItemID.HeaderText = "ID";
-            this.ItemID.MinimumWidth = 6;
-            this.ItemID.Name = "ItemID";
-            this.ItemID.Visible = false;
-            this.ItemID.Width = 125;
-            // 
-            // ItemName
-            // 
-            this.ItemName.HeaderText = "Product Name";
-            this.ItemName.MinimumWidth = 6;
-            this.ItemName.Name = "ItemName";
-            this.ItemName.Width = 170;
-            // 
-            // Category
-            // 
-            this.Category.HeaderText = "Category";
-            this.Category.MinimumWidth = 6;
-            this.Category.Name = "Category";
-            this.Category.Width = 150;
-            // 
-            // UnitPrice
-            // 
-            this.UnitPrice.HeaderText = "Price";
-            this.UnitPrice.MinimumWidth = 6;
-            this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.Width = 125;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 6;
-            this.Stock.Name = "Stock";
-            this.Stock.Width = 68;
+            this.dataGridItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridItems_CellContentClick);
             // 
             // flowLayoutPanel1
             // 
@@ -503,6 +434,85 @@
             this.label1.Text = "ITEMS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ItemID
+            // 
+            this.ItemID.HeaderText = "ID";
+            this.ItemID.MinimumWidth = 6;
+            this.ItemID.Name = "ItemID";
+            this.ItemID.Visible = false;
+            this.ItemID.Width = 125;
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "Product Name";
+            this.ItemName.MinimumWidth = 6;
+            this.ItemName.Name = "ItemName";
+            this.ItemName.Width = 170;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.MinimumWidth = 6;
+            this.Category.Name = "Category";
+            this.Category.Width = 120;
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.HeaderText = "Price";
+            this.UnitPrice.MinimumWidth = 6;
+            this.UnitPrice.Name = "UnitPrice";
+            this.UnitPrice.Width = 90;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.Width = 58;
+            // 
+            // ProductToCart
+            // 
+            this.ProductToCart.HeaderText = "";
+            this.ProductToCart.MinimumWidth = 6;
+            this.ProductToCart.Name = "ProductToCart";
+            this.ProductToCart.Width = 76;
+            // 
+            // CartItemID
+            // 
+            this.CartItemID.HeaderText = "ID";
+            this.CartItemID.MinimumWidth = 6;
+            this.CartItemID.Name = "CartItemID";
+            this.CartItemID.Visible = false;
+            this.CartItemID.Width = 125;
+            // 
+            // CartItemName
+            // 
+            this.CartItemName.HeaderText = "Product";
+            this.CartItemName.MinimumWidth = 6;
+            this.CartItemName.Name = "CartItemName";
+            this.CartItemName.Width = 125;
+            // 
+            // CartUnitPrice
+            // 
+            this.CartUnitPrice.HeaderText = "Price";
+            this.CartUnitPrice.MinimumWidth = 6;
+            this.CartUnitPrice.Name = "CartUnitPrice";
+            this.CartUnitPrice.Width = 125;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Qty";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 125;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.Width = 125;
+            // 
             // SalesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -555,15 +565,16 @@
         private System.Windows.Forms.PictureBox pictureboxSalesUser;
         private System.Windows.Forms.DataGridView dataGridCart;
         private System.Windows.Forms.Button btnAccessories;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CartItemID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CartItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CartUnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewButtonColumn ProductToCart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CartItemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CartItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CartUnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
     }
 }
