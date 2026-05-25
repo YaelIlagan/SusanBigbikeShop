@@ -42,7 +42,7 @@ namespace SusanBigbikeShop
 
         private void btnProductManagementOwner_Click(object sender, EventArgs e)
         {
-            
+            _main.LoadContent(new ProductManagementForm());
         }
 
         private void btnBookingOwner_Click(object sender, EventArgs e)

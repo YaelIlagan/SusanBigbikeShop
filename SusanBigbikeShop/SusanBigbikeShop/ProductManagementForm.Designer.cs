@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridProductList = new System.Windows.Forms.DataGridView();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnClearSearch = new System.Windows.Forms.Button();
             this.txtSearchProduct = new System.Windows.Forms.TextBox();
@@ -37,6 +43,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboBoxCategory = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -57,7 +64,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlbooking = new System.Windows.Forms.Panel();
-            this.cboBoxCategory = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductList)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -71,12 +77,63 @@
             // 
             this.dataGridProductList.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductID,
+            this.ProductName,
+            this.Category,
+            this.UnitPrice,
+            this.Stock,
+            this.Description});
             this.dataGridProductList.Location = new System.Drawing.Point(9, 93);
             this.dataGridProductList.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridProductList.Name = "dataGridProductList";
             this.dataGridProductList.RowHeadersWidth = 51;
             this.dataGridProductList.Size = new System.Drawing.Size(887, 194);
             this.dataGridProductList.TabIndex = 55;
+            this.dataGridProductList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProductList_CellClick);
+            // 
+            // ProductID
+            // 
+            this.ProductID.HeaderText = "ID";
+            this.ProductID.MinimumWidth = 6;
+            this.ProductID.Name = "ProductID";
+            this.ProductID.Visible = false;
+            this.ProductID.Width = 125;
+            // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.Width = 125;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.MinimumWidth = 6;
+            this.Category.Name = "Category";
+            this.Category.Width = 125;
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.HeaderText = "Unit Price";
+            this.UnitPrice.MinimumWidth = 6;
+            this.UnitPrice.Name = "UnitPrice";
+            this.UnitPrice.Width = 125;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.Width = 125;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
+            this.Description.Width = 125;
             // 
             // panel8
             // 
@@ -102,6 +159,7 @@
             this.btnClearSearch.TabIndex = 59;
             this.btnClearSearch.Text = "Clear";
             this.btnClearSearch.UseVisualStyleBackColor = true;
+            this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
             // txtSearchProduct
             // 
@@ -112,6 +170,9 @@
             this.txtSearchProduct.Size = new System.Drawing.Size(347, 30);
             this.txtSearchProduct.TabIndex = 19;
             this.txtSearchProduct.Text = "Enter keyword...";
+            this.txtSearchProduct.TextChanged += new System.EventHandler(this.txtSearchProduct_TextChanged);
+            this.txtSearchProduct.Enter += new System.EventHandler(this.txtSearchProduct_Enter);
+            this.txtSearchProduct.Leave += new System.EventHandler(this.txtSearchProduct_Leave);
             // 
             // cboBoxCategorySearch
             // 
@@ -122,6 +183,7 @@
             this.cboBoxCategorySearch.Size = new System.Drawing.Size(285, 33);
             this.cboBoxCategorySearch.TabIndex = 58;
             this.cboBoxCategorySearch.Text = "Category";
+            this.cboBoxCategorySearch.SelectedIndexChanged += new System.EventHandler(this.cboBoxCategorySearch_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -183,6 +245,19 @@
             this.panel1.Size = new System.Drawing.Size(905, 260);
             this.panel1.TabIndex = 45;
             // 
+            // cboBoxCategory
+            // 
+            this.cboBoxCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxCategory.FormattingEnabled = true;
+            this.cboBoxCategory.Items.AddRange(new object[] {
+            "Parts",
+            "Oils",
+            "Accessories"});
+            this.cboBoxCategory.Location = new System.Drawing.Point(157, 127);
+            this.cboBoxCategory.Name = "cboBoxCategory";
+            this.cboBoxCategory.Size = new System.Drawing.Size(266, 33);
+            this.cboBoxCategory.TabIndex = 19;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
@@ -211,6 +286,7 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
@@ -221,6 +297,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -231,6 +308,7 @@
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -241,6 +319,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtDescription
             // 
@@ -270,6 +349,7 @@
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(307, 30);
             this.txtQty.TabIndex = 13;
+            this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
             // 
             // label5
             // 
@@ -289,6 +369,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(266, 30);
             this.txtPrice.TabIndex = 9;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // label7
             // 
@@ -395,15 +476,6 @@
             this.pnlbooking.Size = new System.Drawing.Size(940, 658);
             this.pnlbooking.TabIndex = 9;
             // 
-            // cboBoxCategory
-            // 
-            this.cboBoxCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboBoxCategory.FormattingEnabled = true;
-            this.cboBoxCategory.Location = new System.Drawing.Point(157, 127);
-            this.cboBoxCategory.Name = "cboBoxCategory";
-            this.cboBoxCategory.Size = new System.Drawing.Size(266, 33);
-            this.cboBoxCategory.TabIndex = 19;
-            // 
             // ProductManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -457,5 +529,11 @@
         private System.Windows.Forms.TextBox txtSearchProduct;
         private System.Windows.Forms.ComboBox cboBoxCategorySearch;
         private System.Windows.Forms.ComboBox cboBoxCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
     }
 }

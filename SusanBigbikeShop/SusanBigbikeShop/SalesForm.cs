@@ -14,12 +14,23 @@ namespace SusanBigbikeShop
     public partial class SalesForm : Form
     {
         private string selectedPayment = "";
-
         private double cartTotal = 0;
+
         public SalesForm()
         {
             InitializeComponent();
+            LoadCategories();
             LoadProducts();
+        }
+
+        private void LoadCategories()
+        {
+            cboBoxCategory.Items.Clear();
+            cboBoxCategory.Items.Add("All");
+            cboBoxCategory.Items.Add("Parts");
+            cboBoxCategory.Items.Add("Oils");
+            cboBoxCategory.Items.Add("Accessories");
+            cboBoxCategory.SelectedIndex = 0;
         }
 
         private void LoadProducts(string category = "All", string search = "")
@@ -152,9 +163,29 @@ namespace SusanBigbikeShop
             lblTotal.Text = cartTotal.ToString("N2");
         }
 
-        private void btnSalesSearchItem_Click(object sender, EventArgs e)
+        private void txtSalesSearchItem_TextChanged(object sender, EventArgs e)
         {
-            LoadProducts("All", txtSalesSearchItem.Text);
+            if (txtSalesSearchItem.Text == "Enter keyword...")
+                return;
+
+            LoadProducts(cboBoxCategory.SelectedItem.ToString(),txtSalesSearchItem.Text);
+        }
+
+        private void cboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadProducts(
+                cboBoxCategory.SelectedItem.ToString(),
+                txtSalesSearchItem.Text == "Enter keyword..." ? "" : txtSalesSearchItem.Text
+            );
+        }
+
+        private void dataGridItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 &&
+                dataGridItems.Columns[e.ColumnIndex].Name == "ProductToCart")
+            {
+                AddToCart(e.RowIndex);
+            }
         }
 
         private void btnSalesClearCart_Click(object sender, EventArgs e)
@@ -182,7 +213,6 @@ namespace SusanBigbikeShop
             selectedPayment = "CASH";
             btnSalesCashPayment.BackColor = Color.DarkRed;
             btnSalesOnlinePayment.BackColor = Color.FromArgb(58, 22, 30);
-
         }
 
         private void btnSalesOnlinePayment_Click(object sender, EventArgs e)
@@ -199,6 +229,17 @@ namespace SusanBigbikeShop
                 MessageBox.Show(
                     "Cart is empty. Please add items before proceeding.",
                     "Empty Cart",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            if (string.IsNullOrEmpty(selectedPayment))
+            {
+                MessageBox.Show(
+                    "Please select a payment method.",
+                    "No Payment Method",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );
@@ -299,6 +340,9 @@ namespace SusanBigbikeShop
                             dataGridCart.Rows.Clear();
                             cartTotal = 0;
                             lblTotal.Text = "0.00";
+                            selectedPayment = "";
+                            btnSalesCashPayment.BackColor = Color.FromArgb(58, 22, 30);
+                            btnSalesOnlinePayment.BackColor = Color.FromArgb(58, 22, 30);
                             LoadProducts();
                         }
                         catch (Exception ex)
@@ -325,36 +369,16 @@ namespace SusanBigbikeShop
             }
         }
 
-        private void btnPartsCategory_Click(object sender, EventArgs e)
+        private void txtSalesSearchItem_Enter(object sender, EventArgs e)
         {
-            btnPartsCategory.BackColor = System.Drawing.Color.DarkRed;
-            btnOilsCategory.BackColor = System.Drawing.Color.FromArgb(58, 22, 30);
-            btnAccessories.BackColor = System.Drawing.Color.FromArgb(58, 22, 30);
-            LoadProducts("Parts", txtSalesSearchItem.Text);
+            if (txtSalesSearchItem.Text == "Enter keyword...")
+                txtSalesSearchItem.Text = "";
         }
 
-        private void btnOilsCategory_Click(object sender, EventArgs e)
+        private void txtSalesSearchItem_Leave(object sender, EventArgs e)
         {
-            btnOilsCategory.BackColor = System.Drawing.Color.DarkRed;
-            btnPartsCategory.BackColor = System.Drawing.Color.FromArgb(58, 22, 30);
-            btnAccessories.BackColor = System.Drawing.Color.FromArgb(58, 22, 30);
-            LoadProducts("Oils", txtSalesSearchItem.Text); 
-        }
-
-        private void btnAccessories_Click(object sender, EventArgs e)
-        {
-            btnAccessories.BackColor = System.Drawing.Color.DarkRed;
-            btnPartsCategory.BackColor = System.Drawing.Color.FromArgb(58, 22, 30);
-            btnOilsCategory.BackColor = System.Drawing.Color.FromArgb(58, 22, 30);
-            LoadProducts("Accessories", txtSalesSearchItem.Text);
-        }
-
-        private void dataGridItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && dataGridItems.Columns[e.ColumnIndex].Name == "ProductToCart")
-            {
-                AddToCart(e.RowIndex);
-            }
+            if (string.IsNullOrWhiteSpace(txtSalesSearchItem.Text))
+                txtSalesSearchItem.Text = "Enter keyword...";
         }
     }
 }

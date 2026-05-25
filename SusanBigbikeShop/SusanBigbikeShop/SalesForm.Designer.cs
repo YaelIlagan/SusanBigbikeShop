@@ -44,27 +44,25 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridCart = new System.Windows.Forms.DataGridView();
+            this.CartItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CartItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CartUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlitemdata = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboBoxCategory = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnSalesSearchItem = new System.Windows.Forms.Button();
             this.txtSalesSearchItem = new System.Windows.Forms.TextBox();
             this.dataGridItems = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnPartsCategory = new System.Windows.Forms.Button();
-            this.btnOilsCategory = new System.Windows.Forms.Button();
-            this.btnAccessories = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductToCart = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.CartItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CartItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CartUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlBackPanel.SuspendLayout();
             this.pnlModuleName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxSalesUser)).BeginInit();
@@ -73,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
             this.pnlitemdata.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBackPanel
@@ -291,11 +288,48 @@
             this.dataGridCart.Size = new System.Drawing.Size(292, 332);
             this.dataGridCart.TabIndex = 0;
             // 
+            // CartItemID
+            // 
+            this.CartItemID.HeaderText = "ID";
+            this.CartItemID.MinimumWidth = 6;
+            this.CartItemID.Name = "CartItemID";
+            this.CartItemID.Visible = false;
+            this.CartItemID.Width = 125;
+            // 
+            // CartItemName
+            // 
+            this.CartItemName.HeaderText = "Product";
+            this.CartItemName.MinimumWidth = 6;
+            this.CartItemName.Name = "CartItemName";
+            this.CartItemName.Width = 125;
+            // 
+            // CartUnitPrice
+            // 
+            this.CartUnitPrice.HeaderText = "Price";
+            this.CartUnitPrice.MinimumWidth = 6;
+            this.CartUnitPrice.Name = "CartUnitPrice";
+            this.CartUnitPrice.Width = 125;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Qty";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 125;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.Width = 125;
+            // 
             // pnlitemdata
             // 
             this.pnlitemdata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(234)))));
+            this.pnlitemdata.Controls.Add(this.label6);
+            this.pnlitemdata.Controls.Add(this.cboBoxCategory);
             this.pnlitemdata.Controls.Add(this.label9);
-            this.pnlitemdata.Controls.Add(this.btnSalesSearchItem);
             this.pnlitemdata.Controls.Add(this.txtSalesSearchItem);
             this.pnlitemdata.Controls.Add(this.dataGridItems);
             this.pnlitemdata.Controls.Add(this.flowLayoutPanel1);
@@ -307,6 +341,27 @@
             this.pnlitemdata.Size = new System.Drawing.Size(585, 564);
             this.pnlitemdata.TabIndex = 0;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(10, 57);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 28);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Search";
+            // 
+            // cboBoxCategory
+            // 
+            this.cboBoxCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxCategory.FormattingEnabled = true;
+            this.cboBoxCategory.Location = new System.Drawing.Point(95, 54);
+            this.cboBoxCategory.Name = "cboBoxCategory";
+            this.cboBoxCategory.Size = new System.Drawing.Size(204, 33);
+            this.cboBoxCategory.TabIndex = 18;
+            this.cboBoxCategory.Text = "Category";
+            this.cboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.cboBoxCategory_SelectedIndexChanged);
+            // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Black;
@@ -316,31 +371,19 @@
             this.label9.Size = new System.Drawing.Size(567, 2);
             this.label9.TabIndex = 17;
             // 
-            // btnSalesSearchItem
-            // 
-            this.btnSalesSearchItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
-            this.btnSalesSearchItem.FlatAppearance.BorderSize = 0;
-            this.btnSalesSearchItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalesSearchItem.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalesSearchItem.ForeColor = System.Drawing.Color.White;
-            this.btnSalesSearchItem.Location = new System.Drawing.Point(463, 54);
-            this.btnSalesSearchItem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalesSearchItem.Name = "btnSalesSearchItem";
-            this.btnSalesSearchItem.Size = new System.Drawing.Size(113, 36);
-            this.btnSalesSearchItem.TabIndex = 4;
-            this.btnSalesSearchItem.Text = "SEARCH";
-            this.btnSalesSearchItem.UseVisualStyleBackColor = false;
-            this.btnSalesSearchItem.Click += new System.EventHandler(this.btnSalesSearchItem_Click);
-            // 
             // txtSalesSearchItem
             // 
             this.txtSalesSearchItem.BackColor = System.Drawing.Color.White;
-            this.txtSalesSearchItem.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalesSearchItem.Location = new System.Drawing.Point(10, 54);
+            this.txtSalesSearchItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalesSearchItem.Location = new System.Drawing.Point(306, 57);
             this.txtSalesSearchItem.Margin = new System.Windows.Forms.Padding(4);
             this.txtSalesSearchItem.Name = "txtSalesSearchItem";
-            this.txtSalesSearchItem.Size = new System.Drawing.Size(445, 36);
+            this.txtSalesSearchItem.Size = new System.Drawing.Size(268, 30);
             this.txtSalesSearchItem.TabIndex = 3;
+            this.txtSalesSearchItem.Text = "Enter keyword...";
+            this.txtSalesSearchItem.TextChanged += new System.EventHandler(this.txtSalesSearchItem_TextChanged);
+            this.txtSalesSearchItem.Enter += new System.EventHandler(this.txtSalesSearchItem_Enter);
+            this.txtSalesSearchItem.Leave += new System.EventHandler(this.txtSalesSearchItem_Leave);
             // 
             // dataGridItems
             // 
@@ -353,86 +396,13 @@
             this.UnitPrice,
             this.Stock,
             this.ProductToCart});
-            this.dataGridItems.Location = new System.Drawing.Point(9, 155);
+            this.dataGridItems.Location = new System.Drawing.Point(9, 105);
             this.dataGridItems.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridItems.Name = "dataGridItems";
             this.dataGridItems.RowHeadersWidth = 51;
-            this.dataGridItems.Size = new System.Drawing.Size(567, 400);
+            this.dataGridItems.Size = new System.Drawing.Size(567, 450);
             this.dataGridItems.TabIndex = 2;
             this.dataGridItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridItems_CellContentClick);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnPartsCategory);
-            this.flowLayoutPanel1.Controls.Add(this.btnOilsCategory);
-            this.flowLayoutPanel1.Controls.Add(this.btnAccessories);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 105);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(568, 49);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // btnPartsCategory
-            // 
-            this.btnPartsCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
-            this.btnPartsCategory.FlatAppearance.BorderSize = 0;
-            this.btnPartsCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPartsCategory.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPartsCategory.ForeColor = System.Drawing.Color.White;
-            this.btnPartsCategory.Location = new System.Drawing.Point(5, 5);
-            this.btnPartsCategory.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPartsCategory.Name = "btnPartsCategory";
-            this.btnPartsCategory.Size = new System.Drawing.Size(180, 37);
-            this.btnPartsCategory.TabIndex = 1;
-            this.btnPartsCategory.Text = "PARTS";
-            this.btnPartsCategory.UseVisualStyleBackColor = false;
-            this.btnPartsCategory.Click += new System.EventHandler(this.btnPartsCategory_Click);
-            // 
-            // btnOilsCategory
-            // 
-            this.btnOilsCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
-            this.btnOilsCategory.FlatAppearance.BorderSize = 0;
-            this.btnOilsCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOilsCategory.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOilsCategory.ForeColor = System.Drawing.Color.White;
-            this.btnOilsCategory.Location = new System.Drawing.Point(193, 5);
-            this.btnOilsCategory.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOilsCategory.Name = "btnOilsCategory";
-            this.btnOilsCategory.Size = new System.Drawing.Size(180, 37);
-            this.btnOilsCategory.TabIndex = 2;
-            this.btnOilsCategory.Text = "OILS";
-            this.btnOilsCategory.UseVisualStyleBackColor = false;
-            this.btnOilsCategory.Click += new System.EventHandler(this.btnOilsCategory_Click);
-            // 
-            // btnAccessories
-            // 
-            this.btnAccessories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
-            this.btnAccessories.FlatAppearance.BorderSize = 0;
-            this.btnAccessories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccessories.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccessories.ForeColor = System.Drawing.Color.White;
-            this.btnAccessories.Location = new System.Drawing.Point(381, 5);
-            this.btnAccessories.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAccessories.Name = "btnAccessories";
-            this.btnAccessories.Size = new System.Drawing.Size(180, 37);
-            this.btnAccessories.TabIndex = 2;
-            this.btnAccessories.Text = "ACCESSORIES";
-            this.btnAccessories.UseVisualStyleBackColor = false;
-            this.btnAccessories.Click += new System.EventHandler(this.btnAccessories_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
-            this.label1.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(567, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ITEMS";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ItemID
             // 
@@ -477,41 +447,27 @@
             this.ProductToCart.Name = "ProductToCart";
             this.ProductToCart.Width = 76;
             // 
-            // CartItemID
+            // flowLayoutPanel1
             // 
-            this.CartItemID.HeaderText = "ID";
-            this.CartItemID.MinimumWidth = 6;
-            this.CartItemID.Name = "CartItemID";
-            this.CartItemID.Visible = false;
-            this.CartItemID.Width = 125;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 105);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(1);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(568, 49);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // CartItemName
+            // label1
             // 
-            this.CartItemName.HeaderText = "Product";
-            this.CartItemName.MinimumWidth = 6;
-            this.CartItemName.Name = "CartItemName";
-            this.CartItemName.Width = 125;
-            // 
-            // CartUnitPrice
-            // 
-            this.CartUnitPrice.HeaderText = "Price";
-            this.CartUnitPrice.MinimumWidth = 6;
-            this.CartUnitPrice.Name = "CartUnitPrice";
-            this.CartUnitPrice.Width = 125;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Qty";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 125;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.Width = 125;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
+            this.label1.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(567, 41);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ITEMS";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SalesForm
             // 
@@ -532,7 +488,6 @@
             this.pnlitemdata.ResumeLayout(false);
             this.pnlitemdata.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -553,18 +508,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pnlitemdata;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnSalesSearchItem;
         private System.Windows.Forms.TextBox txtSalesSearchItem;
         private System.Windows.Forms.DataGridView dataGridItems;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnPartsCategory;
-        private System.Windows.Forms.Button btnOilsCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSalesProceedPayment;
         private System.Windows.Forms.PictureBox pictureboxSalesUser;
         private System.Windows.Forms.DataGridView dataGridCart;
-        private System.Windows.Forms.Button btnAccessories;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
@@ -576,5 +527,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CartUnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.ComboBox cboBoxCategory;
+        private System.Windows.Forms.Label label6;
     }
 }
