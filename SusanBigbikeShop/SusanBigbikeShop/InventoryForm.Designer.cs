@@ -33,7 +33,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridInventoryList = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.txtInventorySearch = new System.Windows.Forms.TextBox();
             this.cboBoxStatus = new System.Windows.Forms.ComboBox();
@@ -41,24 +41,31 @@
             this.cboBoxCategorySearch = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTotalItem = new System.Windows.Forms.Label();
-            this.lblTotalItemQty = new System.Windows.Forms.Label();
-            this.lblLowStock = new System.Windows.Forms.Label();
-            this.lblLowStockQty = new System.Windows.Forms.Label();
-            this.lblOkStock = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblOutStock = new System.Windows.Forms.Label();
-            this.lblOutStockQty = new System.Windows.Forms.Label();
             this.lblAlertDetails = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblOutStockQty = new System.Windows.Forms.Label();
+            this.lblOutStock = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblLowStockQty = new System.Windows.Forms.Label();
+            this.lblLowStock = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblOkStock = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTotalItemQty = new System.Windows.Forms.Label();
+            this.lblTotalItem = new System.Windows.Forms.Label();
+            this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LowStockThreshold = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlbooking.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridInventoryList)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -118,7 +125,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(234)))));
-            this.panel8.Controls.Add(this.dataGridView1);
+            this.panel8.Controls.Add(this.dataGridInventoryList);
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Location = new System.Drawing.Point(9, 277);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
@@ -127,16 +134,24 @@
             this.panel8.Size = new System.Drawing.Size(905, 293);
             this.panel8.TabIndex = 44;
             // 
-            // dataGridView1
+            // dataGridInventoryList
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 64);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(887, 220);
-            this.dataGridView1.TabIndex = 55;
+            this.dataGridInventoryList.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridInventoryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridInventoryList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemID,
+            this.ItemName,
+            this.Category,
+            this.Stock,
+            this.UnitPrice,
+            this.LowStockThreshold,
+            this.Status});
+            this.dataGridInventoryList.Location = new System.Drawing.Point(9, 64);
+            this.dataGridInventoryList.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridInventoryList.Name = "dataGridInventoryList";
+            this.dataGridInventoryList.RowHeadersWidth = 51;
+            this.dataGridInventoryList.Size = new System.Drawing.Size(887, 220);
+            this.dataGridInventoryList.TabIndex = 55;
             // 
             // panel9
             // 
@@ -159,6 +174,7 @@
             this.txtInventorySearch.Name = "txtInventorySearch";
             this.txtInventorySearch.Size = new System.Drawing.Size(215, 38);
             this.txtInventorySearch.TabIndex = 52;
+            this.txtInventorySearch.TextChanged += new System.EventHandler(this.txtInventorySearch_TextChanged);
             // 
             // cboBoxStatus
             // 
@@ -169,6 +185,7 @@
             this.cboBoxStatus.Name = "cboBoxStatus";
             this.cboBoxStatus.Size = new System.Drawing.Size(215, 37);
             this.cboBoxStatus.TabIndex = 53;
+            this.cboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.cboBoxStatus_SelectedIndexChanged);
             // 
             // btnInventoryRestockItem
             // 
@@ -185,6 +202,7 @@
             this.btnInventoryRestockItem.TabIndex = 3;
             this.btnInventoryRestockItem.Text = "Restock Item";
             this.btnInventoryRestockItem.UseVisualStyleBackColor = false;
+            this.btnInventoryRestockItem.Click += new System.EventHandler(this.btnInventoryRestockItem_Click);
             // 
             // cboBoxCategorySearch
             // 
@@ -195,7 +213,7 @@
             this.cboBoxCategorySearch.Name = "cboBoxCategorySearch";
             this.cboBoxCategorySearch.Size = new System.Drawing.Size(215, 37);
             this.cboBoxCategorySearch.TabIndex = 52;
-            this.cboBoxCategorySearch.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cboBoxCategorySearch.SelectedIndexChanged += new System.EventHandler(this.cboBoxCategorySearch_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -221,6 +239,16 @@
             this.panel10.Size = new System.Drawing.Size(888, 79);
             this.panel10.TabIndex = 4;
             // 
+            // lblAlertDetails
+            // 
+            this.lblAlertDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlertDetails.ForeColor = System.Drawing.Color.Transparent;
+            this.lblAlertDetails.Location = new System.Drawing.Point(0, 0);
+            this.lblAlertDetails.Name = "lblAlertDetails";
+            this.lblAlertDetails.Size = new System.Drawing.Size(888, 79);
+            this.lblAlertDetails.TabIndex = 2;
+            this.lblAlertDetails.Text = "Alert details...";
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
@@ -231,105 +259,16 @@
             this.panel6.Size = new System.Drawing.Size(217, 158);
             this.panel6.TabIndex = 3;
             // 
-            // panel3
+            // lblOutStockQty
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.panel3.Controls.Add(this.lblLowStockQty);
-            this.panel3.Controls.Add(this.lblLowStock);
-            this.panel3.Location = new System.Drawing.Point(231, 9);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(217, 158);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.lblOkStock);
-            this.panel7.Location = new System.Drawing.Point(457, 9);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(217, 158);
-            this.panel7.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.lblTotalItemQty);
-            this.panel1.Controls.Add(this.lblTotalItem);
-            this.panel1.Location = new System.Drawing.Point(8, 9);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(217, 158);
-            this.panel1.TabIndex = 0;
-            // 
-            // lblTotalItem
-            // 
-            this.lblTotalItem.AutoSize = true;
-            this.lblTotalItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalItem.ForeColor = System.Drawing.Color.Transparent;
-            this.lblTotalItem.Location = new System.Drawing.Point(0, 0);
-            this.lblTotalItem.Name = "lblTotalItem";
-            this.lblTotalItem.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.lblTotalItem.Size = new System.Drawing.Size(148, 55);
-            this.lblTotalItem.TabIndex = 0;
-            this.lblTotalItem.Text = "Total Items";
-            // 
-            // lblTotalItemQty
-            // 
-            this.lblTotalItemQty.AutoSize = true;
-            this.lblTotalItemQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalItemQty.ForeColor = System.Drawing.Color.Transparent;
-            this.lblTotalItemQty.Location = new System.Drawing.Point(20, 55);
-            this.lblTotalItemQty.Name = "lblTotalItemQty";
-            this.lblTotalItemQty.Size = new System.Drawing.Size(31, 32);
-            this.lblTotalItemQty.TabIndex = 1;
-            this.lblTotalItemQty.Text = "0";
-            // 
-            // lblLowStock
-            // 
-            this.lblLowStock.AutoSize = true;
-            this.lblLowStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLowStock.ForeColor = System.Drawing.Color.Transparent;
-            this.lblLowStock.Location = new System.Drawing.Point(-1, 0);
-            this.lblLowStock.Name = "lblLowStock";
-            this.lblLowStock.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.lblLowStock.Size = new System.Drawing.Size(143, 55);
-            this.lblLowStock.TabIndex = 0;
-            this.lblLowStock.Text = "Low Stock";
-            // 
-            // lblLowStockQty
-            // 
-            this.lblLowStockQty.AutoSize = true;
-            this.lblLowStockQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLowStockQty.ForeColor = System.Drawing.Color.Transparent;
-            this.lblLowStockQty.Location = new System.Drawing.Point(19, 55);
-            this.lblLowStockQty.Name = "lblLowStockQty";
-            this.lblLowStockQty.Size = new System.Drawing.Size(31, 32);
-            this.lblLowStockQty.TabIndex = 1;
-            this.lblLowStockQty.Text = "0";
-            // 
-            // lblOkStock
-            // 
-            this.lblOkStock.AutoSize = true;
-            this.lblOkStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOkStock.ForeColor = System.Drawing.Color.Transparent;
-            this.lblOkStock.Location = new System.Drawing.Point(0, 0);
-            this.lblOkStock.Name = "lblOkStock";
-            this.lblOkStock.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.lblOkStock.Size = new System.Drawing.Size(137, 55);
-            this.lblOkStock.TabIndex = 0;
-            this.lblOkStock.Text = "OK Stock";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(20, 55);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 32);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "0";
+            this.lblOutStockQty.AutoSize = true;
+            this.lblOutStockQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutStockQty.ForeColor = System.Drawing.Color.Transparent;
+            this.lblOutStockQty.Location = new System.Drawing.Point(19, 55);
+            this.lblOutStockQty.Name = "lblOutStockQty";
+            this.lblOutStockQty.Size = new System.Drawing.Size(31, 32);
+            this.lblOutStockQty.TabIndex = 1;
+            this.lblOutStockQty.Text = "0";
             // 
             // lblOutStock
             // 
@@ -343,26 +282,155 @@
             this.lblOutStock.TabIndex = 0;
             this.lblOutStock.Text = "Out Of Stock";
             // 
-            // lblOutStockQty
+            // panel3
             // 
-            this.lblOutStockQty.AutoSize = true;
-            this.lblOutStockQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOutStockQty.ForeColor = System.Drawing.Color.Transparent;
-            this.lblOutStockQty.Location = new System.Drawing.Point(19, 55);
-            this.lblOutStockQty.Name = "lblOutStockQty";
-            this.lblOutStockQty.Size = new System.Drawing.Size(31, 32);
-            this.lblOutStockQty.TabIndex = 1;
-            this.lblOutStockQty.Text = "0";
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.panel3.Controls.Add(this.lblLowStockQty);
+            this.panel3.Controls.Add(this.lblLowStock);
+            this.panel3.Location = new System.Drawing.Point(231, 9);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(217, 158);
+            this.panel3.TabIndex = 1;
             // 
-            // lblAlertDetails
+            // lblLowStockQty
             // 
-            this.lblAlertDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlertDetails.ForeColor = System.Drawing.Color.Transparent;
-            this.lblAlertDetails.Location = new System.Drawing.Point(0, 0);
-            this.lblAlertDetails.Name = "lblAlertDetails";
-            this.lblAlertDetails.Size = new System.Drawing.Size(888, 79);
-            this.lblAlertDetails.TabIndex = 2;
-            this.lblAlertDetails.Text = "Alert details...";
+            this.lblLowStockQty.AutoSize = true;
+            this.lblLowStockQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLowStockQty.ForeColor = System.Drawing.Color.Transparent;
+            this.lblLowStockQty.Location = new System.Drawing.Point(19, 55);
+            this.lblLowStockQty.Name = "lblLowStockQty";
+            this.lblLowStockQty.Size = new System.Drawing.Size(31, 32);
+            this.lblLowStockQty.TabIndex = 1;
+            this.lblLowStockQty.Text = "0";
+            // 
+            // lblLowStock
+            // 
+            this.lblLowStock.AutoSize = true;
+            this.lblLowStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLowStock.ForeColor = System.Drawing.Color.Transparent;
+            this.lblLowStock.Location = new System.Drawing.Point(-1, 0);
+            this.lblLowStock.Name = "lblLowStock";
+            this.lblLowStock.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.lblLowStock.Size = new System.Drawing.Size(143, 55);
+            this.lblLowStock.TabIndex = 0;
+            this.lblLowStock.Text = "Low Stock";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.lblOkStock);
+            this.panel7.Location = new System.Drawing.Point(457, 9);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(217, 158);
+            this.panel7.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(20, 55);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 32);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "0";
+            // 
+            // lblOkStock
+            // 
+            this.lblOkStock.AutoSize = true;
+            this.lblOkStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOkStock.ForeColor = System.Drawing.Color.Transparent;
+            this.lblOkStock.Location = new System.Drawing.Point(0, 0);
+            this.lblOkStock.Name = "lblOkStock";
+            this.lblOkStock.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.lblOkStock.Size = new System.Drawing.Size(137, 55);
+            this.lblOkStock.TabIndex = 0;
+            this.lblOkStock.Text = "OK Stock";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.lblTotalItemQty);
+            this.panel1.Controls.Add(this.lblTotalItem);
+            this.panel1.Location = new System.Drawing.Point(8, 9);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
+            this.panel1.Size = new System.Drawing.Size(217, 158);
+            this.panel1.TabIndex = 0;
+            // 
+            // lblTotalItemQty
+            // 
+            this.lblTotalItemQty.AutoSize = true;
+            this.lblTotalItemQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalItemQty.ForeColor = System.Drawing.Color.Transparent;
+            this.lblTotalItemQty.Location = new System.Drawing.Point(20, 55);
+            this.lblTotalItemQty.Name = "lblTotalItemQty";
+            this.lblTotalItemQty.Size = new System.Drawing.Size(31, 32);
+            this.lblTotalItemQty.TabIndex = 1;
+            this.lblTotalItemQty.Text = "0";
+            // 
+            // lblTotalItem
+            // 
+            this.lblTotalItem.AutoSize = true;
+            this.lblTotalItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalItem.ForeColor = System.Drawing.Color.Transparent;
+            this.lblTotalItem.Location = new System.Drawing.Point(0, 0);
+            this.lblTotalItem.Name = "lblTotalItem";
+            this.lblTotalItem.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.lblTotalItem.Size = new System.Drawing.Size(148, 55);
+            this.lblTotalItem.TabIndex = 0;
+            this.lblTotalItem.Text = "Total Items";
+            // 
+            // ItemID
+            // 
+            this.ItemID.HeaderText = "ID";
+            this.ItemID.MinimumWidth = 6;
+            this.ItemID.Name = "ItemID";
+            this.ItemID.Visible = false;
+            this.ItemID.Width = 75;
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "ProductName";
+            this.ItemName.MinimumWidth = 6;
+            this.ItemName.Name = "ItemName";
+            this.ItemName.Width = 125;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.MinimumWidth = 6;
+            this.Category.Name = "Category";
+            this.Category.Width = 125;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.Width = 125;
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.HeaderText = "Unit Price";
+            this.UnitPrice.MinimumWidth = 6;
+            this.UnitPrice.Name = "UnitPrice";
+            this.UnitPrice.Width = 125;
+            // 
+            // LowStockThreshold
+            // 
+            this.LowStockThreshold.HeaderText = "Min Stock";
+            this.LowStockThreshold.MinimumWidth = 6;
+            this.LowStockThreshold.Name = "LowStockThreshold";
+            this.LowStockThreshold.Width = 125;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.Width = 125;
             // 
             // InventoryForm
             // 
@@ -378,7 +446,7 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridInventoryList)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -413,7 +481,7 @@
         private System.Windows.Forms.ComboBox cboBoxStatus;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridInventoryList;
         private System.Windows.Forms.Label lblTotalItem;
         private System.Windows.Forms.Label lblOutStockQty;
         private System.Windows.Forms.Label lblOutStock;
@@ -423,5 +491,12 @@
         private System.Windows.Forms.Label lblOkStock;
         private System.Windows.Forms.Label lblTotalItemQty;
         private System.Windows.Forms.Label lblAlertDetails;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LowStockThreshold;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

@@ -98,7 +98,6 @@
             this.pnlitemdata.Padding = new System.Windows.Forms.Padding(5);
             this.pnlitemdata.Size = new System.Drawing.Size(427, 638);
             this.pnlitemdata.TabIndex = 1;
-            this.pnlitemdata.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlitemdata_Paint);
             // 
             // btnCancel
             // 
@@ -114,6 +113,7 @@
             this.btnCancel.TabIndex = 51;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -129,6 +129,7 @@
             this.btnSave.TabIndex = 50;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label6
             // 
@@ -147,6 +148,7 @@
             this.txtMinimunStockThreshold.Name = "txtMinimunStockThreshold";
             this.txtMinimunStockThreshold.Size = new System.Drawing.Size(409, 30);
             this.txtMinimunStockThreshold.TabIndex = 47;
+            this.txtMinimunStockThreshold.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinimunStockThreshold_KeyPress);
             // 
             // label5
             // 
@@ -168,6 +170,7 @@
             this.txtAddQuantity.Name = "txtAddQuantity";
             this.txtAddQuantity.Size = new System.Drawing.Size(409, 30);
             this.txtAddQuantity.TabIndex = 45;
+            this.txtAddQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddQuantity_KeyPress);
             // 
             // label4
             // 
