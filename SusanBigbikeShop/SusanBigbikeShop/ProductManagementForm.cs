@@ -400,5 +400,10 @@ namespace SusanBigbikeShop
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
                 e.Handled = true;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

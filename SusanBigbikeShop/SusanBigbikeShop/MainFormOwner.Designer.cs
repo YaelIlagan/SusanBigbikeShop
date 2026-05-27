@@ -105,7 +105,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.panel1.Controls.Add(this.btnReportsOwner);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(5, 391);
+            this.panel1.Location = new System.Drawing.Point(5, 380);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(222, 87);
             this.panel1.TabIndex = 16;

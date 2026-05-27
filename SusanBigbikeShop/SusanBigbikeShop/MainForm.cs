@@ -57,5 +57,10 @@ namespace SusanBigbikeShop
         {
 
         }
+
+        private void PnlRightPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -152,6 +152,12 @@
     <Compile Include="SalesForm.Designer.cs">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAuth.Designer.cs">
+      <DependentUpon>UserAuth.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuth.resx">
+      <DependentUpon>UserAuth.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -87,6 +87,8 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.panel2.Controls.Add(this.btnBookingStaff);
             this.panel2.Controls.Add(this.btnInventoryManagementStaff);
@@ -94,7 +96,7 @@
             this.panel2.Controls.Add(this.btnProductManagementStaff);
             this.panel2.Controls.Add(this.btnSalesStaff);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(5, 104);
+            this.panel2.Location = new System.Drawing.Point(5, 101);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.panel2.Size = new System.Drawing.Size(222, 270);
@@ -184,6 +186,9 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.panel4.Controls.Add(this.btnLogOutStaff);
             this.panel4.Location = new System.Drawing.Point(5, 508);
@@ -193,6 +198,8 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.panel3.Controls.Add(this.btnDashboardStaff);
             this.panel3.Controls.Add(this.label3);

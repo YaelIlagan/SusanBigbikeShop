@@ -79,3 +79,4 @@ C:\Users\j0hnp\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBi
 C:\Users\j0hnp\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.pdb
 C:\Users\j0hnp\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.ProductManagementForm.resources
 C:\Users\j0hnp\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.ReceiptForm.resources
+C:\Users\j0hnp\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.UserAuth.resources

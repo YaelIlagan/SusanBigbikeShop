@@ -60,7 +60,7 @@
             this.pnlrestockbg.Margin = new System.Windows.Forms.Padding(4);
             this.pnlrestockbg.Name = "pnlrestockbg";
             this.pnlrestockbg.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlrestockbg.Size = new System.Drawing.Size(472, 682);
+            this.pnlrestockbg.Size = new System.Drawing.Size(472, 646);
             this.pnlrestockbg.TabIndex = 9;
             // 
             // panel4
@@ -71,7 +71,7 @@
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(5);
-            this.panel4.Size = new System.Drawing.Size(446, 656);
+            this.panel4.Size = new System.Drawing.Size(446, 624);
             this.panel4.TabIndex = 6;
             // 
             // pnlitemdata
@@ -96,17 +96,17 @@
             this.pnlitemdata.Margin = new System.Windows.Forms.Padding(4);
             this.pnlitemdata.Name = "pnlitemdata";
             this.pnlitemdata.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlitemdata.Size = new System.Drawing.Size(427, 638);
+            this.pnlitemdata.Size = new System.Drawing.Size(427, 606);
             this.pnlitemdata.TabIndex = 1;
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Maroon;
+            this.btnCancel.BackColor = System.Drawing.Color.Tomato;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancel.Location = new System.Drawing.Point(220, 548);
+            this.btnCancel.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel.Location = new System.Drawing.Point(220, 535);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(190, 48);
@@ -117,12 +117,12 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSave.Location = new System.Drawing.Point(18, 548);
+            this.btnSave.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(18, 535);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(190, 48);
@@ -142,109 +142,114 @@
             // 
             // txtMinimunStockThreshold
             // 
-            this.txtMinimunStockThreshold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMinimunStockThreshold.BackColor = System.Drawing.Color.White;
+            this.txtMinimunStockThreshold.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMinimunStockThreshold.Location = new System.Drawing.Point(9, 462);
             this.txtMinimunStockThreshold.Margin = new System.Windows.Forms.Padding(4);
             this.txtMinimunStockThreshold.Name = "txtMinimunStockThreshold";
-            this.txtMinimunStockThreshold.Size = new System.Drawing.Size(409, 30);
+            this.txtMinimunStockThreshold.Size = new System.Drawing.Size(409, 38);
             this.txtMinimunStockThreshold.TabIndex = 47;
             this.txtMinimunStockThreshold.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinimunStockThreshold_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(4, 429);
+            this.label5.Location = new System.Drawing.Point(7, 429);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(261, 29);
+            this.label5.Size = new System.Drawing.Size(305, 36);
             this.label5.TabIndex = 48;
             this.label5.Text = "Minimun Stock Threshold";
             // 
             // txtAddQuantity
             // 
-            this.txtAddQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddQuantity.BackColor = System.Drawing.Color.White;
+            this.txtAddQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddQuantity.Location = new System.Drawing.Point(9, 376);
             this.txtAddQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddQuantity.Name = "txtAddQuantity";
-            this.txtAddQuantity.Size = new System.Drawing.Size(409, 30);
+            this.txtAddQuantity.Size = new System.Drawing.Size(409, 38);
             this.txtAddQuantity.TabIndex = 45;
             this.txtAddQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddQuantity_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(4, 343);
+            this.label4.Location = new System.Drawing.Point(7, 343);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 29);
+            this.label4.Size = new System.Drawing.Size(162, 36);
             this.label4.TabIndex = 46;
             this.label4.Text = "Add Quantity";
             // 
             // cboxCategory
             // 
-            this.cboxCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxCategory.BackColor = System.Drawing.Color.White;
+            this.cboxCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxCategory.FormattingEnabled = true;
             this.cboxCategory.Location = new System.Drawing.Point(9, 199);
             this.cboxCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cboxCategory.Name = "cboxCategory";
-            this.cboxCategory.Size = new System.Drawing.Size(409, 33);
+            this.cboxCategory.Size = new System.Drawing.Size(409, 39);
             this.cboxCategory.TabIndex = 44;
             // 
             // txtCurrentStock
             // 
-            this.txtCurrentStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrentStock.BackColor = System.Drawing.Color.White;
+            this.txtCurrentStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCurrentStock.Location = new System.Drawing.Point(9, 289);
             this.txtCurrentStock.Margin = new System.Windows.Forms.Padding(4);
             this.txtCurrentStock.Name = "txtCurrentStock";
-            this.txtCurrentStock.Size = new System.Drawing.Size(409, 30);
+            this.txtCurrentStock.Size = new System.Drawing.Size(409, 38);
             this.txtCurrentStock.TabIndex = 22;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(4, 256);
+            this.label3.Location = new System.Drawing.Point(7, 256);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 29);
+            this.label3.Size = new System.Drawing.Size(167, 36);
             this.label3.TabIndex = 23;
             this.label3.Text = "Current Stock";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(7, 166);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 29);
+            this.label2.Size = new System.Drawing.Size(113, 36);
             this.label2.TabIndex = 21;
             this.label2.Text = "Category";
             // 
             // txtProductName
             // 
-            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductName.BackColor = System.Drawing.Color.White;
+            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductName.Location = new System.Drawing.Point(9, 116);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(409, 30);
+            this.txtProductName.Size = new System.Drawing.Size(409, 38);
             this.txtProductName.TabIndex = 18;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(4, 83);
+            this.label14.Location = new System.Drawing.Point(7, 83);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(150, 29);
+            this.label14.Size = new System.Drawing.Size(176, 36);
             this.label14.TabIndex = 19;
             this.label14.Text = "Product Name";
             // 
@@ -260,23 +265,24 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
-            this.label1.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Impact", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(9, 17);
+            this.label1.Location = new System.Drawing.Point(9, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(409, 41);
+            this.label1.Size = new System.Drawing.Size(409, 45);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ADD NEW ITEM";
+            this.label1.Text = "RESTOCK ITEM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // RestockItemForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(472, 682);
+            this.ClientSize = new System.Drawing.Size(472, 646);
             this.Controls.Add(this.pnlrestockbg);
             this.Name = "RestockItemForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RestockItemForm";
             this.pnlrestockbg.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

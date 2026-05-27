@@ -211,15 +211,15 @@ namespace SusanBigbikeShop
         private void btnSalesCashPayment_Click(object sender, EventArgs e)
         {
             selectedPayment = "CASH";
-            btnSalesCashPayment.BackColor = Color.DarkRed;
-            btnSalesOnlinePayment.BackColor = Color.FromArgb(58, 22, 30);
+            btnSalesCashPayment.BackColor = Color.FromArgb(180, 140, 20);
+            btnSalesOnlinePayment.BackColor = Color.FromArgb(70, 130, 180);
         }
 
         private void btnSalesOnlinePayment_Click(object sender, EventArgs e)
         {
             selectedPayment = "ONLINE";
-            btnSalesOnlinePayment.BackColor = Color.DarkRed;
-            btnSalesCashPayment.BackColor = Color.FromArgb(58, 22, 30);
+            btnSalesOnlinePayment.BackColor = Color.FromArgb(40, 90, 140);
+            btnSalesCashPayment.BackColor = Color.FromArgb(212, 175, 55);
         }
 
         private void btnSalesProceedPayment_Click(object sender, EventArgs e)

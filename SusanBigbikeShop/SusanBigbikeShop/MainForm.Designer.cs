@@ -36,6 +36,8 @@
             // 
             // PnlLogo
             // 
+            this.PnlLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlLogo.BackColor = System.Drawing.Color.Black;
             this.PnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PnlLogo.BackgroundImage")));
             this.PnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -46,9 +48,9 @@
             // 
             // PnlNavBar
             // 
-            this.PnlNavBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.PnlNavBar.BackColor = System.Drawing.Color.Black;
+            this.PnlNavBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PnlNavBar.BackColor = System.Drawing.Color.White;
             this.PnlNavBar.Location = new System.Drawing.Point(12, 119);
             this.PnlNavBar.Name = "PnlNavBar";
             this.PnlNavBar.Size = new System.Drawing.Size(250, 622);
@@ -57,19 +59,19 @@
             // 
             // PnlRightPanel
             // 
-            this.PnlRightPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.PnlRightPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PnlRightPanel.BackColor = System.Drawing.Color.Black;
+            this.PnlRightPanel.BackColor = System.Drawing.Color.White;
             this.PnlRightPanel.Location = new System.Drawing.Point(268, 12);
             this.PnlRightPanel.Name = "PnlRightPanel";
             this.PnlRightPanel.Size = new System.Drawing.Size(982, 729);
             this.PnlRightPanel.TabIndex = 2;
+            this.PnlRightPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlRightPanel_Paint);
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Maroon;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1262, 753);
             this.Controls.Add(this.PnlRightPanel);
             this.Controls.Add(this.PnlNavBar);

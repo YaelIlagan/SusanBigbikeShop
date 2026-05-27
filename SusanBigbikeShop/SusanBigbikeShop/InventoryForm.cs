@@ -265,5 +265,15 @@ namespace SusanBigbikeShop
             }
             LoadInventory(cboBoxCategorySearch.SelectedItem.ToString(), cboBoxStatus.SelectedItem.ToString(), txtInventorySearch.Text);
         }
+
+        private void lblLowStock_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLowStockQty_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
