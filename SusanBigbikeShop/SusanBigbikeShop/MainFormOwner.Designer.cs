@@ -53,11 +53,11 @@
             // 
             this.btnDashboardOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDashboardOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnDashboardOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnDashboardOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDashboardOwner.FlatAppearance.BorderSize = 0;
             this.btnDashboardOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboardOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboardOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboardOwner.ForeColor = System.Drawing.Color.White;
             this.btnDashboardOwner.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboardOwner.Location = new System.Drawing.Point(7, 31);
@@ -70,13 +70,15 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 21);
+            this.label3.Size = new System.Drawing.Size(74, 22);
             this.label3.TabIndex = 8;
             this.label3.Text = "Overview";
             // 
@@ -84,7 +86,7 @@
             // 
             this.btnLogOutOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogOutOwner.BackColor = System.Drawing.Color.Maroon;
+            this.btnLogOutOwner.BackColor = System.Drawing.Color.Red;
             this.btnLogOutOwner.FlatAppearance.BorderSize = 0;
             this.btnLogOutOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOutOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,10 +104,10 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.panel1.Controls.Add(this.btnReportsOwner);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(5, 380);
+            this.panel1.Location = new System.Drawing.Point(5, 374);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(222, 87);
             this.panel1.TabIndex = 16;
@@ -114,10 +116,10 @@
             // 
             this.btnReportsOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReportsOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnReportsOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnReportsOwner.FlatAppearance.BorderSize = 0;
             this.btnReportsOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportsOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportsOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportsOwner.ForeColor = System.Drawing.Color.White;
             this.btnReportsOwner.Location = new System.Drawing.Point(7, 33);
             this.btnReportsOwner.Name = "btnReportsOwner";
@@ -129,13 +131,15 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(9, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 21);
+            this.label4.Size = new System.Drawing.Size(70, 22);
             this.label4.TabIndex = 15;
             this.label4.Text = "Records";
             // 
@@ -143,14 +147,14 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.panel2.Controls.Add(this.btnBookingOwner);
             this.panel2.Controls.Add(this.btnInventoryManagementOwner);
             this.panel2.Controls.Add(this.btnRepairsAndMaintenanceOwner);
             this.panel2.Controls.Add(this.btnProductManagementOwner);
             this.panel2.Controls.Add(this.btnSalesOwner);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(5, 104);
+            this.panel2.Location = new System.Drawing.Point(5, 98);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.panel2.Size = new System.Drawing.Size(222, 270);
@@ -160,10 +164,10 @@
             // 
             this.btnBookingOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBookingOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnBookingOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnBookingOwner.FlatAppearance.BorderSize = 0;
             this.btnBookingOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBookingOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookingOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookingOwner.ForeColor = System.Drawing.Color.White;
             this.btnBookingOwner.Location = new System.Drawing.Point(7, 219);
             this.btnBookingOwner.Name = "btnBookingOwner";
@@ -177,10 +181,10 @@
             // 
             this.btnInventoryManagementOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInventoryManagementOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnInventoryManagementOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnInventoryManagementOwner.FlatAppearance.BorderSize = 0;
             this.btnInventoryManagementOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventoryManagementOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventoryManagementOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventoryManagementOwner.ForeColor = System.Drawing.Color.White;
             this.btnInventoryManagementOwner.Location = new System.Drawing.Point(7, 125);
             this.btnInventoryManagementOwner.Name = "btnInventoryManagementOwner";
@@ -194,10 +198,10 @@
             // 
             this.btnRepairsAndMaintenanceOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRepairsAndMaintenanceOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnRepairsAndMaintenanceOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnRepairsAndMaintenanceOwner.FlatAppearance.BorderSize = 0;
             this.btnRepairsAndMaintenanceOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRepairsAndMaintenanceOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRepairsAndMaintenanceOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRepairsAndMaintenanceOwner.ForeColor = System.Drawing.Color.White;
             this.btnRepairsAndMaintenanceOwner.Location = new System.Drawing.Point(7, 77);
             this.btnRepairsAndMaintenanceOwner.Name = "btnRepairsAndMaintenanceOwner";
@@ -211,10 +215,10 @@
             // 
             this.btnProductManagementOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProductManagementOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnProductManagementOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnProductManagementOwner.FlatAppearance.BorderSize = 0;
             this.btnProductManagementOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductManagementOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductManagementOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductManagementOwner.ForeColor = System.Drawing.Color.White;
             this.btnProductManagementOwner.Location = new System.Drawing.Point(7, 173);
             this.btnProductManagementOwner.Name = "btnProductManagementOwner";
@@ -228,10 +232,10 @@
             // 
             this.btnSalesOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalesOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.btnSalesOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnSalesOwner.FlatAppearance.BorderSize = 0;
             this.btnSalesOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalesOwner.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalesOwner.ForeColor = System.Drawing.Color.White;
             this.btnSalesOwner.Location = new System.Drawing.Point(7, 29);
             this.btnSalesOwner.Name = "btnSalesOwner";
@@ -243,13 +247,15 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 21);
+            this.label1.Size = new System.Drawing.Size(89, 22);
             this.label1.TabIndex = 14;
             this.label1.Text = "Operations";
             // 
@@ -257,10 +263,10 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.panel3.Controls.Add(this.btnDashboardOwner);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(5, 11);
+            this.panel3.Location = new System.Drawing.Point(5, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(222, 87);
             this.panel3.TabIndex = 18;
@@ -269,7 +275,7 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.panel4.Controls.Add(this.btnLogOutOwner);
             this.panel4.Location = new System.Drawing.Point(5, 510);
             this.panel4.Name = "panel4";
@@ -279,7 +285,7 @@
             // MainFormOwner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(8)))), ((int)(((byte)(10)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(232, 575);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
