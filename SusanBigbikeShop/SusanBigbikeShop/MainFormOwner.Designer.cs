@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -105,11 +106,12 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnReportsOwner);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(5, 374);
+            this.panel1.Location = new System.Drawing.Point(5, 365);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 87);
+            this.panel1.Size = new System.Drawing.Size(222, 125);
             this.panel1.TabIndex = 16;
             // 
             // btnReportsOwner
@@ -121,7 +123,7 @@
             this.btnReportsOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportsOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportsOwner.ForeColor = System.Drawing.Color.White;
-            this.btnReportsOwner.Location = new System.Drawing.Point(7, 33);
+            this.btnReportsOwner.Location = new System.Drawing.Point(7, 31);
             this.btnReportsOwner.Name = "btnReportsOwner";
             this.btnReportsOwner.Size = new System.Drawing.Size(208, 40);
             this.btnReportsOwner.TabIndex = 16;
@@ -137,7 +139,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(9, 9);
+            this.label4.Location = new System.Drawing.Point(9, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 22);
             this.label4.TabIndex = 15;
@@ -154,10 +156,10 @@
             this.panel2.Controls.Add(this.btnProductManagementOwner);
             this.panel2.Controls.Add(this.btnSalesOwner);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(5, 98);
+            this.panel2.Location = new System.Drawing.Point(5, 91);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panel2.Size = new System.Drawing.Size(222, 270);
+            this.panel2.Size = new System.Drawing.Size(222, 268);
             this.panel2.TabIndex = 17;
             // 
             // btnBookingOwner
@@ -237,7 +239,7 @@
             this.btnSalesOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalesOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalesOwner.ForeColor = System.Drawing.Color.White;
-            this.btnSalesOwner.Location = new System.Drawing.Point(7, 29);
+            this.btnSalesOwner.Location = new System.Drawing.Point(7, 31);
             this.btnSalesOwner.Name = "btnSalesOwner";
             this.btnSalesOwner.Size = new System.Drawing.Size(208, 40);
             this.btnSalesOwner.TabIndex = 15;
@@ -253,7 +255,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 5);
+            this.label1.Location = new System.Drawing.Point(9, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 22);
             this.label1.TabIndex = 14;
@@ -268,7 +270,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(5, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(222, 87);
+            this.panel3.Size = new System.Drawing.Size(222, 80);
             this.panel3.TabIndex = 18;
             // 
             // panel4
@@ -281,6 +283,23 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(222, 60);
             this.panel4.TabIndex = 19;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(7, 77);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 40);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Manage Users";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainFormOwner
             // 
@@ -321,5 +340,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnBookingOwner;
+        private System.Windows.Forms.Button button1;
     }
 }

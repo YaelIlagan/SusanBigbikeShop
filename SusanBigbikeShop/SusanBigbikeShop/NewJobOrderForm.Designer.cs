@@ -131,7 +131,7 @@
             // 
             // pnlitemdata
             // 
-            this.pnlitemdata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(241)))));
+            this.pnlitemdata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.pnlitemdata.Controls.Add(this.label10);
             this.pnlitemdata.Controls.Add(this.btnCancel);
             this.pnlitemdata.Controls.Add(this.btnSaveOrderJob);
@@ -323,7 +323,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.panel4.Controls.Add(this.pnlitemdata);
             this.panel4.Location = new System.Drawing.Point(13, 13);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
@@ -334,7 +334,7 @@
             // 
             // pnlrestockbg
             // 
-            this.pnlrestockbg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.pnlrestockbg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.pnlrestockbg.Controls.Add(this.panel4);
             this.pnlrestockbg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlrestockbg.Location = new System.Drawing.Point(0, 0);

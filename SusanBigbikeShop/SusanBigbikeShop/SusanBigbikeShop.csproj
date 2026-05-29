@@ -103,6 +103,12 @@
     <Compile Include="MainStaffForm.Designer.cs">
       <DependentUpon>MainStaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsersForm.Designer.cs">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewJobOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainStaffForm.resx">
       <DependentUpon>MainStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsersForm.resx">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewJobOrderForm.resx">
       <DependentUpon>NewJobOrderForm.cs</DependentUpon>
