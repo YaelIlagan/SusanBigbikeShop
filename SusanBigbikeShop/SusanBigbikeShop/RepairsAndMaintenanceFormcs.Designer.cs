@@ -41,10 +41,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridOrderList = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.txtRepairsSearch = new System.Windows.Forms.TextBox();
-            this.btnRepairsNewJobOrder = new System.Windows.Forms.Button();
-            this.cboxRepairsStatus = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRepairsNewJobOrder = new System.Windows.Forms.Button();
+            this.txtRepairsSearch = new System.Windows.Forms.TextBox();
+            this.cboxRepairsStatus = new System.Windows.Forms.ComboBox();
             this.pnlBackPanel.SuspendLayout();
             this.pnlModuleName.SuspendLayout();
             this.pnlitemsales.SuspendLayout();
@@ -224,50 +224,6 @@
             this.panel8.Size = new System.Drawing.Size(905, 70);
             this.panel8.TabIndex = 45;
             // 
-            // txtRepairsSearch
-            // 
-            this.txtRepairsSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRepairsSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRepairsSearch.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRepairsSearch.Location = new System.Drawing.Point(6, 6);
-            this.txtRepairsSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRepairsSearch.Name = "txtRepairsSearch";
-            this.txtRepairsSearch.Size = new System.Drawing.Size(334, 40);
-            this.txtRepairsSearch.TabIndex = 52;
-            this.txtRepairsSearch.TextChanged += new System.EventHandler(this.txtRepairsSearch_TextChanged);
-            // 
-            // btnRepairsNewJobOrder
-            // 
-            this.btnRepairsNewJobOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(44)))), ((int)(((byte)(191)))));
-            this.btnRepairsNewJobOrder.FlatAppearance.BorderSize = 0;
-            this.btnRepairsNewJobOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRepairsNewJobOrder.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRepairsNewJobOrder.ForeColor = System.Drawing.Color.White;
-            this.btnRepairsNewJobOrder.Location = new System.Drawing.Point(690, 6);
-            this.btnRepairsNewJobOrder.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRepairsNewJobOrder.Name = "btnRepairsNewJobOrder";
-            this.btnRepairsNewJobOrder.Padding = new System.Windows.Forms.Padding(5);
-            this.btnRepairsNewJobOrder.Size = new System.Drawing.Size(193, 38);
-            this.btnRepairsNewJobOrder.TabIndex = 3;
-            this.btnRepairsNewJobOrder.Text = "New Job Order";
-            this.btnRepairsNewJobOrder.UseVisualStyleBackColor = false;
-            this.btnRepairsNewJobOrder.Click += new System.EventHandler(this.btnRepairsNewJobOrder_Click);
-            // 
-            // cboxRepairsStatus
-            // 
-            this.cboxRepairsStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboxRepairsStatus.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxRepairsStatus.FormattingEnabled = true;
-            this.cboxRepairsStatus.Location = new System.Drawing.Point(348, 6);
-            this.cboxRepairsStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.cboxRepairsStatus.Name = "cboxRepairsStatus";
-            this.cboxRepairsStatus.Size = new System.Drawing.Size(334, 42);
-            this.cboxRepairsStatus.TabIndex = 52;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -287,6 +243,50 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(889, 54);
             this.tableLayoutPanel1.TabIndex = 57;
+            // 
+            // btnRepairsNewJobOrder
+            // 
+            this.btnRepairsNewJobOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(44)))), ((int)(((byte)(191)))));
+            this.btnRepairsNewJobOrder.FlatAppearance.BorderSize = 0;
+            this.btnRepairsNewJobOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRepairsNewJobOrder.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRepairsNewJobOrder.ForeColor = System.Drawing.Color.White;
+            this.btnRepairsNewJobOrder.Location = new System.Drawing.Point(690, 6);
+            this.btnRepairsNewJobOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRepairsNewJobOrder.Name = "btnRepairsNewJobOrder";
+            this.btnRepairsNewJobOrder.Padding = new System.Windows.Forms.Padding(5);
+            this.btnRepairsNewJobOrder.Size = new System.Drawing.Size(193, 38);
+            this.btnRepairsNewJobOrder.TabIndex = 3;
+            this.btnRepairsNewJobOrder.Text = "New Job Order";
+            this.btnRepairsNewJobOrder.UseVisualStyleBackColor = false;
+            this.btnRepairsNewJobOrder.Click += new System.EventHandler(this.btnRepairsNewJobOrder_Click);
+            // 
+            // txtRepairsSearch
+            // 
+            this.txtRepairsSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRepairsSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRepairsSearch.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRepairsSearch.Location = new System.Drawing.Point(6, 6);
+            this.txtRepairsSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRepairsSearch.Name = "txtRepairsSearch";
+            this.txtRepairsSearch.Size = new System.Drawing.Size(334, 40);
+            this.txtRepairsSearch.TabIndex = 52;
+            this.txtRepairsSearch.TextChanged += new System.EventHandler(this.txtRepairsSearch_TextChanged);
+            // 
+            // cboxRepairsStatus
+            // 
+            this.cboxRepairsStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboxRepairsStatus.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxRepairsStatus.FormattingEnabled = true;
+            this.cboxRepairsStatus.Location = new System.Drawing.Point(348, 6);
+            this.cboxRepairsStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxRepairsStatus.Name = "cboxRepairsStatus";
+            this.cboxRepairsStatus.Size = new System.Drawing.Size(334, 42);
+            this.cboxRepairsStatus.TabIndex = 52;
             // 
             // RepairsAndMaintenanceFormcs
             // 

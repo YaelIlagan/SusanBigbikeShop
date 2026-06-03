@@ -10,21 +10,13 @@ using System.Windows.Forms;
 
 namespace SusanBigbikeShop
 {
-    public partial class ReceiptForm : Form
+    public partial class SignUp : Form
     {
-        public ReceiptForm()
+        public SignUp()
         {
             InitializeComponent();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

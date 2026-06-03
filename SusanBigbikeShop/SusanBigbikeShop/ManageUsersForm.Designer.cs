@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlbooking = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.cboBoxCategory = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.txtQty = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -52,6 +54,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.txtSearchProduct = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnClearSearch = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -62,11 +67,6 @@
             this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.txtSearchProduct = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.pnlbooking.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -157,6 +157,32 @@
             this.panel1.Size = new System.Drawing.Size(905, 230);
             this.panel1.TabIndex = 45;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Parts",
+            "Oils",
+            "Accessories"});
+            this.comboBox1.Location = new System.Drawing.Point(529, 132);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(369, 33);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(427, 137);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 28);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Status";
+            // 
             // cboBoxCategory
             // 
             this.cboBoxCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -207,21 +233,6 @@
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(445, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(215, 39);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "DELETE";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
@@ -249,6 +260,21 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(445, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(215, 39);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // txtQty
             // 
@@ -283,8 +309,7 @@
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(427, 97);
@@ -385,7 +410,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.61751F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.38249F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 227F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
             this.tableLayoutPanel2.Controls.Add(this.comboBox3, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtSearchProduct, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox2, 2, 0);
@@ -397,13 +422,46 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(784, 38);
             this.tableLayoutPanel2.TabIndex = 60;
             // 
+            // comboBox3
+            // 
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(218, 3);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(221, 33);
+            this.comboBox3.TabIndex = 62;
+            this.comboBox3.Text = "Category";
+            // 
+            // txtSearchProduct
+            // 
+            this.txtSearchProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSearchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchProduct.Location = new System.Drawing.Point(3, 3);
+            this.txtSearchProduct.Name = "txtSearchProduct";
+            this.txtSearchProduct.Size = new System.Drawing.Size(209, 34);
+            this.txtSearchProduct.TabIndex = 61;
+            this.txtSearchProduct.Text = "Enter keyword...";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(445, 3);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(221, 33);
+            this.comboBox2.TabIndex = 60;
+            this.comboBox2.Text = "Category";
+            // 
             // btnClearSearch
             // 
             this.btnClearSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.btnClearSearch.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClearSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearSearch.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearSearch.Location = new System.Drawing.Point(673, 3);
+            this.btnClearSearch.Location = new System.Drawing.Point(672, 3);
             this.btnClearSearch.Name = "btnClearSearch";
             this.btnClearSearch.Size = new System.Drawing.Size(108, 31);
             this.btnClearSearch.TabIndex = 59;
@@ -443,14 +501,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridProductList.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridProductList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridProductList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductID,
@@ -509,70 +567,9 @@
             this.Description.MinimumWidth = 6;
             this.Description.Name = "Description";
             // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(427, 137);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 28);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Status";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Parts",
-            "Oils",
-            "Accessories"});
-            this.comboBox1.Location = new System.Drawing.Point(529, 132);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(369, 33);
-            this.comboBox1.TabIndex = 21;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(446, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(221, 33);
-            this.comboBox2.TabIndex = 60;
-            this.comboBox2.Text = "Category";
-            // 
-            // txtSearchProduct
-            // 
-            this.txtSearchProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSearchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchProduct.Location = new System.Drawing.Point(3, 3);
-            this.txtSearchProduct.Name = "txtSearchProduct";
-            this.txtSearchProduct.Size = new System.Drawing.Size(209, 34);
-            this.txtSearchProduct.TabIndex = 61;
-            this.txtSearchProduct.Text = "Enter keyword...";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(218, 3);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(222, 33);
-            this.comboBox3.TabIndex = 62;
-            this.comboBox3.Text = "Category";
-            // 
             // ManageUsersForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(964, 682);
             this.Controls.Add(this.pnlbooking);

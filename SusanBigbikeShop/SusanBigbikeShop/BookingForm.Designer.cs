@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlbooking = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -38,9 +38,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvBookings = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cboxBookingAMPM = new System.Windows.Forms.ComboBox();
             this.cboxBookingMinutes = new System.Windows.Forms.ComboBox();
@@ -80,7 +80,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).BeginInit();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -147,7 +147,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.panel6.Controls.Add(this.tableLayoutPanel1);
             this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.dataGridView3);
+            this.panel6.Controls.Add(this.dgvBookings);
             this.panel6.Location = new System.Drawing.Point(9, 391);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
@@ -165,7 +165,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel1.Controls.Add(this.comboBox6, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtSearch, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(82, 7);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -198,18 +198,18 @@
             this.button2.TabIndex = 47;
             this.button2.Text = "SEARCH";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(294, 4);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(375, 34);
-            this.textBox1.TabIndex = 45;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(294, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(375, 34);
+            this.txtSearch.TabIndex = 45;
+            this.txtSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label1
             // 
@@ -225,35 +225,35 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dataGridView3
+            // dgvBookings
             // 
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvBookings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView3.Location = new System.Drawing.Point(9, 51);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(887, 119);
-            this.dataGridView3.TabIndex = 0;
+            this.dgvBookings.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBookings.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBookings.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvBookings.Location = new System.Drawing.Point(9, 51);
+            this.dgvBookings.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvBookings.Name = "dgvBookings";
+            this.dgvBookings.RowHeadersWidth = 51;
+            this.dgvBookings.Size = new System.Drawing.Size(887, 119);
+            this.dgvBookings.TabIndex = 0;
             // 
             // panel2
             // 
@@ -327,11 +327,11 @@
             this.flowLayoutPanel2.Controls.Add(this.button11);
             this.flowLayoutPanel2.Controls.Add(this.button1);
             this.flowLayoutPanel2.Controls.Add(this.button12);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(9, 272);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(20, 272);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(432, 100);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(408, 100);
             this.flowLayoutPanel2.TabIndex = 50;
             // 
             // button4
@@ -344,10 +344,11 @@
             this.button4.Location = new System.Drawing.Point(9, 9);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(196, 37);
+            this.button4.Size = new System.Drawing.Size(185, 37);
             this.button4.TabIndex = 0;
             this.button4.Text = "NEW BOOKING";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button11
             // 
@@ -356,13 +357,14 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Location = new System.Drawing.Point(213, 9);
+            this.button11.Location = new System.Drawing.Point(202, 9);
             this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(208, 37);
+            this.button11.Size = new System.Drawing.Size(188, 37);
             this.button11.TabIndex = 2;
             this.button11.Text = "SAVE BOOKING";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.btnSaveBooking_Click);
             // 
             // button1
             // 
@@ -374,10 +376,11 @@
             this.button1.Location = new System.Drawing.Point(9, 54);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 37);
+            this.button1.Size = new System.Drawing.Size(185, 37);
             this.button1.TabIndex = 4;
             this.button1.Text = "CANCEL BOOKING";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button12
             // 
@@ -386,13 +389,14 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(213, 54);
+            this.button12.Location = new System.Drawing.Point(202, 54);
             this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(208, 37);
+            this.button12.Size = new System.Drawing.Size(188, 37);
             this.button12.TabIndex = 3;
             this.button12.Text = "CLEAR";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // label26
             // 
@@ -493,6 +497,7 @@
             this.txtBookingNotes.Name = "txtBookingNotes";
             this.txtBookingNotes.Size = new System.Drawing.Size(469, 93);
             this.txtBookingNotes.TabIndex = 42;
+            this.txtBookingNotes.TextChanged += new System.EventHandler(this.txtBookingNotes_TextChanged);
             // 
             // txtBookingbookingID
             // 
@@ -574,7 +579,7 @@
             this.txtBookingEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookingEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookingEmail.Location = new System.Drawing.Point(135, 158);
+            this.txtBookingEmail.Location = new System.Drawing.Point(134, 158);
             this.txtBookingEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookingEmail.Name = "txtBookingEmail";
             this.txtBookingEmail.Size = new System.Drawing.Size(281, 34);
@@ -586,7 +591,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookingPlateNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookingPlateNumber.Location = new System.Drawing.Point(135, 237);
+            this.txtBookingPlateNumber.Location = new System.Drawing.Point(134, 237);
             this.txtBookingPlateNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookingPlateNumber.Name = "txtBookingPlateNumber";
             this.txtBookingPlateNumber.Size = new System.Drawing.Size(281, 34);
@@ -597,7 +602,7 @@
             this.txtBookingCustomerID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookingCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookingCustomerID.Location = new System.Drawing.Point(135, 42);
+            this.txtBookingCustomerID.Location = new System.Drawing.Point(134, 42);
             this.txtBookingCustomerID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookingCustomerID.Name = "txtBookingCustomerID";
             this.txtBookingCustomerID.Size = new System.Drawing.Size(281, 34);
@@ -608,7 +613,7 @@
             this.txtBookingMotorcycle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookingMotorcycle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookingMotorcycle.Location = new System.Drawing.Point(135, 197);
+            this.txtBookingMotorcycle.Location = new System.Drawing.Point(134, 197);
             this.txtBookingMotorcycle.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookingMotorcycle.Name = "txtBookingMotorcycle";
             this.txtBookingMotorcycle.Size = new System.Drawing.Size(281, 34);
@@ -619,7 +624,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(13, 42);
+            this.label14.Location = new System.Drawing.Point(11, 42);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(143, 33);
@@ -632,7 +637,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(13, 78);
+            this.label15.Location = new System.Drawing.Point(11, 78);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(74, 33);
@@ -644,7 +649,7 @@
             this.txtBookingPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookingPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookingPhoneNumber.Location = new System.Drawing.Point(135, 119);
+            this.txtBookingPhoneNumber.Location = new System.Drawing.Point(134, 119);
             this.txtBookingPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookingPhoneNumber.Name = "txtBookingPhoneNumber";
             this.txtBookingPhoneNumber.Size = new System.Drawing.Size(281, 34);
@@ -656,7 +661,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(13, 119);
+            this.label17.Location = new System.Drawing.Point(11, 119);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(84, 33);
@@ -668,7 +673,7 @@
             this.txtBookingName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookingName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookingName.Location = new System.Drawing.Point(135, 78);
+            this.txtBookingName.Location = new System.Drawing.Point(134, 78);
             this.txtBookingName.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookingName.Name = "txtBookingName";
             this.txtBookingName.Size = new System.Drawing.Size(281, 34);
@@ -679,7 +684,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(13, 161);
+            this.label16.Location = new System.Drawing.Point(11, 161);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(76, 33);
@@ -691,7 +696,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(13, 240);
+            this.label18.Location = new System.Drawing.Point(11, 240);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(114, 33);
@@ -703,7 +708,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(13, 200);
+            this.label19.Location = new System.Drawing.Point(11, 200);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(130, 33);
@@ -725,7 +730,7 @@
             this.panel6.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -743,9 +748,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvBookings;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cboxBookingAMPM;
         private System.Windows.Forms.ComboBox cboxBookingMinutes;

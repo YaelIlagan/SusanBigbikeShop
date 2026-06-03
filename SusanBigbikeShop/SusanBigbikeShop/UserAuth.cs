@@ -32,5 +32,12 @@ namespace SusanBigbikeShop
         {
 
         }
+
+        private void UserAuth_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

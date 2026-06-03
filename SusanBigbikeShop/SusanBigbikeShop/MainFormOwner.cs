@@ -60,9 +60,9 @@ namespace SusanBigbikeShop
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnManageUsers_Click(object sender, EventArgs e)
         {
-
+            _main.LoadContent(new ManageUsersForm());
         }
     }
 }

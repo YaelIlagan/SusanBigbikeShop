@@ -29,19 +29,39 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAuth));
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(53, 285);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(110, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(484, 211);
+            this.pictureBox1.Size = new System.Drawing.Size(341, 119);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(12, 166);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(538, 385);
+            this.panel1.TabIndex = 27;
             // 
             // UserAuth
             // 
@@ -49,18 +69,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(567, 776);
+            this.ClientSize = new System.Drawing.Size(561, 563);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Name = "UserAuth";
-            this.Text = "UserAuth";
+            this.Text = "*********+";
+            this.Load += new System.EventHandler(this.UserAuth_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
