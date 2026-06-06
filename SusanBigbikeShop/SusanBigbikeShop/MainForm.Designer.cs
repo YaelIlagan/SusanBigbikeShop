@@ -55,7 +55,6 @@
             this.PnlNavBar.Name = "PnlNavBar";
             this.PnlNavBar.Size = new System.Drawing.Size(250, 622);
             this.PnlNavBar.TabIndex = 1;
-            this.PnlNavBar.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlNavBar_Paint);
             // 
             // PnlRightPanel
             // 
@@ -66,7 +65,6 @@
             this.PnlRightPanel.Name = "PnlRightPanel";
             this.PnlRightPanel.Size = new System.Drawing.Size(982, 729);
             this.PnlRightPanel.TabIndex = 2;
-            this.PnlRightPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlRightPanel_Paint);
             // 
             // MainForm
             // 
@@ -80,7 +78,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Susan BigBike Shop";
+            this.Text = "SUSAN BigBike Shop";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.ResumeLayout(false);
 

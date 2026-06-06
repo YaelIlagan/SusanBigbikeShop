@@ -15,29 +15,31 @@ namespace SusanBigbikeShop
         public UserAuth()
         {
             InitializeComponent();
-
+            ShowLogin();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void ShowLogin()
         {
+            panelUserAuth.Controls.Clear();
 
+            LogIn loginForm = new LogIn(this);
+            loginForm.FormBorderStyle = FormBorderStyle.None;
+            loginForm.TopLevel = false;
+            loginForm.Dock = DockStyle.Fill;
+            panelUserAuth.Controls.Add(loginForm);
+            loginForm.Show();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        public void ShowSignUp()
         {
+            panelUserAuth.Controls.Clear();
 
+            SignUp signUpForm = new SignUp(this);
+            signUpForm.FormBorderStyle = FormBorderStyle.None;
+            signUpForm.TopLevel = false;
+            signUpForm.Dock = DockStyle.Fill;
+            panelUserAuth.Controls.Add(signUpForm);
+            signUpForm.Show();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UserAuth_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }

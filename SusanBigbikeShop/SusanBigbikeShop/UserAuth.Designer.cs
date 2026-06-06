@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAuth));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelUserAuth = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,13 +55,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // panelUserAuth
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(12, 166);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(538, 385);
-            this.panel1.TabIndex = 27;
+            this.panelUserAuth.BackColor = System.Drawing.Color.White;
+            this.panelUserAuth.Location = new System.Drawing.Point(12, 166);
+            this.panelUserAuth.Name = "panelUserAuth";
+            this.panelUserAuth.Size = new System.Drawing.Size(538, 385);
+            this.panelUserAuth.TabIndex = 27;
             // 
             // UserAuth
             // 
@@ -70,13 +70,13 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(561, 563);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelUserAuth);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Name = "UserAuth";
-            this.Text = "*********+";
-            this.Load += new System.EventHandler(this.UserAuth_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SUSAN Bigbike Shop";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -86,6 +86,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelUserAuth;
     }
 }
