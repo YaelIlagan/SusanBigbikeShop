@@ -34,9 +34,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboBoxStatus = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cboBoxCategory = new System.Windows.Forms.ComboBox();
+            this.cboBoxRole = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -54,19 +54,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.txtSearchProduct = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboBoxUsers = new System.Windows.Forms.ComboBox();
+            this.txtSearchUser = new System.Windows.Forms.TextBox();
+            this.cboBoxSearchStatus = new System.Windows.Forms.ComboBox();
             this.btnClearSearch = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridProductList = new System.Windows.Forms.DataGridView();
-            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridUserList = new System.Windows.Forms.DataGridView();
+            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlbooking.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProductList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserList)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlbooking
@@ -136,9 +136,9 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cboBoxStatus);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.cboBoxCategory);
+            this.panel1.Controls.Add(this.cboBoxRole);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.txtQty);
             this.panel1.Controls.Add(this.label5);
@@ -157,19 +157,18 @@
             this.panel1.Size = new System.Drawing.Size(905, 230);
             this.panel1.TabIndex = 45;
             // 
-            // comboBox1
+            // cboBoxStatus
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Parts",
-            "Oils",
-            "Accessories"});
-            this.comboBox1.Location = new System.Drawing.Point(529, 132);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(369, 33);
-            this.comboBox1.TabIndex = 21;
+            this.cboBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxStatus.FormattingEnabled = true;
+            this.cboBoxStatus.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.cboBoxStatus.Location = new System.Drawing.Point(529, 132);
+            this.cboBoxStatus.Name = "cboBoxStatus";
+            this.cboBoxStatus.Size = new System.Drawing.Size(369, 33);
+            this.cboBoxStatus.TabIndex = 21;
             // 
             // label8
             // 
@@ -183,20 +182,19 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Status";
             // 
-            // cboBoxCategory
+            // cboBoxRole
             // 
-            this.cboBoxCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cboBoxRole.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboBoxCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboBoxCategory.FormattingEnabled = true;
-            this.cboBoxCategory.Items.AddRange(new object[] {
-            "Parts",
-            "Oils",
-            "Accessories"});
-            this.cboBoxCategory.Location = new System.Drawing.Point(110, 132);
-            this.cboBoxCategory.Name = "cboBoxCategory";
-            this.cboBoxCategory.Size = new System.Drawing.Size(316, 33);
-            this.cboBoxCategory.TabIndex = 19;
+            this.cboBoxRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxRole.FormattingEnabled = true;
+            this.cboBoxRole.Items.AddRange(new object[] {
+            "Staff",
+            "Customer"});
+            this.cboBoxRole.Location = new System.Drawing.Point(110, 132);
+            this.cboBoxRole.Name = "cboBoxRole";
+            this.cboBoxRole.Size = new System.Drawing.Size(316, 33);
+            this.cboBoxRole.TabIndex = 19;
             // 
             // tableLayoutPanel1
             // 
@@ -232,6 +230,7 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnUpdate
             // 
@@ -246,6 +245,7 @@
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -260,6 +260,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -275,6 +276,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtQty
             // 
@@ -394,7 +396,7 @@
             this.panel8.Controls.Add(this.tableLayoutPanel2);
             this.panel8.Controls.Add(this.label9);
             this.panel8.Controls.Add(this.label6);
-            this.panel8.Controls.Add(this.dataGridProductList);
+            this.panel8.Controls.Add(this.dataGridUserList);
             this.panel8.Location = new System.Drawing.Point(9, 247);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
@@ -411,9 +413,9 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.38249F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 227F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
-            this.tableLayoutPanel2.Controls.Add(this.comboBox3, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtSearchProduct, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox2, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cboBoxUsers, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtSearchUser, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cboBoxSearchStatus, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnClearSearch, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(107, 52);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -422,38 +424,41 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(784, 38);
             this.tableLayoutPanel2.TabIndex = 60;
             // 
-            // comboBox3
+            // cboBoxUsers
             // 
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(218, 3);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(221, 33);
-            this.comboBox3.TabIndex = 62;
-            this.comboBox3.Text = "Category";
+            this.cboBoxUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboBoxUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxUsers.FormattingEnabled = true;
+            this.cboBoxUsers.Location = new System.Drawing.Point(218, 3);
+            this.cboBoxUsers.Name = "cboBoxUsers";
+            this.cboBoxUsers.Size = new System.Drawing.Size(221, 33);
+            this.cboBoxUsers.TabIndex = 62;
+            this.cboBoxUsers.Text = "All Users";
             // 
-            // txtSearchProduct
+            // txtSearchUser
             // 
-            this.txtSearchProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSearchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchProduct.Location = new System.Drawing.Point(3, 3);
-            this.txtSearchProduct.Name = "txtSearchProduct";
-            this.txtSearchProduct.Size = new System.Drawing.Size(209, 34);
-            this.txtSearchProduct.TabIndex = 61;
-            this.txtSearchProduct.Text = "Enter keyword...";
+            this.txtSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSearchUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchUser.Location = new System.Drawing.Point(3, 3);
+            this.txtSearchUser.Name = "txtSearchUser";
+            this.txtSearchUser.Size = new System.Drawing.Size(209, 34);
+            this.txtSearchUser.TabIndex = 61;
+            this.txtSearchUser.Text = "Enter keyword...";
+            this.txtSearchUser.TextChanged += new System.EventHandler(this.txtSearchUser_TextChanged);
+            this.txtSearchUser.Enter += new System.EventHandler(this.txtSearchUser_Enter);
+            this.txtSearchUser.Leave += new System.EventHandler(this.txtSearchUser_Leave);
             // 
-            // comboBox2
+            // cboBoxSearchStatus
             // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(445, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(221, 33);
-            this.comboBox2.TabIndex = 60;
-            this.comboBox2.Text = "Category";
+            this.cboBoxSearchStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboBoxSearchStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxSearchStatus.FormattingEnabled = true;
+            this.cboBoxSearchStatus.Location = new System.Drawing.Point(445, 3);
+            this.cboBoxSearchStatus.Name = "cboBoxSearchStatus";
+            this.cboBoxSearchStatus.Size = new System.Drawing.Size(221, 33);
+            this.cboBoxSearchStatus.TabIndex = 60;
+            this.cboBoxSearchStatus.Text = "All Status";
             // 
             // btnClearSearch
             // 
@@ -467,6 +472,7 @@
             this.btnClearSearch.TabIndex = 59;
             this.btnClearSearch.Text = "CLEAR";
             this.btnClearSearch.UseVisualStyleBackColor = false;
+            this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
             // label9
             // 
@@ -495,12 +501,13 @@
             this.label6.TabIndex = 56;
             this.label6.Text = "Search";
             // 
-            // dataGridProductList
+            // dataGridUserList
             // 
-            this.dataGridProductList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridUserList.AllowUserToAddRows = false;
+            this.dataGridUserList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridProductList.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridUserList.BackgroundColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -508,64 +515,64 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridProductList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProductID,
-            this.ProductName,
-            this.Category,
-            this.UnitPrice,
-            this.Stock,
-            this.Description});
-            this.dataGridProductList.Location = new System.Drawing.Point(9, 93);
-            this.dataGridProductList.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridProductList.Name = "dataGridProductList";
-            this.dataGridProductList.RowHeadersWidth = 51;
-            this.dataGridProductList.Size = new System.Drawing.Size(887, 224);
-            this.dataGridProductList.TabIndex = 55;
+            this.dataGridUserList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridUserList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UserID,
+            this.Username,
+            this.FullName,
+            this.Role,
+            this.Password,
+            this.Status});
+            this.dataGridUserList.Location = new System.Drawing.Point(9, 93);
+            this.dataGridUserList.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridUserList.Name = "dataGridUserList";
+            this.dataGridUserList.RowHeadersWidth = 51;
+            this.dataGridUserList.Size = new System.Drawing.Size(887, 224);
+            this.dataGridUserList.TabIndex = 55;
+            this.dataGridUserList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUserList_CellClick);
             // 
-            // ProductID
+            // UserID
             // 
-            this.ProductID.HeaderText = "ID";
-            this.ProductID.MinimumWidth = 6;
-            this.ProductID.Name = "ProductID";
-            this.ProductID.Visible = false;
-            this.ProductID.Width = 125;
+            this.UserID.HeaderText = "ID";
+            this.UserID.MinimumWidth = 6;
+            this.UserID.Name = "UserID";
+            this.UserID.Width = 125;
             // 
-            // ProductName
+            // Username
             // 
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.MinimumWidth = 6;
-            this.ProductName.Name = "ProductName";
-            this.ProductName.Width = 150;
+            this.Username.HeaderText = "Username";
+            this.Username.MinimumWidth = 6;
+            this.Username.Name = "Username";
+            this.Username.Width = 125;
             // 
-            // Category
+            // FullName
             // 
-            this.Category.HeaderText = "Category";
-            this.Category.MinimumWidth = 6;
-            this.Category.Name = "Category";
-            this.Category.Width = 125;
+            this.FullName.HeaderText = "Full Name";
+            this.FullName.MinimumWidth = 6;
+            this.FullName.Name = "FullName";
+            this.FullName.Width = 125;
             // 
-            // UnitPrice
+            // Role
             // 
-            this.UnitPrice.HeaderText = "Unit Price";
-            this.UnitPrice.MinimumWidth = 6;
-            this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.Width = 125;
+            this.Role.HeaderText = "Role";
+            this.Role.MinimumWidth = 6;
+            this.Role.Name = "Role";
+            this.Role.Width = 125;
             // 
-            // Stock
+            // Password
             // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 6;
-            this.Stock.Name = "Stock";
-            this.Stock.Width = 125;
+            this.Password.HeaderText = "Password";
+            this.Password.MinimumWidth = 6;
+            this.Password.Name = "Password";
+            this.Password.Width = 125;
             // 
-            // Description
+            // Status
             // 
-            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Description.HeaderText = "Description";
-            this.Description.MinimumWidth = 6;
-            this.Description.Name = "Description";
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.Width = 125;
             // 
             // ManageUsersForm
             // 
@@ -586,7 +593,7 @@
             this.panel8.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProductList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUserList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -598,7 +605,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cboBoxCategory;
+        private System.Windows.Forms.ComboBox cboBoxRole;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
@@ -619,17 +626,17 @@
         private System.Windows.Forms.Button btnClearSearch;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridProductList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridView dataGridUserList;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox txtSearchProduct;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboBoxStatus;
+        private System.Windows.Forms.ComboBox cboBoxUsers;
+        private System.Windows.Forms.TextBox txtSearchUser;
+        private System.Windows.Forms.ComboBox cboBoxSearchStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

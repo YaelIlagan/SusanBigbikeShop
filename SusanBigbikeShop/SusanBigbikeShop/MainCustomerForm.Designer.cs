@@ -50,6 +50,7 @@
             this.btnBookingCustomer.TabIndex = 5;
             this.btnBookingCustomer.Text = "Booking";
             this.btnBookingCustomer.UseVisualStyleBackColor = false;
+            this.btnBookingCustomer.Click += new System.EventHandler(this.btnBookingCustomer_Click);
             // 
             // label3
             // 

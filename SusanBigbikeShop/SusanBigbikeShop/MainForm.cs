@@ -12,14 +12,16 @@ namespace SusanBigbikeShop
 {
     public partial class MainForm : Form
     {
+        private string role;
         public MainForm()
         {
             InitializeComponent();
-            LoadNavPanel("Owner");
+            LoadNavPanel(role);
         }
 
         public void LoadNavPanel(string role)
         {
+            this.role = role;
             PnlNavBar.Controls.Clear();
 
             Form navForm = null;
@@ -27,6 +29,16 @@ namespace SusanBigbikeShop
             if (role == "Owner")
             {
                 navForm = new MainFormOwner(this);
+            }
+
+            else if (role == "Staff")
+            {
+                navForm = new MainStaffForm(this);
+            }
+
+            else if (role == "Customer")
+            {
+                navForm = new MainCustomerForm(this);
             }
 
             if (navForm != null)

@@ -12,9 +12,17 @@ namespace SusanBigbikeShop
 {
     public partial class MainCustomerForm : Form
     {
-        public MainCustomerForm()
+        private MainForm _main;
+        public MainCustomerForm(MainForm main)
         {
             InitializeComponent();
+            _main = main;
+            _main.LoadContent(new DasboardForm());
+        }
+
+        private void btnBookingCustomer_Click(object sender, EventArgs e)
+        {
+            _main.LoadContent(new BookingForm());
         }
     }
 }

@@ -320,6 +320,7 @@
             // 
             // dataGridCart
             // 
+            this.dataGridCart.AllowUserToAddRows = false;
             this.dataGridCart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridCart.BackgroundColor = System.Drawing.Color.WhiteSmoke;
@@ -468,6 +469,7 @@
             // 
             // dataGridItems
             // 
+            this.dataGridItems.AllowUserToAddRows = false;
             this.dataGridItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));

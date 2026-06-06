@@ -47,6 +47,8 @@
             // 
             // btnDashboardStaff
             // 
+            this.btnDashboardStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDashboardStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnDashboardStaff.FlatAppearance.BorderSize = 0;
             this.btnDashboardStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -58,9 +60,12 @@
             this.btnDashboardStaff.TabIndex = 5;
             this.btnDashboardStaff.Text = "Dashboard";
             this.btnDashboardStaff.UseVisualStyleBackColor = false;
+            this.btnDashboardStaff.Click += new System.EventHandler(this.btnDashboardStaff_Click);
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,6 +95,8 @@
             // 
             // btnBookingStaff
             // 
+            this.btnBookingStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBookingStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnBookingStaff.FlatAppearance.BorderSize = 0;
             this.btnBookingStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -101,9 +108,12 @@
             this.btnBookingStaff.TabIndex = 19;
             this.btnBookingStaff.Text = "Booking";
             this.btnBookingStaff.UseVisualStyleBackColor = false;
+            this.btnBookingStaff.Click += new System.EventHandler(this.btnBookingStaff_Click);
             // 
             // btnInventoryManagementStaff
             // 
+            this.btnInventoryManagementStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInventoryManagementStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnInventoryManagementStaff.FlatAppearance.BorderSize = 0;
             this.btnInventoryManagementStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -115,9 +125,12 @@
             this.btnInventoryManagementStaff.TabIndex = 18;
             this.btnInventoryManagementStaff.Text = "Inventory Management";
             this.btnInventoryManagementStaff.UseVisualStyleBackColor = false;
+            this.btnInventoryManagementStaff.Click += new System.EventHandler(this.btnInventoryManagementStaff_Click);
             // 
             // btnRepairsAndManagementStaff
             // 
+            this.btnRepairsAndManagementStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRepairsAndManagementStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnRepairsAndManagementStaff.FlatAppearance.BorderSize = 0;
             this.btnRepairsAndManagementStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -129,9 +142,12 @@
             this.btnRepairsAndManagementStaff.TabIndex = 16;
             this.btnRepairsAndManagementStaff.Text = "Repairs and Maintenance";
             this.btnRepairsAndManagementStaff.UseVisualStyleBackColor = false;
+            this.btnRepairsAndManagementStaff.Click += new System.EventHandler(this.btnRepairsAndManagementStaff_Click);
             // 
             // btnProductManagementStaff
             // 
+            this.btnProductManagementStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProductManagementStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnProductManagementStaff.FlatAppearance.BorderSize = 0;
             this.btnProductManagementStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -143,9 +159,12 @@
             this.btnProductManagementStaff.TabIndex = 17;
             this.btnProductManagementStaff.Text = "Product Management";
             this.btnProductManagementStaff.UseVisualStyleBackColor = false;
+            this.btnProductManagementStaff.Click += new System.EventHandler(this.btnProductManagementStaff_Click);
             // 
             // btnSalesStaff
             // 
+            this.btnSalesStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalesStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnSalesStaff.FlatAppearance.BorderSize = 0;
             this.btnSalesStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -157,9 +176,12 @@
             this.btnSalesStaff.TabIndex = 15;
             this.btnSalesStaff.Text = "Sales";
             this.btnSalesStaff.UseVisualStyleBackColor = false;
+            this.btnSalesStaff.Click += new System.EventHandler(this.btnSalesStaff_Click);
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,7 +217,7 @@
             // 
             // btnLogOutOwner
             // 
-            this.btnLogOutOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnLogOutOwner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogOutOwner.BackColor = System.Drawing.Color.Red;
             this.btnLogOutOwner.FlatAppearance.BorderSize = 0;
