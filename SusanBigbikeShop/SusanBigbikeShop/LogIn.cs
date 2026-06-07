@@ -64,7 +64,6 @@ namespace SusanBigbikeShop
                                 mainForm.Activate();
 
                                 _parent.Hide();
-                                mainForm.FormClosed += (s, args) => _parent.Close();
                             }
                             else
                             {

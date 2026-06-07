@@ -18,6 +18,7 @@ namespace SusanBigbikeShop
             InitializeComponent();
             _main = main;
             _main.LoadContent(new DasboardForm());
+
         }
 
         private void btnDashboardOwner_Click(object sender, EventArgs e)
@@ -57,7 +58,19 @@ namespace SusanBigbikeShop
 
         private void btnLogOutOwner_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
+            if (result == DialogResult.Yes)
+            {
+                UserAuth loginForm = new UserAuth();
+                loginForm.Show();
+                _main.Close();
+            }
         }
 
         private void btnManageUsers_Click(object sender, EventArgs e)

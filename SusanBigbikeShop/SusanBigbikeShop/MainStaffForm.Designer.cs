@@ -231,6 +231,7 @@
             this.btnLogOutOwner.TabIndex = 15;
             this.btnLogOutOwner.Text = "Log Out";
             this.btnLogOutOwner.UseVisualStyleBackColor = false;
+            this.btnLogOutOwner.Click += new System.EventHandler(this.btnLogOutOwner_Click);
             // 
             // MainStaffForm
             // 

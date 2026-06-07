@@ -63,6 +63,7 @@ namespace SusanBigbikeShop
             PnlRightPanel.Controls.Add(contentForm);
 
             contentForm.Show();
+
         }
     }
 }

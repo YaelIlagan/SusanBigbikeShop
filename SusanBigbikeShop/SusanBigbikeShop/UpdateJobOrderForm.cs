@@ -11,13 +11,18 @@ using System.Windows.Forms;
 
 namespace SusanBigbikeShop
 {
-    public partial class NewJobOrderForm : Form
+    public partial class UpdateJobOrderForm : Form
     {
-        public NewJobOrderForm()
+        private readonly int _jobOrderId;
+
+        public UpdateJobOrderForm(int jobOrderId)
         {
             InitializeComponent();
+            _jobOrderId = jobOrderId;
             LoadTypeOptions();
+            LoadStatusOptions();
             LoadPartsFromInventory();
+            LoadJobOrderData();
         }
 
         private void LoadTypeOptions()
@@ -26,6 +31,15 @@ namespace SusanBigbikeShop
             cboxType.Items.Add("Walk-In");
             cboxType.Items.Add("Booking");
             cboxType.SelectedIndex = 0;
+        }
+
+        private void LoadStatusOptions()
+        {
+            cboBoxStatus.Items.Clear();
+            cboBoxStatus.Items.Add("Pending");
+            cboBoxStatus.Items.Add("In Progress");
+            cboBoxStatus.Items.Add("Completed");
+            cboBoxStatus.SelectedIndex = 0;
         }
 
         private void LoadPartsFromInventory()
@@ -68,6 +82,60 @@ namespace SusanBigbikeShop
             return string.Join(", ", selected);
         }
 
+        private void LoadJobOrderData()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DBConnection.ConnectionString))
+                {
+                    conn.Open();
+
+                    string query = @"
+                        SELECT customer_name, contact_number, motorcycle_model,
+                               plate_number, parts_used, labor_cost,
+                               type, issue_description, status
+                        FROM JobOrder
+                        WHERE job_order_id = @id";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", _jobOrderId);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                txtCustomerName.Text = reader["customer_name"].ToString();
+                                txtContactNumber.Text = reader["contact_number"].ToString();
+                                txtMotorcycleModel.Text = reader["motorcycle_model"].ToString();
+                                txtPlateNumber.Text = reader["plate_number"].ToString();
+                                txtLaborCost.Text = reader["labor_cost"].ToString();
+                                txtIssueCocernsNote.Text = reader["issue_description"].ToString();
+                                cboxType.SelectedItem = reader["type"].ToString();
+                                cboBoxStatus.SelectedItem = reader["status"].ToString();
+
+                                string savedParts = reader["parts_used"].ToString();
+                                List<string> savedList = new List<string>(
+                                    savedParts.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries));
+
+                                for (int i = 0; i < chkListParts.Items.Count; i++)
+                                {
+                                    PartItem item = (PartItem)chkListParts.Items[i];
+                                    if (savedList.Contains(item.ItemName))
+                                        chkListParts.SetItemChecked(i, true);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading job order: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private bool ValidateForm()
         {
             if (string.IsNullOrWhiteSpace(txtCustomerName.Text) ||
@@ -76,7 +144,8 @@ namespace SusanBigbikeShop
                 string.IsNullOrWhiteSpace(txtPlateNumber.Text) ||
                 string.IsNullOrWhiteSpace(txtLaborCost.Text) ||
                 string.IsNullOrWhiteSpace(txtIssueCocernsNote.Text) ||
-                cboxType.SelectedIndex == -1)
+                cboxType.SelectedIndex == -1 ||
+                cboBoxStatus.SelectedIndex == -1)
             {
                 MessageBox.Show("Please fill in all required fields.",
                     "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -109,20 +178,6 @@ namespace SusanBigbikeShop
             return true;
         }
 
-        private void ClearForm()
-        {
-            txtCustomerName.Clear();
-            txtContactNumber.Clear();
-            txtMotorcycleModel.Clear();
-            txtPlateNumber.Clear();
-            txtLaborCost.Clear();
-            txtIssueCocernsNote.Clear();
-            cboxType.SelectedIndex = 0;
-
-            for (int i = 0; i < chkListParts.Items.Count; i++)
-                chkListParts.SetItemChecked(i, false);
-        }
-
         private void btnSaveOrderJob_Click(object sender, EventArgs e)
         {
             if (!ValidateForm()) return;
@@ -134,14 +189,17 @@ namespace SusanBigbikeShop
                     conn.Open();
 
                     string query = @"
-                        INSERT INTO JobOrder
-                            (customer_name, contact_number, motorcycle_model,
-                             plate_number, parts_used, labor_cost,
-                             type, issue_description, status, date_received)
-                        VALUES
-                            (@customerName, @contact, @model,
-                             @plate, @parts, @laborCost,
-                             @type, @issue, 'Pending', GETDATE())";
+                        UPDATE JobOrder SET
+                            customer_name     = @customerName,
+                            contact_number    = @contact,
+                            motorcycle_model  = @model,
+                            plate_number      = @plate,
+                            parts_used        = @parts,
+                            labor_cost        = @laborCost,
+                            type              = @type,
+                            issue_description = @issue,
+                            status            = @status
+                        WHERE job_order_id = @id";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -153,20 +211,21 @@ namespace SusanBigbikeShop
                         cmd.Parameters.AddWithValue("@laborCost", double.Parse(txtLaborCost.Text));
                         cmd.Parameters.AddWithValue("@type", cboxType.SelectedItem.ToString());
                         cmd.Parameters.AddWithValue("@issue", txtIssueCocernsNote.Text.Trim());
+                        cmd.Parameters.AddWithValue("@status", cboBoxStatus.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@id", _jobOrderId);
                         cmd.ExecuteNonQuery();
                     }
                 }
 
-                MessageBox.Show("Job Order saved successfully!",
+                MessageBox.Show("Job Order updated successfully!",
                     "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                ClearForm();
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error saving job order: " + ex.Message,
+                MessageBox.Show("Error updating job order: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -179,17 +238,9 @@ namespace SusanBigbikeShop
 
             if (result == DialogResult.Yes)
             {
-                ClearForm();
                 this.DialogResult = DialogResult.Cancel;
                 this.Close();
             }
         }
-    }
-
-    public class PartItem
-    {
-        public int ItemId { get; set; }
-        public string ItemName { get; set; }
-        public override string ToString() => ItemName;
     }
 }

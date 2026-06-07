@@ -28,15 +28,15 @@ namespace SusanBigbikeShop
         {
             cboxSalesReportsService.Items.Clear();
             cboxSalesReportsService.Items.AddRange(new string[] {
-                "Parts",
-                "Oils",
-                "Accessories"
-            });
+            "Parts",
+            "Oils",
+            "Accessories"
+        });
 
             cboxSalesReportStatus.Items.Clear();
             cboxSalesReportStatus.Items.AddRange(new string[] {
-                "CASH",
-                "ONLINE"
+            "CASH",
+            "ONLINE"
             });
 
             try
@@ -45,7 +45,8 @@ namespace SusanBigbikeShop
                 using (SqlConnection conn = db.GetConnection())
                 {
                     conn.Open();
-                    string query = "SELECT user_id, full_name FROM Users WHERE role = 'Mechanic'";
+                    // Changed: loads all users, not just Mechanics
+                    string query = "SELECT user_id, full_name FROM Users";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -62,7 +63,7 @@ namespace SusanBigbikeShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading mechanics: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error loading staff: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -76,22 +77,22 @@ namespace SusanBigbikeShop
                     conn.Open();
 
                     string query = @"
-                        SELECT 
-                            s.sale_id AS [Sale ID], 
-                            CAST(s.sale_date AS DATE) AS [Date], 
-                            i.item_name AS [Item], 
-                            i.category AS [Category],
-                            si.quantity AS [Qty],
-                            si.unit_price AS [Unit Price],
-                            si.subtotal AS [Subtotal],
-                            s.payment_method AS [Payment],
-                            ISNULL(u.full_name, 'None') AS [Mechanic]
-                        FROM Sales s
-                        INNER JOIN SalesItem si ON s.sale_id = si.sale_id
-                        INNER JOIN Inventory i ON si.item_id = i.item_id
-                        LEFT JOIN Users u ON s.mechanic_id = u.user_id
-                        WHERE CAST(s.sale_date AS DATE) >= CAST(@DateFrom AS DATE) 
-                          AND CAST(s.sale_date AS DATE) <= CAST(@DateTo AS DATE)";
+                SELECT 
+                    s.sale_id AS [Sale ID], 
+                    CAST(s.sale_date AS DATE) AS [Date], 
+                    i.item_name AS [Item], 
+                    i.category AS [Category],
+                    si.quantity AS [Qty],
+                    si.unit_price AS [Unit Price],
+                    si.subtotal AS [Subtotal],
+                    s.payment_method AS [Payment],
+                    ISNULL(u.full_name, 'None') AS [Staff]
+                FROM Sales s
+                INNER JOIN SalesItem si ON s.sale_id = si.sale_id
+                INNER JOIN Inventory i ON si.item_id = i.item_id
+                LEFT JOIN Users u ON s.staff_id = u.user_id
+                WHERE CAST(s.sale_date AS DATE) >= CAST(@DateFrom AS DATE) 
+                  AND CAST(s.sale_date AS DATE) <= CAST(@DateTo AS DATE)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -106,8 +107,8 @@ namespace SusanBigbikeShop
 
                         if (cboxSalesReportMechanic.SelectedIndex != -1)
                         {
-                            query += " AND s.mechanic_id = @MechanicID";
-                            cmd.Parameters.AddWithValue("@MechanicID", cboxSalesReportMechanic.SelectedValue);
+                            query += " AND s.staff_id = @StaffID"; 
+                            cmd.Parameters.AddWithValue("@StaffID", cboxSalesReportMechanic.SelectedValue);
                         }
 
                         if (cboxSalesReportStatus.SelectedIndex != -1)

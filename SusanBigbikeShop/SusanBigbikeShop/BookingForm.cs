@@ -14,197 +14,320 @@ namespace SusanBigbikeShop
 {
     public partial class BookingForm : Form
     {
+        private int _selectedBookingId = -1;
+
         public BookingForm()
         {
             InitializeComponent();
-            this.Load += new System.EventHandler(this.BookingForm_Load);
-        }
-
-        private void BookingForm_Load(object sender, EventArgs e)
-        {
             LoadStaticData();
             LoadMechanics();
             LoadMotorcycleAutoComplete();
-            LoadPlateNumberAutoComplete(); 
+            LoadBookings();
+            GenerateBookingID();
         }
+
 
         private void LoadStaticData()
         {
             cboxBookingServicetype.Items.Clear();
             cboxBookingServicetype.Items.AddRange(new string[] {
-                "Oil Change",
-                "Tune-Up",
-                "Brake Pad Replacement",
-                "Tire Replacement",
-                "Engine Overhaul",
-                "General Maintenance",
-                "Electrical Diagnostics",
-                "Change Chain and Sprocket",
-                "Coolant Flush",
-                "Valve Clearance"
+                "Oil Change", "Tune-Up", "Brake Pad Replacement",
+                "Tire Replacement", "Engine Overhaul", "General Maintenance",
+                "Electrical Diagnostics", "Change Chain and Sprocket",
+                "Coolant Flush", "Valve Clearance"
             });
 
             cboxBookingHour.Items.Clear();
             for (int i = 1; i <= 12; i++)
-            {
                 cboxBookingHour.Items.Add(i.ToString("00"));
-            }
 
             cboxBookingMinutes.Items.Clear();
-            cboxBookingMinutes.Items.AddRange(new string[] { "00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55" });
+            cboxBookingMinutes.Items.AddRange(new string[] {
+                "00", "05", "10", "15", "20", "25",
+                "30", "35", "40", "45", "50", "55"
+            });
 
             cboxBookingAMPM.Items.Clear();
             cboxBookingAMPM.Items.AddRange(new string[] { "AM", "PM" });
+
+            comboBox6.Items.Clear();
+            comboBox6.Items.Add("All Status");
+            comboBox6.Items.Add("Pending");
+            comboBox6.Items.Add("Confirmed");
+            comboBox6.Items.Add("Cancelled");
+            comboBox6.SelectedIndex = 0;
         }
 
         private void LoadMechanics()
         {
-            var mechanics = new[]
+            try
             {
-                new { user_id = 1, full_name = "Justine" },
-                new { user_id = 2, full_name = "Bobot" },
-                new { user_id = 3, full_name = "Ian" },
-                new { user_id = 4, full_name = "Susan" },
-                new { user_id = 5, full_name = "Mark" },
-                new { user_id = 6, full_name = "Jay" },
-                new { user_id = 7, full_name = "Cris" },
-                new { user_id = 8, full_name = "Alex" },
-                new { user_id = 9, full_name = "Mike" },
-                new { user_id = 10, full_name = "Tony" }
-            };
-
-            cboxBookingMechanic.DataSource = mechanics.ToList();
-            cboxBookingMechanic.DisplayMember = "full_name";
-            cboxBookingMechanic.ValueMember = "user_id";
-            cboxBookingMechanic.SelectedIndex = -1;
+                using (SqlConnection conn = new DBConnection().GetConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT user_id, full_name FROM Users WHERE role = 'Staff' ORDER BY full_name";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        var list = new System.Collections.Generic.List<dynamic>();
+                        while (reader.Read())
+                        {
+                            list.Add(new
+                            {
+                                user_id = reader.GetInt32(0),
+                                full_name = reader.GetString(1)
+                            });
+                        }
+                        cboxBookingMechanic.DataSource = list;
+                        cboxBookingMechanic.DisplayMember = "full_name";
+                        cboxBookingMechanic.ValueMember = "user_id";
+                        cboxBookingMechanic.SelectedIndex = -1;
+                    }
+                }
+            }
+            catch
+            {
+                cboxBookingMechanic.Items.Clear();
+            }
         }
 
         private void LoadMotorcycleAutoComplete()
         {
-            AutoCompleteStringCollection bikes = new AutoCompleteStringCollection();
-            
+            cboBoxModel.Items.Clear();
+
             string[] baseModels = new string[] {
-                "BMW R 1300 GS", "BMW R 1250 GS", "BMW S 1000 RR", "BMW M 1000 RR", "BMW R 1250 RT", "BMW K 1600 GTL", "BMW F 900 R",
-                "Yamaha YZF-R1M", "Yamaha YZF-R1", "Yamaha YZF-R6", "Yamaha MT-10 SP", "Yamaha MT-09", "Yamaha Tracer 9 GT", "Yamaha Tenere 700",
-                "Honda CBR1000RR-R Fireblade SP", "Honda CBR600RR", "Honda CB1000R", "Honda Africa Twin", "Honda X-ADV 750", "Honda Rebel 1100",
-                "Kawasaki Ninja H2", "Kawasaki Ninja ZX-10R", "Kawasaki Ninja ZX-6R", "Kawasaki Z H2", "Kawasaki Z1000", "Kawasaki Versys 1000",
-                "Ducati Panigale V4", "Ducati Streetfighter V4", "Ducati Multistrada V4", "Ducati Diavel V4", "Ducati DesertX", "Ducati Monster",
-                "Suzuki Hayabusa", "Suzuki GSX-R1000R", "Suzuki Katana", "Suzuki V-Strom 1050", "Suzuki GSX-S1000",
-                "KTM 1390 Super Duke R", "KTM 1290 Super Adventure", "KTM 890 Adventure R", "KTM 890 Duke R",
-                "Triumph Rocket 3 R", "Triumph Tiger 1200", "Triumph Speed Triple 1200 RS", "Triumph Bonneville T120",
-                "Harley-Davidson Pan America 1250", "Harley-Davidson Street Glide", "Harley-Davidson Fat Boy 114", "Harley-Davidson Breakout 117"
+                "BMW R 1300 GS", "BMW S 1000 RR", "BMW M 1000 RR",
+                "Yamaha YZF-R1", "Yamaha YZF-R6", "Yamaha MT-10 SP", "Yamaha MT-09",
+                "Honda CBR1000RR-R Fireblade SP", "Honda CBR600RR", "Honda Africa Twin",
+                "Kawasaki Ninja H2", "Kawasaki Ninja ZX-10R", "Kawasaki Ninja ZX-6R",
+                "Ducati Panigale V4", "Ducati Streetfighter V4", "Ducati Multistrada V4",
+                "Suzuki Hayabusa", "Suzuki GSX-R1000R",
+                "KTM 1390 Super Duke R", "KTM 1290 Super Adventure",
+                "Triumph Rocket 3 R", "Triumph Speed Triple 1200 RS",
+                "Harley-Davidson Pan America 1250", "Harley-Davidson Street Glide"
             };
 
             int currentYear = DateTime.Now.Year;
-            for (int year = 2010; year <= currentYear + 1; year++) 
-            {
+            for (int year = 2010; year <= currentYear + 1; year++)
                 foreach (string model in baseModels)
-                {
-                    bikes.Add($"{year} {model}"); 
-                }
-            }
+                    cboBoxModel.Items.Add($"{year} {model}");
 
-            bikes.AddRange(new string[] {
-                "1998 Yamaha YZF-R1",
-                "1999 Suzuki Hayabusa",
-                "2004 Honda CBR1000RR"
-            });
-
-            txtBookingMotorcycle.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            txtBookingMotorcycle.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            txtBookingMotorcycle.AutoCompleteCustomSource = bikes;
+            cboBoxModel.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cboBoxModel.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
-        private void LoadPlateNumberAutoComplete()
+        private void GenerateBookingID()
         {
-            AutoCompleteStringCollection plates = new AutoCompleteStringCollection();
-            
             try
             {
-                DBConnection db = new DBConnection();
-                using (SqlConnection conn = db.GetConnection())
+                using (SqlConnection conn = new DBConnection().GetConnection())
                 {
                     conn.Open();
-                    string query = "SELECT plate_number FROM Motorcycle";
+                    string query = "SELECT ISNULL(MAX(booking_id), 0) + 1 FROM Booking";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        int nextId = Convert.ToInt32(cmd.ExecuteScalar());
+                        txtBookingbookingID.Text = $"BK-{nextId:D5}";
+                    }
+                }
+            }
+            catch
+            {
+                txtBookingbookingID.Text = "BK-00001";
+            }
+        }
+
+        private void LoadBookings(string search = "", string status = "All Status")
+        {
+            dgvBookings.Rows.Clear();
+
+            try
+            {
+                using (SqlConnection conn = new DBConnection().GetConnection())
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT
+                    b.booking_id,
+                    ISNULL(c.full_name, 'Unknown')       AS full_name,
+                    ISNULL(m.plate_number, 'Unknown')    AS plate_number,
+                    ISNULL(m.model, 'Unknown')           AS model,
+                    b.service_type,
+                    b.requested_date,
+                    b.preferred_time,
+                    ISNULL(u.full_name, 'Unassigned')    AS mechanic_name,
+                    b.status,
+                    ISNULL(b.notes, '')                  AS notes
+                FROM Booking b
+                LEFT JOIN Customer c   ON b.customer_id   = c.customer_id
+                LEFT JOIN Motorcycle m ON b.motorcycle_id = m.motorcycle_id
+                LEFT JOIN Users u      ON b.mechanic_id   = u.user_id
+                WHERE (@status = 'All Status' OR b.status = @status)
+                  AND (
+                      ISNULL(c.full_name, '')    LIKE @search
+                   OR ISNULL(m.plate_number, '') LIKE @search
+                   OR b.service_type             LIKE @search
+                  )
+                ORDER BY b.requested_date DESC";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
+                        cmd.Parameters.AddWithValue("@status", status);
+                        cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                plates.Add(reader["plate_number"].ToString());
+                                dgvBookings.Rows.Add(
+                                    reader["booking_id"].ToString(),
+                                    reader["full_name"].ToString(),
+                                    reader["plate_number"].ToString(),
+                                    reader["model"].ToString(),
+                                    reader["service_type"].ToString(),
+                                    Convert.ToDateTime(reader["requested_date"]).ToString("MM/dd/yyyy"),
+                                    reader["preferred_time"].ToString(),
+                                    reader["mechanic_name"].ToString(),
+                                    reader["status"].ToString(),
+                                    reader["notes"].ToString()
+                                );
                             }
                         }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // We leave this catch block empty. 
+                MessageBox.Show("Error loading bookings: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            txtBookingPlateNumber.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            txtBookingPlateNumber.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            txtBookingPlateNumber.AutoCompleteCustomSource = plates;
         }
 
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e) { }
-        private void textBox1_TextChanged(object sender, EventArgs e) { }
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e) { }
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e) { }
-        private void textBox1_TextChanged_1(object sender, EventArgs e) { }
-        private void button2_Click(object sender, EventArgs e) { }
-        private void label1_Click(object sender, EventArgs e) { }
-        private void label14_Click(object sender, EventArgs e) { }
-        private void textBox5_TextChanged(object sender, EventArgs e) { }
-        private void txtBookingCustomerID_TextChanged(object sender, EventArgs e) { }
-        private void button11_Click(object sender, EventArgs e) { }
+        private bool ValidateForm()
+        {
+            if (string.IsNullOrWhiteSpace(txtBookingName.Text) ||
+                string.IsNullOrWhiteSpace(txtBookingPlateNumber.Text) ||
+                string.IsNullOrWhiteSpace(cboxBookingServicetype.Text) ||
+                cboxBookingHour.SelectedIndex == -1 ||
+                cboxBookingMinutes.SelectedIndex == -1 ||
+                cboxBookingAMPM.SelectedIndex == -1 ||
+                cboxBookingMechanic.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please fill in all required fields.",
+                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private string GetCurrentStatus()
+        {
+            foreach (DataGridViewRow row in dgvBookings.Rows)
+            {
+                if (row.Cells["ColBookingID"].Value?.ToString() == _selectedBookingId.ToString())
+                    return row.Cells["ColStatus"].Value?.ToString() ?? "";
+            }
+            return "";
+        }
 
         private void btnSaveBooking_Click(object sender, EventArgs e)
         {
+            if (_selectedBookingId == -1)
+            {
+                MessageBox.Show("Please select a booking from the list to update.",
+                    "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string currentStatus = GetCurrentStatus();
+            if (currentStatus == "Cancelled")
+            {
+                MessageBox.Show("This booking has been cancelled and cannot be updated.",
+                    "Cancelled Booking", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!ValidateForm()) return;
+
+            DialogResult confirm = MessageBox.Show(
+                "Are you sure you want to update this booking?",
+                "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm != DialogResult.Yes) return;
+
             try
             {
-                int customerId = Convert.ToInt32(txtBookingCustomerID.Text);
-                string plateNumber = txtBookingPlateNumber.Text;
-
+                string plateNumber = txtBookingPlateNumber.Text.Trim();
+                string customerName = txtBookingName.Text.Trim();
                 DateTime requestedDate = datetimepickerBookingbookingdate.Value.Date;
-
                 string timeString = $"{cboxBookingHour.Text}:{cboxBookingMinutes.Text} {cboxBookingAMPM.Text}";
                 TimeSpan preferredTime = DateTime.Parse(timeString).TimeOfDay;
-
                 string serviceType = cboxBookingServicetype.Text;
                 int mechanicId = Convert.ToInt32(cboxBookingMechanic.SelectedValue);
 
-                DBConnection db = new DBConnection();
-
-                using (SqlConnection conn = db.GetConnection())
+                using (SqlConnection conn = new DBConnection().GetConnection())
                 {
                     conn.Open();
 
                     int motorcycleId = 0;
-                    string findBikeQuery = "SELECT motorcycle_id FROM Motorcycle WHERE plate_number = @PlateNo";
+                    int customerId = 0;
 
+                    string findBikeQuery = "SELECT motorcycle_id, customer_id FROM Motorcycle WHERE plate_number = @PlateNo";
                     using (SqlCommand findCmd = new SqlCommand(findBikeQuery, conn))
                     {
                         findCmd.Parameters.AddWithValue("@PlateNo", plateNumber);
-                        object bikeResult = findCmd.ExecuteScalar();
-
-                        if (bikeResult != null)
+                        using (SqlDataReader reader = findCmd.ExecuteReader())
                         {
-                            motorcycleId = Convert.ToInt32(bikeResult);
-                        }
-                        else
-                        {
-                            MessageBox.Show("We couldn't find a motorcycle with that Plate Number in the system. Please register the motorcycle first!", "Motorcycle Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
+                            if (reader.Read())
+                            {
+                                motorcycleId = Convert.ToInt32(reader["motorcycle_id"]);
+                                customerId = reader["customer_id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["customer_id"]);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Motorcycle with that plate number not found.",
+                                    "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
                         }
                     }
 
-                    string query = @"INSERT INTO Booking 
-                                (customer_id, motorcycle_id, requested_date, preferred_time, service_type, mechanic_id, status, notes) 
-                                VALUES 
-                                (@CustomerID, @MotorcycleID, @RequestedDate, @PreferredTime, @ServiceType, @MechanicID, 'Pending', @Notes)";
+                    if (customerId == 0)
+                    {
+                        string findCustomerQuery = "SELECT customer_id FROM Customer WHERE full_name = @name";
+                        using (SqlCommand custCmd = new SqlCommand(findCustomerQuery, conn))
+                        {
+                            custCmd.Parameters.AddWithValue("@name", customerName);
+                            object result = custCmd.ExecuteScalar();
+                            if (result == null || result == DBNull.Value)
+                            {
+                                MessageBox.Show("Customer not found.",
+                                    "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                            customerId = Convert.ToInt32(result);
+                        }
+                    }
+
+                    // Update Customer name to match typed name
+                    string updateCustomerName = "UPDATE Customer SET full_name = @name WHERE customer_id = @cid";
+                    using (SqlCommand updCmd = new SqlCommand(updateCustomerName, conn))
+                    {
+                        updCmd.Parameters.AddWithValue("@name", customerName);
+                        updCmd.Parameters.AddWithValue("@cid", customerId);
+                        updCmd.ExecuteNonQuery();
+                    }
+
+                    string query = @"UPDATE Booking SET
+                        customer_id    = @CustomerID,
+                        motorcycle_id  = @MotorcycleID,
+                        requested_date = @RequestedDate,
+                        preferred_time = @PreferredTime,
+                        service_type   = @ServiceType,
+                        mechanic_id    = @MechanicID,
+                        notes          = @Notes
+                    WHERE booking_id = @BookingID";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -214,33 +337,34 @@ namespace SusanBigbikeShop
                         cmd.Parameters.AddWithValue("@PreferredTime", preferredTime);
                         cmd.Parameters.AddWithValue("@ServiceType", serviceType);
                         cmd.Parameters.AddWithValue("@MechanicID", mechanicId);
-                        cmd.Parameters.AddWithValue("@Notes", txtBookingNotes.Text);
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Booking saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ClearForm();
-                        }
+                        cmd.Parameters.AddWithValue("@Notes", txtBookingNotes.Text.Trim());
+                        cmd.Parameters.AddWithValue("@BookingID", _selectedBookingId);
+                        cmd.ExecuteNonQuery();
                     }
                 }
+
+                MessageBox.Show("Booking updated successfully!",
+                    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearForm();
+                LoadBookings();
             }
             catch (FormatException)
             {
-                MessageBox.Show("Please make sure all fields are filled out correctly (e.g., IDs must be numbers, time must be selected).", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please make sure all fields are filled out correctly.",
+                    "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error saving booking: " + ex.Message, "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error updating booking: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void ClearForm()
         {
-            txtBookingbookingID.Clear();
-            txtBookingCustomerID.Clear();
-            txtBookingMotorcycle.Clear();
+            _selectedBookingId = -1;
+
+            cboBoxModel.SelectedIndex = -1;
             txtBookingName.Clear();
             txtBookingPhoneNumber.Clear();
             txtBookingEmail.Clear();
@@ -254,71 +378,379 @@ namespace SusanBigbikeShop
             cboxBookingAMPM.SelectedIndex = -1;
 
             datetimepickerBookingbookingdate.Value = DateTime.Now;
-        }
 
-        private void button12_Click(object sender, EventArgs e)
-        {
-            ClearForm();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ClearForm();
-            txtBookingCustomerID.Focus();
+            GenerateBookingID();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            string keyword = txtSearch.Text == "Enter keyword..." ? "" : txtSearch.Text;
+            LoadBookings(keyword, comboBox6.SelectedItem?.ToString() ?? "All Status");
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearForm();
+        }
+
+        private void btnNewBooking_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBookingName.Text) ||
+                string.IsNullOrWhiteSpace(txtBookingPlateNumber.Text) ||
+                string.IsNullOrWhiteSpace(cboxBookingServicetype.Text) ||
+                cboxBookingHour.SelectedIndex == -1 ||
+                cboxBookingMinutes.SelectedIndex == -1 ||
+                cboxBookingAMPM.SelectedIndex == -1 ||
+                cboxBookingMechanic.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please fill in all required fields.",
+                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
-                string searchTerm = txtSearch.Text;
-                DBConnection db = new DBConnection();
+                string plateNumber = txtBookingPlateNumber.Text.Trim();
+                DateTime requestedDate = datetimepickerBookingbookingdate.Value.Date;
 
-                using (SqlConnection conn = db.GetConnection())
+                string timeString = $"{cboxBookingHour.Text}:{cboxBookingMinutes.Text} {cboxBookingAMPM.Text}";
+                TimeSpan preferredTime = DateTime.Parse(timeString).TimeOfDay;
+
+                string serviceType = cboxBookingServicetype.Text;
+                int mechanicId = Convert.ToInt32(cboxBookingMechanic.SelectedValue);
+
+                using (SqlConnection conn = new DBConnection().GetConnection())
                 {
                     conn.Open();
-                    string query = @"
-                SELECT 
-                    b.booking_id AS [Booking ID], 
-                    c.full_name AS [Customer Name], 
-                    m.plate_number AS [Plate No], 
-                    m.model AS [Motorcycle],
-                    b.service_type AS [Service],
-                    b.requested_date AS [Date], 
-                    b.preferred_time AS [Time],
-                    u.full_name AS [Mechanic],
-                    b.status AS [Status],
-                    b.notes AS [Notes]
-                FROM Booking b
-                INNER JOIN Customer c ON b.customer_id = c.customer_id
-                INNER JOIN Motorcycle m ON b.motorcycle_id = m.motorcycle_id
-                LEFT JOIN Users u ON b.mechanic_id = u.user_id
-                WHERE c.full_name LIKE @SearchTerm OR m.plate_number LIKE @SearchTerm";
+
+                    int motorcycleId = 0;
+                    int customerId = 0;
+
+                    string findBikeQuery = "SELECT motorcycle_id, customer_id FROM Motorcycle WHERE plate_number = @PlateNo";
+                    using (SqlCommand findCmd = new SqlCommand(findBikeQuery, conn))
+                    {
+                        findCmd.Parameters.AddWithValue("@PlateNo", plateNumber);
+                        using (SqlDataReader reader = findCmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                motorcycleId = Convert.ToInt32(reader["motorcycle_id"]);
+                                customerId = reader["customer_id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["customer_id"]);
+                            }
+                        }
+                    }
+
+                    // If motorcycle not found, create a new one
+                    if (motorcycleId == 0)
+                    {
+                        // Find or create customer first
+                        string findCustQuery = "SELECT customer_id FROM Customer WHERE full_name = @name";
+                        using (SqlCommand custCmd = new SqlCommand(findCustQuery, conn))
+                        {
+                            custCmd.Parameters.AddWithValue("@name", txtBookingName.Text.Trim());
+                            object result = custCmd.ExecuteScalar();
+                            if (result != null && result != DBNull.Value)
+                                customerId = Convert.ToInt32(result);
+                        }
+
+                        if (customerId == 0)
+                        {
+                            string insertCustQuery = @"INSERT INTO Customer (full_name, contact_number)
+                                   OUTPUT INSERTED.customer_id
+                                   VALUES (@name, @phone)";
+                            using (SqlCommand insertCust = new SqlCommand(insertCustQuery, conn))
+                            {
+                                insertCust.Parameters.AddWithValue("@name", txtBookingName.Text.Trim());
+                                insertCust.Parameters.AddWithValue("@phone", txtBookingPhoneNumber.Text.Trim());
+                                customerId = (int)insertCust.ExecuteScalar();
+                            }
+                        }
+
+                        string model = cboBoxModel.Text.Trim();
+                        string insertBikeQuery = @"INSERT INTO Motorcycle (customer_id, make, model, plate_number)
+                                OUTPUT INSERTED.motorcycle_id
+                                VALUES (@custId, 'Unknown', @model, @plate)";
+                        using (SqlCommand insertBike = new SqlCommand(insertBikeQuery, conn))
+                        {
+                            insertBike.Parameters.AddWithValue("@custId", customerId);
+                            insertBike.Parameters.AddWithValue("@model", string.IsNullOrWhiteSpace(model) ? "Unknown" : model);
+                            insertBike.Parameters.AddWithValue("@plate", plateNumber);
+                            motorcycleId = (int)insertBike.ExecuteScalar();
+                        }
+                    }
+
+                    if (customerId == 0)
+                    {
+                        string findCustFallback = "SELECT customer_id FROM Customer WHERE full_name = @name";
+                        using (SqlCommand custCmd = new SqlCommand(findCustFallback, conn))
+                        {
+                            custCmd.Parameters.AddWithValue("@name", txtBookingName.Text.Trim());
+                            object result = custCmd.ExecuteScalar();
+                            if (result != null && result != DBNull.Value)
+                                customerId = Convert.ToInt32(result);
+                            else
+                            {
+                                MessageBox.Show("Could not find or create customer record.",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
+                    }
+
+                    string query = @"INSERT INTO Booking
+                        (customer_id, motorcycle_id, requested_date, preferred_time,
+                         service_type, mechanic_id, status, notes)
+                        VALUES
+                        (@CustomerID, @MotorcycleID, @RequestedDate, @PreferredTime,
+                         @ServiceType, @MechanicID, 'Pending', @Notes)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
-
-                        dgvBookings.DataSource = dt;
+                        cmd.Parameters.AddWithValue("@CustomerID", customerId);
+                        cmd.Parameters.AddWithValue("@MotorcycleID", motorcycleId);
+                        cmd.Parameters.AddWithValue("@RequestedDate", requestedDate);
+                        cmd.Parameters.AddWithValue("@PreferredTime", preferredTime);
+                        cmd.Parameters.AddWithValue("@ServiceType", serviceType);
+                        cmd.Parameters.AddWithValue("@MechanicID", mechanicId);
+                        cmd.Parameters.AddWithValue("@Notes", txtBookingNotes.Text.Trim());
+                        cmd.ExecuteNonQuery();
                     }
                 }
+
+                MessageBox.Show("Booking saved successfully!",
+                    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ClearForm();
+                LoadBookings();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please make sure all fields are filled out correctly.",
+                    "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error saving booking: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void txtBookingNotes_TextChanged(object sender, EventArgs e)
+        private void dgvBookings_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = dgvBookings.Rows[e.RowIndex];
+
+            _selectedBookingId = int.Parse(row.Cells["ColBookingID"].Value.ToString());
+
+            txtBookingbookingID.Text = "BK-" + _selectedBookingId.ToString("D5");
+            txtBookingName.Text = row.Cells["ColCustomerName"].Value.ToString();
+            txtBookingPlateNumber.Text = row.Cells["ColPlate"].Value.ToString();
+            txtBookingNotes.Text = row.Cells["ColNotes"].Value.ToString();
+
+            cboBoxModel.Text = row.Cells["ColMotorcycle"].Value.ToString();
+            cboxBookingServicetype.Text = row.Cells["ColService"].Value.ToString();
+            cboxBookingMechanic.Text = row.Cells["ColMechanic"].Value.ToString();
+
+            if (DateTime.TryParse(row.Cells["ColDate"].Value.ToString(), out DateTime date))
+                datetimepickerBookingbookingdate.Value = date;
+
+            string timeVal = row.Cells["ColTime"].Value.ToString();
+            if (TimeSpan.TryParse(timeVal, out TimeSpan ts))
+            {
+                int hour = ts.Hours;
+                string ampm = hour >= 12 ? "PM" : "AM";
+                hour = hour % 12;
+                if (hour == 0) hour = 12;
+
+                cboxBookingHour.Text = hour.ToString("00");
+                cboxBookingMinutes.Text = ts.Minutes.ToString("00");
+                cboxBookingAMPM.Text = ampm;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            if (_selectedBookingId == -1)
+            {
+                MessageBox.Show("Please select a booking from the list to cancel.",
+                    "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string currentStatus = "";
+            foreach (DataGridViewRow row in dgvBookings.Rows)
+            {
+                if (row.Cells["ColBookingID"].Value?.ToString() == _selectedBookingId.ToString())
+                {
+                    currentStatus = row.Cells["ColStatus"].Value?.ToString();
+                    break;
+                }
+            }
+
+            if (currentStatus == "Cancelled")
+            {
+                MessageBox.Show("This booking is already cancelled.",
+                    "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DialogResult confirm = MessageBox.Show(
+                "Are you sure you want to cancel this booking?",
+                "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirm != DialogResult.Yes) return;
+
+            try
+            {
+                using (SqlConnection conn = new DBConnection().GetConnection())
+                {
+                    conn.Open();
+                    string query = "UPDATE Booking SET status = 'Cancelled' WHERE booking_id = @id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", _selectedBookingId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Booking has been cancelled.",
+                    "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ClearForm();
+                LoadBookings(
+                    txtSearch.Text == "Enter keyword..." ? "" : txtSearch.Text,
+                    comboBox6.SelectedItem?.ToString() ?? "All Status");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error cancelling booking: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnInProgress_Click(object sender, EventArgs e)
+        {
+            if (_selectedBookingId == -1)
+            {
+                MessageBox.Show("Please select a booking from the list.",
+                    "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string currentStatus = GetCurrentStatus();
+            if (currentStatus == "Cancelled")
+            {
+                MessageBox.Show("This booking has been cancelled and cannot be updated.",
+                    "Cancelled Booking", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (currentStatus == "Confirmed")
+            {
+                MessageBox.Show("This booking is already marked as Confirmed.",
+                    "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DialogResult confirm = MessageBox.Show(
+                "Mark this booking as Confirmed?",
+                "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm != DialogResult.Yes) return;
+
+            try
+            {
+                using (SqlConnection conn = new DBConnection().GetConnection())
+                {
+                    conn.Open();
+                    string query = "UPDATE Booking SET status = 'Confirmed' WHERE booking_id = @id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", _selectedBookingId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Booking marked as Confirmed.",
+                    "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearForm();
+                LoadBookings(
+                    txtSearch.Text == "Enter keyword..." ? "" : txtSearch.Text,
+                    comboBox6.SelectedItem?.ToString() ?? "All Status");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating status: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtSearch.Text == "Enter keyword..." ? "" : txtSearch.Text;
+            LoadBookings(keyword, comboBox6.SelectedItem?.ToString() ?? "All Status");
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (_selectedBookingId == -1)
+            {
+                MessageBox.Show("Please select a booking from the list to delete.",
+                    "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult confirm = MessageBox.Show(
+                "Are you sure you want to permanently delete this booking? This cannot be undone.",
+                "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirm != DialogResult.Yes) return;
+
+            try
+            {
+                using (SqlConnection conn = new DBConnection().GetConnection())
+                {
+                    conn.Open();
+                    string query = "DELETE FROM Booking WHERE booking_id = @id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", _selectedBookingId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Booking deleted successfully.",
+                    "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ClearForm();
+                LoadBookings(
+                    txtSearch.Text == "Enter keyword..." ? "" : txtSearch.Text,
+                    comboBox6.SelectedItem?.ToString() ?? "All Status");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error deleting booking: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string keyword = txtSearch.Text == "Enter keyword..." ? "" : txtSearch.Text;
+            LoadBookings(keyword, comboBox6.SelectedItem?.ToString() ?? "All Status");
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Enter keyword...")
+                txtSearch.Text = "";
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+                txtSearch.Text = "Enter keyword...";
         }
     }
 }

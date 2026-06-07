@@ -334,5 +334,6 @@ namespace SusanBigbikeShop
             if (string.IsNullOrWhiteSpace(txtSearchUser.Text))
                 txtSearchUser.Text = "Enter keyword...";
         }
+
     }
 }

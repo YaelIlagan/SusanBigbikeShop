@@ -54,6 +54,12 @@
     <Compile Include="BookingForm.Designer.cs">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CashPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashPaymentForm.Designer.cs">
+      <DependentUpon>CashPaymentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DasboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlinePaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlinePaymentForm.Designer.cs">
+      <DependentUpon>OnlinePaymentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
@@ -164,6 +176,12 @@
     <Compile Include="SalesForm.Designer.cs">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateJobOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateJobOrderForm.Designer.cs">
+      <DependentUpon>UpdateJobOrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAuth.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,11 +191,17 @@
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CashPaymentForm.resx">
+      <DependentUpon>CashPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DasboardForm.resx">
       <DependentUpon>DasboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlinePaymentForm.resx">
+      <DependentUpon>OnlinePaymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
@@ -228,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateJobOrderForm.resx">
+      <DependentUpon>UpdateJobOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAuth.resx">
       <DependentUpon>UserAuth.cs</DependentUpon>

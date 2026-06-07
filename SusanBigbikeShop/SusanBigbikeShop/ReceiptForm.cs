@@ -12,19 +12,34 @@ namespace SusanBigbikeShop
 {
     public partial class ReceiptForm : Form
     {
-        public ReceiptForm()
+        public ReceiptForm(
+            int saleId,
+            DateTime date,
+            string cashierName,
+            List<string> items,
+            List<string> amounts,
+            double total,
+            string paymentMethod,
+            double cashGiven,
+            double change,
+            string transactionRef)
         {
             InitializeComponent();
-        }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
+            lblDate.Text = date.ToString("yyyy/MM/dd hh:mm tt");
+            lblName.Text = cashierName;
+            lblTotal.Text = "₱" + total.ToString("N2");
+            lblItem.Text = string.Join(Environment.NewLine, items);
+            lblAmount.Text = string.Join(Environment.NewLine, amounts);
 
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
+            if (paymentMethod == "CASH")
+            {
+                lblChange.Text = "₱" + change.ToString("N2");
+            }
+            else
+            {
+                lblChange.Text = "Ref#: " + transactionRef;
+            }
         }
     }
 }
