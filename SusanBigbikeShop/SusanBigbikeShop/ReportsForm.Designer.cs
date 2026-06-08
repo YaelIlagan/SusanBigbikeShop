@@ -28,18 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlitemdata = new System.Windows.Forms.Panel();
             this.btnSalesReportsClear = new System.Windows.Forms.Button();
             this.btnSalesReportsGenerateReport = new System.Windows.Forms.Button();
             this.cboxSalesReportStatus = new System.Windows.Forms.ComboBox();
-            this.cboxSalesReportMechanic = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cboxSalesReportsService = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.dateTimePickerSalesReportsDateTo = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerSalesReportsDateFrom = new System.Windows.Forms.DateTimePicker();
@@ -82,11 +78,7 @@
             this.pnlitemdata.Controls.Add(this.btnSalesReportsClear);
             this.pnlitemdata.Controls.Add(this.btnSalesReportsGenerateReport);
             this.pnlitemdata.Controls.Add(this.cboxSalesReportStatus);
-            this.pnlitemdata.Controls.Add(this.cboxSalesReportMechanic);
             this.pnlitemdata.Controls.Add(this.label5);
-            this.pnlitemdata.Controls.Add(this.label6);
-            this.pnlitemdata.Controls.Add(this.cboxSalesReportsService);
-            this.pnlitemdata.Controls.Add(this.label25);
             this.pnlitemdata.Controls.Add(this.dateTimePickerSalesReportsDateTo);
             this.pnlitemdata.Controls.Add(this.label2);
             this.pnlitemdata.Controls.Add(this.dateTimePickerSalesReportsDateFrom);
@@ -96,7 +88,7 @@
             this.pnlitemdata.Margin = new System.Windows.Forms.Padding(4);
             this.pnlitemdata.Name = "pnlitemdata";
             this.pnlitemdata.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlitemdata.Size = new System.Drawing.Size(902, 197);
+            this.pnlitemdata.Size = new System.Drawing.Size(902, 170);
             this.pnlitemdata.TabIndex = 0;
             // 
             // btnSalesReportsClear
@@ -108,7 +100,7 @@
             this.btnSalesReportsClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalesReportsClear.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalesReportsClear.ForeColor = System.Drawing.Color.Black;
-            this.btnSalesReportsClear.Location = new System.Drawing.Point(683, 147);
+            this.btnSalesReportsClear.Location = new System.Drawing.Point(683, 114);
             this.btnSalesReportsClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalesReportsClear.Name = "btnSalesReportsClear";
             this.btnSalesReportsClear.Size = new System.Drawing.Size(210, 41);
@@ -119,12 +111,12 @@
             // 
             // btnSalesReportsGenerateReport
             // 
-            this.btnSalesReportsGenerateReport.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnSalesReportsGenerateReport.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnSalesReportsGenerateReport.FlatAppearance.BorderSize = 0;
             this.btnSalesReportsGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalesReportsGenerateReport.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalesReportsGenerateReport.ForeColor = System.Drawing.Color.Black;
-            this.btnSalesReportsGenerateReport.Location = new System.Drawing.Point(465, 147);
+            this.btnSalesReportsGenerateReport.Location = new System.Drawing.Point(465, 114);
             this.btnSalesReportsGenerateReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalesReportsGenerateReport.Name = "btnSalesReportsGenerateReport";
             this.btnSalesReportsGenerateReport.Size = new System.Drawing.Size(210, 41);
@@ -139,73 +131,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboxSalesReportStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxSalesReportStatus.FormattingEnabled = true;
-            this.cboxSalesReportStatus.Location = new System.Drawing.Point(576, 107);
+            this.cboxSalesReportStatus.Location = new System.Drawing.Point(576, 61);
             this.cboxSalesReportStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cboxSalesReportStatus.Name = "cboxSalesReportStatus";
             this.cboxSalesReportStatus.Size = new System.Drawing.Size(317, 37);
             this.cboxSalesReportStatus.TabIndex = 57;
             this.cboxSalesReportStatus.SelectedIndexChanged += new System.EventHandler(this.cboxSalesReportStatus_SelectedIndexChanged);
             // 
-            // cboxSalesReportMechanic
-            // 
-            this.cboxSalesReportMechanic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboxSalesReportMechanic.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxSalesReportMechanic.FormattingEnabled = true;
-            this.cboxSalesReportMechanic.Location = new System.Drawing.Point(576, 62);
-            this.cboxSalesReportMechanic.Margin = new System.Windows.Forms.Padding(4);
-            this.cboxSalesReportMechanic.Name = "cboxSalesReportMechanic";
-            this.cboxSalesReportMechanic.Size = new System.Drawing.Size(317, 37);
-            this.cboxSalesReportMechanic.TabIndex = 56;
-            this.cboxSalesReportMechanic.SelectedIndexChanged += new System.EventHandler(this.cboxSalesReportMechanic_SelectedIndexChanged);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(458, 110);
+            this.label5.Location = new System.Drawing.Point(459, 66);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 33);
+            this.label5.Size = new System.Drawing.Size(110, 33);
             this.label5.TabIndex = 53;
-            this.label5.Text = "Status";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(458, 66);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 33);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "Staff";
-            // 
-            // cboxSalesReportsService
-            // 
-            this.cboxSalesReportsService.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxSalesReportsService.FormattingEnabled = true;
-            this.cboxSalesReportsService.Location = new System.Drawing.Point(131, 150);
-            this.cboxSalesReportsService.Margin = new System.Windows.Forms.Padding(4);
-            this.cboxSalesReportsService.Name = "cboxSalesReportsService";
-            this.cboxSalesReportsService.Size = new System.Drawing.Size(309, 37);
-            this.cboxSalesReportsService.TabIndex = 50;
-            this.cboxSalesReportsService.SelectedIndexChanged += new System.EventHandler(this.cboxSalesReportsService_SelectedIndexChanged);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(10, 152);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(93, 33);
-            this.label25.TabIndex = 49;
-            this.label25.Text = "Service";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
+            this.label5.Text = "PAYMENT";
             // 
             // dateTimePickerSalesReportsDateTo
             // 
@@ -278,41 +221,42 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(234)))));
             this.panel1.Controls.Add(this.dataGridView3);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Location = new System.Drawing.Point(9, 214);
+            this.panel1.Location = new System.Drawing.Point(9, 187);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(902, 359);
+            this.panel1.Size = new System.Drawing.Size(902, 386);
             this.panel1.TabIndex = 58;
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView3.Location = new System.Drawing.Point(9, 55);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(884, 295);
+            this.dataGridView3.Size = new System.Drawing.Size(884, 322);
             this.dataGridView3.TabIndex = 1;
             // 
             // label11
@@ -401,12 +345,8 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DateTimePicker dateTimePickerSalesReportsDateTo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cboxSalesReportsService;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox cboxSalesReportStatus;
-        private System.Windows.Forms.ComboBox cboxSalesReportMechanic;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView3;

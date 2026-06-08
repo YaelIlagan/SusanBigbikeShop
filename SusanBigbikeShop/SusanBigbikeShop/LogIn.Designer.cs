@@ -43,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(191, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 50);
@@ -88,7 +88,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(117, 251);
+            this.btnLogin.Location = new System.Drawing.Point(117, 258);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(286, 40);
             this.btnLogin.TabIndex = 1;
@@ -99,10 +99,10 @@
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtUsername.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(12, 122);
+            this.txtUsername.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(12, 124);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(496, 32);
+            this.txtUsername.Size = new System.Drawing.Size(496, 36);
             this.txtUsername.TabIndex = 2;
             // 
             // label2
@@ -111,7 +111,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 89);
+            this.label2.Location = new System.Drawing.Point(10, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 28);
             this.label2.TabIndex = 3;
@@ -120,10 +120,10 @@
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPassword.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(12, 197);
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold);
+            this.txtPassword.Location = new System.Drawing.Point(12, 201);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(496, 32);
+            this.txtPassword.Size = new System.Drawing.Size(496, 36);
             this.txtPassword.TabIndex = 4;
             // 
             // label3
@@ -132,7 +132,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(10, 164);
+            this.label3.Location = new System.Drawing.Point(10, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 28);
             this.label3.TabIndex = 5;

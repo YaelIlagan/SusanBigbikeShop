@@ -71,7 +71,6 @@ namespace SusanBigbikeShop
         private bool ValidateForm()
         {
             if (string.IsNullOrWhiteSpace(txtCustomerName.Text) ||
-                string.IsNullOrWhiteSpace(txtContactNumber.Text) ||
                 string.IsNullOrWhiteSpace(txtMotorcycleModel.Text) ||
                 string.IsNullOrWhiteSpace(txtPlateNumber.Text) ||
                 string.IsNullOrWhiteSpace(txtLaborCost.Text) ||
@@ -146,7 +145,7 @@ namespace SusanBigbikeShop
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@customerName", txtCustomerName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@contact", txtContactNumber.Text.Trim());
+                        cmd.Parameters.AddWithValue("@contact", string.IsNullOrWhiteSpace(txtContactNumber.Text) ? "N/A" : txtContactNumber.Text.Trim());
                         cmd.Parameters.AddWithValue("@model", txtMotorcycleModel.Text.Trim());
                         cmd.Parameters.AddWithValue("@plate", txtPlateNumber.Text.Trim());
                         cmd.Parameters.AddWithValue("@parts", GetSelectedParts());

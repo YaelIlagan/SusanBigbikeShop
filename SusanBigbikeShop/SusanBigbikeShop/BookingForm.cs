@@ -15,10 +15,16 @@ namespace SusanBigbikeShop
     public partial class BookingForm : Form
     {
         private int _selectedBookingId = -1;
+        private string _currentUserRole;
+        private int _currentUserId;
 
-        public BookingForm()
+        public BookingForm(string userRole = "Owner", int userId = 0)
         {
             InitializeComponent();
+
+            _currentUserRole = userRole;
+            _currentUserId = userId;
+
             LoadStaticData();
             LoadMechanics();
             LoadMotorcycleAutoComplete();
@@ -148,33 +154,44 @@ namespace SusanBigbikeShop
                     conn.Open();
 
                     string query = @"
-                SELECT
-                    b.booking_id,
-                    ISNULL(c.full_name, 'Unknown')       AS full_name,
-                    ISNULL(m.plate_number, 'Unknown')    AS plate_number,
-                    ISNULL(m.model, 'Unknown')           AS model,
-                    b.service_type,
-                    b.requested_date,
-                    b.preferred_time,
-                    ISNULL(u.full_name, 'Unassigned')    AS mechanic_name,
-                    b.status,
-                    ISNULL(b.notes, '')                  AS notes
-                FROM Booking b
-                LEFT JOIN Customer c   ON b.customer_id   = c.customer_id
-                LEFT JOIN Motorcycle m ON b.motorcycle_id = m.motorcycle_id
-                LEFT JOIN Users u      ON b.mechanic_id   = u.user_id
-                WHERE (@status = 'All Status' OR b.status = @status)
-                  AND (
-                      ISNULL(c.full_name, '')    LIKE @search
-                   OR ISNULL(m.plate_number, '') LIKE @search
-                   OR b.service_type             LIKE @search
-                  )
-                ORDER BY b.requested_date DESC";
+                        SELECT
+                        b.booking_id,
+                        ISNULL(c.full_name, 'Unknown')       AS full_name,
+                        ISNULL(m.plate_number, 'Unknown')    AS plate_number,
+                        ISNULL(m.model, 'Unknown')           AS model,
+                        b.service_type,
+                        b.requested_date,
+                        b.preferred_time,
+                        ISNULL(u.full_name, 'Unassigned')    AS mechanic_name,
+                        b.status,
+                        ISNULL(b.notes, '')                  AS notes
+                        FROM Booking b
+                        LEFT JOIN Customer c   ON b.customer_id   = c.customer_id
+                        LEFT JOIN Motorcycle m ON b.motorcycle_id = m.motorcycle_id
+                        LEFT JOIN Users u      ON b.mechanic_id   = u.user_id
+                        WHERE (@status = 'All Status' OR b.status = @status)
+                            AND (
+                            ISNULL(c.full_name, '')    LIKE @search
+                        OR ISNULL(m.plate_number, '') LIKE @search
+                        OR b.service_type             LIKE @search
+                        )";
+
+                    if (_currentUserRole == "Customer")
+                    {
+                        query += " AND c.user_id = @userId";
+                    }
+
+                    query += " ORDER BY b.requested_date DESC";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@status", status);
                         cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
+                        if (_currentUserRole == "Customer")
+                        {
+                            cmd.Parameters.AddWithValue("@userId", _currentUserId);
+                        }
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
@@ -229,6 +246,53 @@ namespace SusanBigbikeShop
                     return row.Cells["ColStatus"].Value?.ToString() ?? "";
             }
             return "";
+        }
+
+        private bool IsDuplicateBooking(int motorcycleId, DateTime requestedDate, TimeSpan preferredTime, string serviceType, int excludeBookingId = -1)
+        {
+            bool isDuplicate = false;
+            try
+            {
+                using (SqlConnection conn = new DBConnection().GetConnection())
+                {
+                    conn.Open();
+                    string query = @"
+                SELECT COUNT(1) 
+                FROM Booking 
+                WHERE motorcycle_id = @motorcycleId 
+                  AND requested_date = @requestedDate 
+                  AND preferred_time = @preferredTime 
+                  AND service_type = @serviceType
+                  AND status != 'Cancelled'";
+
+                    if (excludeBookingId != -1)
+                    {
+                        query += " AND booking_id != @excludeBookingId";
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@motorcycleId", motorcycleId);
+                        cmd.Parameters.AddWithValue("@requestedDate", requestedDate);
+                        cmd.Parameters.AddWithValue("@preferredTime", preferredTime);
+                        cmd.Parameters.AddWithValue("@serviceType", serviceType);
+
+                        if (excludeBookingId != -1)
+                        {
+                            cmd.Parameters.AddWithValue("@excludeBookingId", excludeBookingId);
+                        }
+
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        isDuplicate = count > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking for duplicate booking: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+            return isDuplicate;
         }
 
         private void btnSaveBooking_Click(object sender, EventArgs e)
@@ -291,6 +355,13 @@ namespace SusanBigbikeShop
                                 return;
                             }
                         }
+                    }
+
+                    if (IsDuplicateBooking(motorcycleId, requestedDate, preferredTime, serviceType, _selectedBookingId))
+                    {
+                        MessageBox.Show("A booking with this motorcycle, date, time, and service type already exists.",
+                                        "Duplicate Booking Detected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
 
                     if (customerId == 0)
@@ -438,6 +509,13 @@ namespace SusanBigbikeShop
                                 customerId = reader["customer_id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["customer_id"]);
                             }
                         }
+                    }
+
+                    if (motorcycleId != 0 && IsDuplicateBooking(motorcycleId, requestedDate, preferredTime, serviceType))
+                    {
+                        MessageBox.Show("A booking with this motorcycle, date, time, and service type already exists.",
+                                        "Duplicate Booking Detected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
 
                     // If motorcycle not found, create a new one
@@ -654,7 +732,7 @@ namespace SusanBigbikeShop
             }
 
             DialogResult confirm = MessageBox.Show(
-                "Mark this booking as Confirmed?",
+                "Mark this booking as Confirmed and send it to Repairs & Maintenance?",
                 "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirm != DialogResult.Yes) return;
@@ -664,16 +742,45 @@ namespace SusanBigbikeShop
                 using (SqlConnection conn = new DBConnection().GetConnection())
                 {
                     conn.Open();
-                    string query = "UPDATE Booking SET status = 'Confirmed' WHERE booking_id = @id";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+
+                    string updateQuery = "UPDATE Booking SET status = 'Confirmed' WHERE booking_id = @id";
+                    using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", _selectedBookingId);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    string insertJoQuery = @"
+                INSERT INTO JobOrder (customer_name, contact_number, motorcycle_model, plate_number, 
+                                      parts_used, labor_cost, type, issue_description, 
+                                      mechanic_id, motorcycle_id, status)
+                SELECT 
+                    ISNULL(c.full_name, 'Unknown'), 
+                    ISNULL(c.contact_number, 'Unknown'), 
+                    ISNULL(m.model, 'Unknown'), 
+                    ISNULL(m.plate_number, 'Unknown'), 
+                    'None yet', 
+                    0.0, 
+                    b.service_type, 
+                    ISNULL(b.notes, 'No notes provided.'), 
+                    b.mechanic_id, 
+                    b.motorcycle_id, 
+                    'Confirmed' -- The status it will start with in the Job Order grid
+                FROM Booking b
+                LEFT JOIN Customer c ON b.customer_id = c.customer_id
+                LEFT JOIN Motorcycle m ON b.motorcycle_id = m.motorcycle_id
+                WHERE b.booking_id = @id";
+
+                    using (SqlCommand cmd = new SqlCommand(insertJoQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", _selectedBookingId);
                         cmd.ExecuteNonQuery();
                     }
                 }
 
-                MessageBox.Show("Booking marked as Confirmed.",
+                MessageBox.Show("Booking Confirmed! A Job Order has been sent to the Repairs list.",
                     "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 ClearForm();
                 LoadBookings(
                     txtSearch.Text == "Enter keyword..." ? "" : txtSearch.Text,

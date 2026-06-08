@@ -75,7 +75,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(11, 131);
+            this.label3.Location = new System.Drawing.Point(11, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 28);
             this.label3.TabIndex = 13;
@@ -84,10 +84,10 @@
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPassword.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(13, 164);
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold);
+            this.txtPassword.Location = new System.Drawing.Point(13, 166);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(496, 32);
+            this.txtPassword.Size = new System.Drawing.Size(496, 36);
             this.txtPassword.TabIndex = 12;
             // 
             // label2
@@ -96,7 +96,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(11, 62);
+            this.label2.Location = new System.Drawing.Point(11, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 28);
             this.label2.TabIndex = 11;
@@ -105,10 +105,10 @@
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtUsername.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(13, 95);
+            this.txtUsername.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold);
+            this.txtUsername.Location = new System.Drawing.Point(13, 96);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(496, 32);
+            this.txtUsername.Size = new System.Drawing.Size(496, 36);
             this.txtUsername.TabIndex = 10;
             // 
             // btnSignUp
@@ -120,7 +120,7 @@
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignUp.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
-            this.btnSignUp.Location = new System.Drawing.Point(117, 269);
+            this.btnSignUp.Location = new System.Drawing.Point(117, 284);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(286, 42);
             this.btnSignUp.TabIndex = 9;
@@ -133,7 +133,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(182, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 50);
@@ -146,7 +146,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(11, 199);
+            this.label5.Location = new System.Drawing.Point(11, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(198, 28);
             this.label5.TabIndex = 17;
@@ -155,10 +155,10 @@
             // txtConfirmPass
             // 
             this.txtConfirmPass.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtConfirmPass.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPass.Location = new System.Drawing.Point(13, 231);
+            this.txtConfirmPass.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold);
+            this.txtConfirmPass.Location = new System.Drawing.Point(13, 234);
             this.txtConfirmPass.Name = "txtConfirmPass";
-            this.txtConfirmPass.Size = new System.Drawing.Size(496, 32);
+            this.txtConfirmPass.Size = new System.Drawing.Size(496, 36);
             this.txtConfirmPass.TabIndex = 16;
             // 
             // SignUp

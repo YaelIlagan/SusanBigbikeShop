@@ -16,6 +16,8 @@ namespace SusanBigbikeShop
         {
             InitializeComponent();
             ShowLogin();
+            this.FormClosed += (s, e) => Application.Exit();
+
         }
 
         public void ShowLogin()

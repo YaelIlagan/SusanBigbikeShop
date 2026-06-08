@@ -25,6 +25,7 @@ namespace SusanBigbikeShop
             cboxRepairsStatus.Items.Clear();
             cboxRepairsStatus.Items.Add("All Status");
             cboxRepairsStatus.Items.Add("Pending");
+            cboxRepairsStatus.Items.Add("Confirmed");
             cboxRepairsStatus.Items.Add("In Progress");
             cboxRepairsStatus.Items.Add("Completed");
             cboxRepairsStatus.SelectedIndex = 0;

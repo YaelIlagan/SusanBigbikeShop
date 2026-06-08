@@ -21,6 +21,7 @@ namespace SusanBigbikeShop
             _parent = parent;
 
             txtPassword.PasswordChar = '●';
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

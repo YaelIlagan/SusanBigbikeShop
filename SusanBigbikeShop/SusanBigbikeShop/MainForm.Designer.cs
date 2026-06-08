@@ -76,6 +76,8 @@
             this.Controls.Add(this.PnlLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1280, 800);
+            this.MinimumSize = new System.Drawing.Size(1280, 800);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SUSAN BigBike Shop";
