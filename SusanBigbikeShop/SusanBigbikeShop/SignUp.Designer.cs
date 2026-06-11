@@ -148,9 +148,10 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(11, 202);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 28);
+            this.label5.Size = new System.Drawing.Size(206, 28);
             this.label5.TabIndex = 17;
-            this.label5.Text = "ReEnter Password*";
+            this.label5.Text = "Re-Enter Password*";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtConfirmPass
             // 

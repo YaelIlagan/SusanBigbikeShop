@@ -23,6 +23,8 @@ namespace SusanBigbikeShop
 
             txtPassword.PasswordChar = '●';
             txtConfirmPass.PasswordChar = '●';
+            this.FormClosed += (s, e) => Application.Exit();
+
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
@@ -137,6 +139,11 @@ namespace SusanBigbikeShop
         private void linklblLogIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             _parent.ShowLogin();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

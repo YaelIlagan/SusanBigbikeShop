@@ -142,7 +142,6 @@ namespace SusanBigbikeShop
                 string.IsNullOrWhiteSpace(txtMotorcycleModel.Text) ||
                 string.IsNullOrWhiteSpace(txtPlateNumber.Text) ||
                 string.IsNullOrWhiteSpace(txtLaborCost.Text) ||
-                string.IsNullOrWhiteSpace(txtIssueCocernsNote.Text) ||
                 cboxType.SelectedIndex == -1 ||
                 cboBoxStatus.SelectedIndex == -1)
             {
@@ -158,9 +157,10 @@ namespace SusanBigbikeShop
                 return false;
             }
 
-            if (!System.Text.RegularExpressions.Regex.IsMatch(txtContactNumber.Text, @"^\d{11}$"))
+            if (!string.IsNullOrWhiteSpace(txtContactNumber.Text) &&
+                !System.Text.RegularExpressions.Regex.IsMatch(txtContactNumber.Text, @"^\d{11}$"))
             {
-                MessageBox.Show("Contact Number must be exactly 11 digits.",
+                MessageBox.Show("Contact Number must be exactly 11 digits if provided.",
                     "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtContactNumber.Focus();
                 return false;

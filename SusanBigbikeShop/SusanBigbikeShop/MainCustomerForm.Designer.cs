@@ -39,6 +39,8 @@
             // 
             // btnBookingCustomer
             // 
+            this.btnBookingCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBookingCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.btnBookingCustomer.FlatAppearance.BorderSize = 0;
             this.btnBookingCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -107,8 +109,7 @@
             // 
             // MainCustomerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(8)))), ((int)(((byte)(10)))));
             this.ClientSize = new System.Drawing.Size(232, 575);
             this.Controls.Add(this.panel4);

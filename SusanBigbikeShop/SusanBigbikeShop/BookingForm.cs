@@ -18,12 +18,12 @@ namespace SusanBigbikeShop
         private string _currentUserRole;
         private int _currentUserId;
 
-        public BookingForm(string userRole = "Owner", int userId = 0)
+        public BookingForm()
         {
             InitializeComponent();
 
-            _currentUserRole = userRole;
-            _currentUserId = userId;
+            _currentUserRole = UserSession.Role ?? "Owner";
+            _currentUserId = UserSession.UserId;
 
             LoadStaticData();
             LoadMechanics();
@@ -381,7 +381,6 @@ namespace SusanBigbikeShop
                         }
                     }
 
-                    // Update Customer name to match typed name
                     string updateCustomerName = "UPDATE Customer SET full_name = @name WHERE customer_id = @cid";
                     using (SqlCommand updCmd = new SqlCommand(updateCustomerName, conn))
                     {
@@ -518,10 +517,8 @@ namespace SusanBigbikeShop
                         return;
                     }
 
-                    // If motorcycle not found, create a new one
                     if (motorcycleId == 0)
                     {
-                        // Find or create customer first
                         string findCustQuery = "SELECT customer_id FROM Customer WHERE full_name = @name";
                         using (SqlCommand custCmd = new SqlCommand(findCustQuery, conn))
                         {
@@ -533,13 +530,20 @@ namespace SusanBigbikeShop
 
                         if (customerId == 0)
                         {
-                            string insertCustQuery = @"INSERT INTO Customer (full_name, contact_number)
-                                   OUTPUT INSERTED.customer_id
-                                   VALUES (@name, @phone)";
+                            string insertCustQuery = @"INSERT INTO Customer (full_name, contact_number, user_id)
+                                OUTPUT INSERTED.customer_id
+                                VALUES (@name, @phone, @userId)";
+
                             using (SqlCommand insertCust = new SqlCommand(insertCustQuery, conn))
                             {
                                 insertCust.Parameters.AddWithValue("@name", txtBookingName.Text.Trim());
                                 insertCust.Parameters.AddWithValue("@phone", txtBookingPhoneNumber.Text.Trim());
+
+                                if (_currentUserRole == "Customer" && _currentUserId != 0)
+                                    insertCust.Parameters.AddWithValue("@userId", _currentUserId);
+                                else
+                                    insertCust.Parameters.AddWithValue("@userId", DBNull.Value);
+
                                 customerId = (int)insertCust.ExecuteScalar();
                             }
                         }

@@ -188,6 +188,7 @@
     <Compile Include="UserAuth.Designer.cs">
       <DependentUpon>UserAuth.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSession.cs" />
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>

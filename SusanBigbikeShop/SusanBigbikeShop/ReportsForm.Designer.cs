@@ -34,8 +34,6 @@
             this.pnlitemdata = new System.Windows.Forms.Panel();
             this.btnSalesReportsClear = new System.Windows.Forms.Button();
             this.btnSalesReportsGenerateReport = new System.Windows.Forms.Button();
-            this.cboxSalesReportStatus = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.dateTimePickerSalesReportsDateTo = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerSalesReportsDateFrom = new System.Windows.Forms.DateTimePicker();
@@ -77,8 +75,6 @@
             this.pnlitemdata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(234)))));
             this.pnlitemdata.Controls.Add(this.btnSalesReportsClear);
             this.pnlitemdata.Controls.Add(this.btnSalesReportsGenerateReport);
-            this.pnlitemdata.Controls.Add(this.cboxSalesReportStatus);
-            this.pnlitemdata.Controls.Add(this.label5);
             this.pnlitemdata.Controls.Add(this.dateTimePickerSalesReportsDateTo);
             this.pnlitemdata.Controls.Add(this.label2);
             this.pnlitemdata.Controls.Add(this.dateTimePickerSalesReportsDateFrom);
@@ -88,7 +84,7 @@
             this.pnlitemdata.Margin = new System.Windows.Forms.Padding(4);
             this.pnlitemdata.Name = "pnlitemdata";
             this.pnlitemdata.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlitemdata.Size = new System.Drawing.Size(902, 170);
+            this.pnlitemdata.Size = new System.Drawing.Size(902, 158);
             this.pnlitemdata.TabIndex = 0;
             // 
             // btnSalesReportsClear
@@ -100,7 +96,7 @@
             this.btnSalesReportsClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalesReportsClear.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalesReportsClear.ForeColor = System.Drawing.Color.Black;
-            this.btnSalesReportsClear.Location = new System.Drawing.Point(683, 114);
+            this.btnSalesReportsClear.Location = new System.Drawing.Point(465, 109);
             this.btnSalesReportsClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalesReportsClear.Name = "btnSalesReportsClear";
             this.btnSalesReportsClear.Size = new System.Drawing.Size(210, 41);
@@ -116,7 +112,7 @@
             this.btnSalesReportsGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalesReportsGenerateReport.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalesReportsGenerateReport.ForeColor = System.Drawing.Color.Black;
-            this.btnSalesReportsGenerateReport.Location = new System.Drawing.Point(465, 114);
+            this.btnSalesReportsGenerateReport.Location = new System.Drawing.Point(247, 109);
             this.btnSalesReportsGenerateReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalesReportsGenerateReport.Name = "btnSalesReportsGenerateReport";
             this.btnSalesReportsGenerateReport.Size = new System.Drawing.Size(210, 41);
@@ -125,36 +121,11 @@
             this.btnSalesReportsGenerateReport.UseVisualStyleBackColor = false;
             this.btnSalesReportsGenerateReport.Click += new System.EventHandler(this.btnSalesReportsGenerateReport_Click);
             // 
-            // cboxSalesReportStatus
-            // 
-            this.cboxSalesReportStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboxSalesReportStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxSalesReportStatus.FormattingEnabled = true;
-            this.cboxSalesReportStatus.Location = new System.Drawing.Point(576, 61);
-            this.cboxSalesReportStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.cboxSalesReportStatus.Name = "cboxSalesReportStatus";
-            this.cboxSalesReportStatus.Size = new System.Drawing.Size(317, 37);
-            this.cboxSalesReportStatus.TabIndex = 57;
-            this.cboxSalesReportStatus.SelectedIndexChanged += new System.EventHandler(this.cboxSalesReportStatus_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(459, 66);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 33);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "PAYMENT";
-            // 
             // dateTimePickerSalesReportsDateTo
             // 
             this.dateTimePickerSalesReportsDateTo.CalendarFont = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerSalesReportsDateTo.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerSalesReportsDateTo.Location = new System.Drawing.Point(131, 107);
+            this.dateTimePickerSalesReportsDateTo.Location = new System.Drawing.Point(584, 66);
             this.dateTimePickerSalesReportsDateTo.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerSalesReportsDateTo.MinDate = new System.DateTime(2026, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerSalesReportsDateTo.Name = "dateTimePickerSalesReportsDateTo";
@@ -167,7 +138,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(10, 110);
+            this.label2.Location = new System.Drawing.Point(479, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 33);
@@ -178,7 +149,7 @@
             // 
             this.dateTimePickerSalesReportsDateFrom.CalendarFont = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerSalesReportsDateFrom.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerSalesReportsDateFrom.Location = new System.Drawing.Point(131, 63);
+            this.dateTimePickerSalesReportsDateFrom.Location = new System.Drawing.Point(146, 66);
             this.dateTimePickerSalesReportsDateFrom.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerSalesReportsDateFrom.MinDate = new System.DateTime(2026, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerSalesReportsDateFrom.Name = "dateTimePickerSalesReportsDateFrom";
@@ -191,7 +162,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(10, 66);
+            this.label22.Location = new System.Drawing.Point(19, 68);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(125, 33);
@@ -212,6 +183,7 @@
             this.pnlitemsales.Padding = new System.Windows.Forms.Padding(5);
             this.pnlitemsales.Size = new System.Drawing.Size(922, 582);
             this.pnlitemsales.TabIndex = 0;
+            this.pnlitemsales.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlitemsales_Paint);
             // 
             // panel1
             // 
@@ -221,11 +193,11 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(234)))));
             this.panel1.Controls.Add(this.dataGridView3);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Location = new System.Drawing.Point(9, 187);
+            this.panel1.Location = new System.Drawing.Point(9, 175);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(902, 386);
+            this.panel1.Size = new System.Drawing.Size(902, 398);
             this.panel1.TabIndex = 58;
             // 
             // dataGridView3
@@ -256,7 +228,7 @@
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(884, 322);
+            this.dataGridView3.Size = new System.Drawing.Size(884, 334);
             this.dataGridView3.TabIndex = 1;
             // 
             // label11
@@ -345,8 +317,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DateTimePicker dateTimePickerSalesReportsDateTo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cboxSalesReportStatus;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView3;

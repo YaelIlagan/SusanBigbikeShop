@@ -326,9 +326,9 @@
             this.label4.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(8, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 28);
+            this.label4.Size = new System.Drawing.Size(54, 28);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Roler";
+            this.label4.Text = "Role";
             // 
             // txtProductName
             // 

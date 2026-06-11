@@ -30,12 +30,15 @@
         {
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlitemdata = new System.Windows.Forms.Panel();
+            this.chkListParts = new System.Windows.Forms.CheckedListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSaveOrderJob = new System.Windows.Forms.Button();
+            this.cboBoxStatus = new System.Windows.Forms.ComboBox();
             this.cboxType = new System.Windows.Forms.ComboBox();
             this.txtLaborCost = new System.Windows.Forms.TextBox();
             this.txtIssueCocernsNote = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,9 +53,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cboBoxStatus = new System.Windows.Forms.ComboBox();
-            this.chkListParts = new System.Windows.Forms.CheckedListBox();
             this.panel4.SuspendLayout();
             this.pnlitemdata.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +101,14 @@
             this.pnlitemdata.Size = new System.Drawing.Size(831, 498);
             this.pnlitemdata.TabIndex = 1;
             // 
+            // chkListParts
+            // 
+            this.chkListParts.FormattingEnabled = true;
+            this.chkListParts.Location = new System.Drawing.Point(418, 104);
+            this.chkListParts.Name = "chkListParts";
+            this.chkListParts.Size = new System.Drawing.Size(404, 55);
+            this.chkListParts.TabIndex = 65;
+            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
@@ -142,11 +150,21 @@
             this.btnSaveOrderJob.UseVisualStyleBackColor = false;
             this.btnSaveOrderJob.Click += new System.EventHandler(this.btnSaveOrderJob_Click);
             // 
+            // cboBoxStatus
+            // 
+            this.cboBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxStatus.FormattingEnabled = true;
+            this.cboBoxStatus.Location = new System.Drawing.Point(418, 322);
+            this.cboBoxStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.cboBoxStatus.Name = "cboBoxStatus";
+            this.cboBoxStatus.Size = new System.Drawing.Size(404, 37);
+            this.cboBoxStatus.TabIndex = 61;
+            // 
             // cboxType
             // 
             this.cboxType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxType.FormattingEnabled = true;
-            this.cboxType.Location = new System.Drawing.Point(418, 240);
+            this.cboxType.Location = new System.Drawing.Point(418, 258);
             this.cboxType.Margin = new System.Windows.Forms.Padding(4);
             this.cboxType.Name = "cboxType";
             this.cboxType.Size = new System.Drawing.Size(404, 37);
@@ -155,7 +173,7 @@
             // txtLaborCost
             // 
             this.txtLaborCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLaborCost.Location = new System.Drawing.Point(418, 172);
+            this.txtLaborCost.Location = new System.Drawing.Point(418, 190);
             this.txtLaborCost.Margin = new System.Windows.Forms.Padding(4);
             this.txtLaborCost.Name = "txtLaborCost";
             this.txtLaborCost.Size = new System.Drawing.Size(404, 34);
@@ -164,19 +182,31 @@
             // txtIssueCocernsNote
             // 
             this.txtIssueCocernsNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIssueCocernsNote.Location = new System.Drawing.Point(418, 368);
+            this.txtIssueCocernsNote.Location = new System.Drawing.Point(418, 389);
             this.txtIssueCocernsNote.Margin = new System.Windows.Forms.Padding(4);
             this.txtIssueCocernsNote.Multiline = true;
             this.txtIssueCocernsNote.Name = "txtIssueCocernsNote";
-            this.txtIssueCocernsNote.Size = new System.Drawing.Size(404, 126);
+            this.txtIssueCocernsNote.Size = new System.Drawing.Size(404, 105);
             this.txtIssueCocernsNote.TabIndex = 58;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(413, 289);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 36);
+            this.label11.TabIndex = 57;
+            this.label11.Text = "Status";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(416, 335);
+            this.label5.Location = new System.Drawing.Point(416, 352);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(193, 36);
@@ -188,7 +218,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(413, 207);
+            this.label6.Location = new System.Drawing.Point(413, 225);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 36);
@@ -200,7 +230,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(416, 139);
+            this.label7.Location = new System.Drawing.Point(416, 157);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 36);
@@ -325,36 +355,6 @@
             this.label1.Text = "UPDATE JOB ORDER";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(413, 271);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 36);
-            this.label11.TabIndex = 57;
-            this.label11.Text = "Status";
-            // 
-            // cboBoxStatus
-            // 
-            this.cboBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboBoxStatus.FormattingEnabled = true;
-            this.cboBoxStatus.Location = new System.Drawing.Point(418, 304);
-            this.cboBoxStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.cboBoxStatus.Name = "cboBoxStatus";
-            this.cboBoxStatus.Size = new System.Drawing.Size(404, 37);
-            this.cboBoxStatus.TabIndex = 61;
-            // 
-            // chkListParts
-            // 
-            this.chkListParts.FormattingEnabled = true;
-            this.chkListParts.Location = new System.Drawing.Point(418, 104);
-            this.chkListParts.Name = "chkListParts";
-            this.chkListParts.Size = new System.Drawing.Size(404, 38);
-            this.chkListParts.TabIndex = 65;
-            // 
             // UpdateJobOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -363,6 +363,7 @@
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateJobOrderForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateJobOrderForm";
             this.panel4.ResumeLayout(false);
             this.pnlitemdata.ResumeLayout(false);

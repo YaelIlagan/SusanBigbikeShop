@@ -21,6 +21,8 @@ namespace SusanBigbikeShop
             _parent = parent;
 
             txtPassword.PasswordChar = '●';
+            this.FormClosed += (s, e) => Application.Exit();
+
 
         }
 
@@ -53,7 +55,11 @@ namespace SusanBigbikeShop
                         {
                             if (reader.Read())
                             {
-                                string role = reader.GetString(1);
+                                UserSession.UserId = reader.GetInt32(0);
+                                UserSession.Role = reader.GetString(1);
+                                UserSession.FullName = reader.GetString(2);
+
+                                string role = UserSession.Role;
 
                                 MainForm mainForm = new MainForm();
                                 mainForm.LoadNavPanel(role);

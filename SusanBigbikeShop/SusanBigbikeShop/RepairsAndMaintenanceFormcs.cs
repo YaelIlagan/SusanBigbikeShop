@@ -197,24 +197,121 @@ namespace SusanBigbikeShop
                 using (SqlConnection conn = new SqlConnection(DBConnection.ConnectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE JobOrder SET status = 'Completed' WHERE job_order_id = @id";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+
+                    // 1. Fetch the Job Order Details
+                    string joQuery = @"SELECT customer_name, parts_used, labor_cost, mechanic_id, motorcycle_id 
+                               FROM JobOrder WHERE job_order_id = @id";
+
+                    string partsUsed = "";
+                    double laborCost = 0;
+                    string customerName = "";
+                    int mechanicId = 0;
+                    int motorcycleId = 0;
+
+                    using (SqlCommand cmd = new SqlCommand(joQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", jobOrderId);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                customerName = reader["customer_name"].ToString();
+                                partsUsed = reader["parts_used"].ToString();
+                                laborCost = Convert.ToDouble(reader["labor_cost"]);
+                                mechanicId = reader["mechanic_id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["mechanic_id"]);
+                                motorcycleId = reader["motorcycle_id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["motorcycle_id"]);
+                            }
+                        }
+                    }
+
+                    // 2. Get Customer ID
+                    int customerId = 0;
+                    string custQuery = "SELECT TOP 1 customer_id FROM Customer WHERE full_name = @name";
+                    using (SqlCommand cmd = new SqlCommand(custQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@name", customerName);
+                        object res = cmd.ExecuteScalar();
+                        if (res != null) customerId = Convert.ToInt32(res);
+                    }
+
+                    // 3. Process Parts and calculate costs
+                    double totalPartsCost = 0;
+                    List<Tuple<int, double>> partsToInsert = new List<Tuple<int, double>>();
+
+                    if (!string.IsNullOrWhiteSpace(partsUsed) && partsUsed != "None yet" && partsUsed != "N/A")
+                    {
+                        string[] partsList = partsUsed.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (string part in partsList)
+                        {
+                            string partQuery = "SELECT item_id, unit_price FROM Inventory WHERE item_name = @itemName";
+                            using (SqlCommand cmd = new SqlCommand(partQuery, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@itemName", part);
+                                using (SqlDataReader reader = cmd.ExecuteReader())
+                                {
+                                    if (reader.Read())
+                                    {
+                                        int itemId = Convert.ToInt32(reader["item_id"]);
+                                        double unitPrice = Convert.ToDouble(reader["unit_price"]);
+                                        totalPartsCost += unitPrice;
+                                        partsToInsert.Add(new Tuple<int, double>(itemId, unitPrice));
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    double grandTotal = laborCost + totalPartsCost;
+
+                    // 4. Insert into Sales
+                    int saleId = 0;
+                    string insertSale = @"INSERT INTO Sales (customer_id, sale_date, total_amount, payment_method, mechanic_id)
+                                  OUTPUT INSERTED.sale_id
+                                  VALUES (@custId, @date, @total, 'CASH', @mechId)";
+                    using (SqlCommand cmd = new SqlCommand(insertSale, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@custId", customerId > 0 ? (object)customerId : DBNull.Value);
+                        cmd.Parameters.AddWithValue("@date", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@total", grandTotal);
+                        cmd.Parameters.AddWithValue("@mechId", mechanicId > 0 ? (object)mechanicId : DBNull.Value);
+                        saleId = (int)cmd.ExecuteScalar();
+                    }
+
+                    foreach (var part in partsToInsert)
+                    {
+                        string insertItemQuery = @"INSERT INTO SalesItem (sale_id, item_id, quantity, unit_price, subtotal)
+                                           VALUES (@saleId, @itemId, 1, @price, @price)";
+                        using (SqlCommand cmdInsert = new SqlCommand(insertItemQuery, conn)) // Use a new name
+                        {
+                            cmdInsert.Parameters.AddWithValue("@saleId", saleId);
+                            cmdInsert.Parameters.AddWithValue("@itemId", part.Item1);
+                            cmdInsert.Parameters.AddWithValue("@price", part.Item2);
+                            cmdInsert.ExecuteNonQuery();
+                        }
+
+                        string deductInvQuery = "UPDATE Inventory SET quantity_in_stock = quantity_in_stock - 1 WHERE item_id = @itemId";
+                        using (SqlCommand cmdDeduct = new SqlCommand(deductInvQuery, conn)) // Use a new name
+                        {
+                            cmdDeduct.Parameters.AddWithValue("@itemId", part.Item1);
+                            cmdDeduct.ExecuteNonQuery();
+                        }
+                    }
+
+                    string updateJo = "UPDATE JobOrder SET status = 'Completed' WHERE job_order_id = @id";
+                    using (SqlCommand cmd = new SqlCommand(updateJo, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", jobOrderId);
                         cmd.ExecuteNonQuery();
                     }
                 }
 
-                MessageBox.Show("Job order marked as Completed.",
-                    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show("Job order completed! Sales record generated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 panelJobDetails.Visible = false;
                 LoadJobOrders(txtSearch.Text, cboxRepairsStatus.SelectedItem.ToString());
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error updating status: " + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error completing job: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

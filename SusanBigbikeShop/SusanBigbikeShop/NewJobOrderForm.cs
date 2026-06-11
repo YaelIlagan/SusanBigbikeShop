@@ -74,7 +74,6 @@ namespace SusanBigbikeShop
                 string.IsNullOrWhiteSpace(txtMotorcycleModel.Text) ||
                 string.IsNullOrWhiteSpace(txtPlateNumber.Text) ||
                 string.IsNullOrWhiteSpace(txtLaborCost.Text) ||
-                string.IsNullOrWhiteSpace(txtIssueCocernsNote.Text) ||
                 cboxType.SelectedIndex == -1)
             {
                 MessageBox.Show("Please fill in all required fields.",

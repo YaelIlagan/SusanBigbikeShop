@@ -17,7 +17,7 @@ namespace SusanBigbikeShop
         {
             InitializeComponent();
             _main = main;
-            _main.LoadContent(new DasboardForm());
+            _main.LoadContent(new BookingForm());
         }
 
         private void btnBookingCustomer_Click(object sender, EventArgs e)

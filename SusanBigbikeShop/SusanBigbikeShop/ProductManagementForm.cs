@@ -19,6 +19,7 @@ namespace SusanBigbikeShop
             LoadCategories();
             LoadProducts();
             txtProductID.ReadOnly = true;
+            txtQty.ReadOnly = true;
         }
 
         private void LoadCategories()
@@ -91,7 +92,6 @@ namespace SusanBigbikeShop
         {
             if (string.IsNullOrWhiteSpace(txtProductName.Text) ||
                 string.IsNullOrWhiteSpace(txtPrice.Text) ||
-                string.IsNullOrWhiteSpace(txtQty.Text) ||
                 cboBoxCategory.SelectedIndex == -1)
             {
                 MessageBox.Show(
@@ -118,7 +118,7 @@ namespace SusanBigbikeShop
             if (!int.TryParse(txtQty.Text, out int qty) || qty < 0)
             {
                 MessageBox.Show(
-                    "Stock Quantity must be a valid number.",
+                    "Stock Quantity must be a valid number.", 
                     "Validation Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
@@ -126,6 +126,37 @@ namespace SusanBigbikeShop
                 txtQty.Focus();
                 return false;
             }
+
+            return true;
+        }
+
+        private bool ValidateForm1()
+        {
+            if (string.IsNullOrWhiteSpace(txtProductName.Text) ||
+                string.IsNullOrWhiteSpace(txtPrice.Text) ||
+                cboBoxCategory.SelectedIndex == -1)
+            {
+                MessageBox.Show(
+                    "Please fill in all required fields.",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return false;
+            }
+
+            if (!double.TryParse(txtPrice.Text, out double price) || price <= 0)
+            {
+                MessageBox.Show(
+                    "Unit Price must be a valid number.",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                txtPrice.Focus();
+                return false;
+            }
+
 
             return true;
         }
@@ -142,7 +173,7 @@ namespace SusanBigbikeShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (!ValidateForm())
+            if (!ValidateForm1())
                 return;
 
             try
@@ -155,8 +186,8 @@ namespace SusanBigbikeShop
                                     (item_name, category, description,
                                     quantity_in_stock, unit_price)
                                     VALUES
-                                    (@itemName, @category, @description,
-                                    @qty, @price)";
+                                    (@itemName, @category, @description, 1
+                                    , @price)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -166,8 +197,6 @@ namespace SusanBigbikeShop
                             cboBoxCategory.SelectedItem.ToString());
                         cmd.Parameters.AddWithValue("@description",
                             txtDescription.Text.Trim());
-                        cmd.Parameters.AddWithValue("@qty",
-                            int.Parse(txtQty.Text));
                         cmd.Parameters.AddWithValue("@price",
                             double.Parse(txtPrice.Text));
 
