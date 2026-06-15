@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.checkBoxShowPass = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -92,7 +93,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(88, 219);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(214, 32);
             this.btnLogin.TabIndex = 1;
@@ -103,48 +104,60 @@
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtUsername.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(9, 104);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(9, 96);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(373, 30);
+            this.txtUsername.Size = new System.Drawing.Size(373, 27);
             this.txtUsername.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(8, 74);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 25);
+            this.label2.Size = new System.Drawing.Size(96, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Username*";
             // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPassword.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold);
-            this.txtPassword.Location = new System.Drawing.Point(9, 167);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(9, 153);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(373, 30);
+            this.txtPassword.Size = new System.Drawing.Size(373, 27);
             this.txtPassword.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(8, 138);
+            this.label3.Location = new System.Drawing.Point(8, 131);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 25);
+            this.label3.Size = new System.Drawing.Size(95, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Password*";
+            // 
+            // checkBoxShowPass
+            // 
+            this.checkBoxShowPass.AutoSize = true;
+            this.checkBoxShowPass.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.checkBoxShowPass.Location = new System.Drawing.Point(280, 185);
+            this.checkBoxShowPass.Name = "checkBoxShowPass";
+            this.checkBoxShowPass.Size = new System.Drawing.Size(102, 17);
+            this.checkBoxShowPass.TabIndex = 8;
+            this.checkBoxShowPass.Text = "Show Password";
+            this.checkBoxShowPass.UseVisualStyleBackColor = true;
+            this.checkBoxShowPass.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
             // 
             // LogIn
             // 
@@ -152,6 +165,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(390, 275);
+            this.Controls.Add(this.checkBoxShowPass);
             this.Controls.Add(this.linklblSignUp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -160,7 +174,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LogIn";
             this.Text = "LogIn";
             this.ResumeLayout(false);
@@ -178,5 +192,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBoxShowPass;
     }
 }

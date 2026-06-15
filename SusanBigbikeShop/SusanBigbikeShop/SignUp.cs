@@ -141,9 +141,18 @@ namespace SusanBigbikeShop
             _parent.ShowLogin();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBoxShowPass.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+                txtConfirmPass.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '●';
+                txtConfirmPass.PasswordChar = '●';
+            }
         }
     }
 }
