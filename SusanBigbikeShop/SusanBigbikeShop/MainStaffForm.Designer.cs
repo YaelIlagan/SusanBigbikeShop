@@ -72,7 +72,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 22);
+            this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 8;
             this.label3.Text = "Overview";
             // 
@@ -102,7 +102,7 @@
             this.btnBookingStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookingStaff.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookingStaff.ForeColor = System.Drawing.Color.White;
-            this.btnBookingStaff.Location = new System.Drawing.Point(7, 219);
+            this.btnBookingStaff.Location = new System.Drawing.Point(7, 169);
             this.btnBookingStaff.Name = "btnBookingStaff";
             this.btnBookingStaff.Size = new System.Drawing.Size(208, 40);
             this.btnBookingStaff.TabIndex = 19;
@@ -119,7 +119,7 @@
             this.btnInventoryManagementStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventoryManagementStaff.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventoryManagementStaff.ForeColor = System.Drawing.Color.White;
-            this.btnInventoryManagementStaff.Location = new System.Drawing.Point(7, 125);
+            this.btnInventoryManagementStaff.Location = new System.Drawing.Point(7, 77);
             this.btnInventoryManagementStaff.Name = "btnInventoryManagementStaff";
             this.btnInventoryManagementStaff.Size = new System.Drawing.Size(208, 40);
             this.btnInventoryManagementStaff.TabIndex = 18;
@@ -136,7 +136,7 @@
             this.btnRepairsAndManagementStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRepairsAndManagementStaff.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRepairsAndManagementStaff.ForeColor = System.Drawing.Color.White;
-            this.btnRepairsAndManagementStaff.Location = new System.Drawing.Point(7, 77);
+            this.btnRepairsAndManagementStaff.Location = new System.Drawing.Point(7, 215);
             this.btnRepairsAndManagementStaff.Name = "btnRepairsAndManagementStaff";
             this.btnRepairsAndManagementStaff.Size = new System.Drawing.Size(208, 40);
             this.btnRepairsAndManagementStaff.TabIndex = 16;
@@ -153,7 +153,7 @@
             this.btnProductManagementStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductManagementStaff.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductManagementStaff.ForeColor = System.Drawing.Color.White;
-            this.btnProductManagementStaff.Location = new System.Drawing.Point(7, 173);
+            this.btnProductManagementStaff.Location = new System.Drawing.Point(7, 123);
             this.btnProductManagementStaff.Name = "btnProductManagementStaff";
             this.btnProductManagementStaff.Size = new System.Drawing.Size(208, 40);
             this.btnProductManagementStaff.TabIndex = 17;
@@ -188,7 +188,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 22);
+            this.label1.Size = new System.Drawing.Size(78, 19);
             this.label1.TabIndex = 14;
             this.label1.Text = "Operations";
             // 

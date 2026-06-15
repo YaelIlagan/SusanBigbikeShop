@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlbooking = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -111,7 +112,7 @@
             this.label12.Location = new System.Drawing.Point(8, 6);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(250, 48);
+            this.label12.Size = new System.Drawing.Size(202, 39);
             this.label12.TabIndex = 4;
             this.label12.Text = "MANAGE USER";
             // 
@@ -160,14 +161,14 @@
             // cboBoxStatus
             // 
             this.cboBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxStatus.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBoxStatus.FormattingEnabled = true;
             this.cboBoxStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
             this.cboBoxStatus.Location = new System.Drawing.Point(529, 132);
             this.cboBoxStatus.Name = "cboBoxStatus";
-            this.cboBoxStatus.Size = new System.Drawing.Size(369, 33);
+            this.cboBoxStatus.Size = new System.Drawing.Size(369, 27);
             this.cboBoxStatus.TabIndex = 21;
             // 
             // label8
@@ -175,10 +176,10 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(427, 137);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 28);
+            this.label8.Size = new System.Drawing.Size(72, 22);
             this.label8.TabIndex = 20;
             this.label8.Text = "Status";
             // 
@@ -186,14 +187,14 @@
             // 
             this.cboBoxRole.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboBoxRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxRole.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBoxRole.FormattingEnabled = true;
             this.cboBoxRole.Items.AddRange(new object[] {
             "Staff",
             "Customer"});
             this.cboBoxRole.Location = new System.Drawing.Point(110, 132);
             this.cboBoxRole.Name = "cboBoxRole";
-            this.cboBoxRole.Size = new System.Drawing.Size(316, 33);
+            this.cboBoxRole.Size = new System.Drawing.Size(316, 27);
             this.cboBoxRole.TabIndex = 19;
             // 
             // tableLayoutPanel1
@@ -282,20 +283,20 @@
             // 
             this.txtQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQty.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQty.Location = new System.Drawing.Point(529, 57);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(368, 30);
+            this.txtQty.Size = new System.Drawing.Size(368, 27);
             this.txtQty.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(427, 59);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 28);
+            this.label5.Size = new System.Drawing.Size(104, 22);
             this.label5.TabIndex = 12;
             this.label5.Text = "Full Name";
             // 
@@ -303,30 +304,30 @@
             // 
             this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(529, 95);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(368, 30);
+            this.txtPrice.Size = new System.Drawing.Size(368, 27);
             this.txtPrice.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(427, 97);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 28);
+            this.label7.Size = new System.Drawing.Size(102, 22);
             this.label7.TabIndex = 8;
             this.label7.Text = "Password";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(8, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 28);
+            this.label4.Size = new System.Drawing.Size(53, 22);
             this.label4.TabIndex = 6;
             this.label4.Text = "Role";
             // 
@@ -335,19 +336,19 @@
             this.txtProductName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProductName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductName.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductName.Location = new System.Drawing.Point(110, 95);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(316, 30);
+            this.txtProductName.Size = new System.Drawing.Size(316, 27);
             this.txtProductName.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(8, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 28);
+            this.label3.Size = new System.Drawing.Size(106, 22);
             this.label3.TabIndex = 4;
             this.label3.Text = "Username";
             // 
@@ -371,19 +372,19 @@
             this.txtProductID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProductID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductID.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductID.Location = new System.Drawing.Point(110, 57);
             this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(316, 30);
+            this.txtProductID.Size = new System.Drawing.Size(316, 27);
             this.txtProductID.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(8, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 28);
+            this.label1.Size = new System.Drawing.Size(81, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "User ID";
             // 
@@ -427,11 +428,11 @@
             // cboBoxUsers
             // 
             this.cboBoxUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboBoxUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxUsers.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBoxUsers.FormattingEnabled = true;
             this.cboBoxUsers.Location = new System.Drawing.Point(218, 3);
             this.cboBoxUsers.Name = "cboBoxUsers";
-            this.cboBoxUsers.Size = new System.Drawing.Size(221, 33);
+            this.cboBoxUsers.Size = new System.Drawing.Size(221, 28);
             this.cboBoxUsers.TabIndex = 62;
             this.cboBoxUsers.Text = "All Users";
             // 
@@ -439,10 +440,10 @@
             // 
             this.txtSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearchUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSearchUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchUser.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchUser.Location = new System.Drawing.Point(3, 3);
             this.txtSearchUser.Name = "txtSearchUser";
-            this.txtSearchUser.Size = new System.Drawing.Size(209, 34);
+            this.txtSearchUser.Size = new System.Drawing.Size(209, 28);
             this.txtSearchUser.TabIndex = 61;
             this.txtSearchUser.Text = "Enter keyword...";
             this.txtSearchUser.TextChanged += new System.EventHandler(this.txtSearchUser_TextChanged);
@@ -452,11 +453,11 @@
             // cboBoxSearchStatus
             // 
             this.cboBoxSearchStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboBoxSearchStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxSearchStatus.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBoxSearchStatus.FormattingEnabled = true;
             this.cboBoxSearchStatus.Location = new System.Drawing.Point(445, 3);
             this.cboBoxSearchStatus.Name = "cboBoxSearchStatus";
-            this.cboBoxSearchStatus.Size = new System.Drawing.Size(221, 33);
+            this.cboBoxSearchStatus.Size = new System.Drawing.Size(221, 28);
             this.cboBoxSearchStatus.TabIndex = 60;
             this.cboBoxSearchStatus.Text = "All Status";
             // 
@@ -494,10 +495,10 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Helvetica", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(8, 54);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 35);
+            this.label6.Size = new System.Drawing.Size(89, 27);
             this.label6.TabIndex = 56;
             this.label6.Text = "Search";
             // 
@@ -510,7 +511,7 @@
             this.dataGridUserList.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -524,6 +525,14 @@
             this.Role,
             this.Password,
             this.Status});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Helvetica", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridUserList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridUserList.Location = new System.Drawing.Point(9, 93);
             this.dataGridUserList.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridUserList.Name = "dataGridUserList";

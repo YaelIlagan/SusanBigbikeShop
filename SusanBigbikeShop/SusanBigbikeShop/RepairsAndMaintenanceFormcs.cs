@@ -13,13 +13,17 @@ namespace SusanBigbikeShop
 {
     public partial class RepairsAndMaintenanceFormcs : Form
     {
+        private int selectedJobOrderId = -1;
+
         public RepairsAndMaintenanceFormcs()
         {
             InitializeComponent();
             LoadStatusFilter();
             LoadJobOrders();
             panelJobDetails.Visible = false;
+            txtSearch.Text = "Enter keyword...";
         }
+
         private void LoadStatusFilter()
         {
             cboxRepairsStatus.Items.Clear();
@@ -30,6 +34,7 @@ namespace SusanBigbikeShop
             cboxRepairsStatus.Items.Add("Completed");
             cboxRepairsStatus.SelectedIndex = 0;
         }
+
         public void LoadJobOrders(string search = "", string status = "All Status")
         {
             dataGridOrderList.Rows.Clear();
@@ -66,9 +71,7 @@ namespace SusanBigbikeShop
                                     reader["motorcycle_model"].ToString(),
                                     reader["plate_number"].ToString(),
                                     reader["type"].ToString(),
-                                    reader["status"].ToString(),
-                                    "Update",
-                                    "Done"
+                                    reader["status"].ToString()
                                 );
                             }
                         }
@@ -82,7 +85,6 @@ namespace SusanBigbikeShop
             }
         }
 
-
         private void btnRepairsNewJobOrder_Click(object sender, EventArgs e)
         {
             NewJobOrderForm newJobOrder = new NewJobOrderForm();
@@ -92,56 +94,77 @@ namespace SusanBigbikeShop
             }
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (selectedJobOrderId == -1)
+            {
+                MessageBox.Show("Please select a job order to update.",
+                    "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string currentStatus = GetSelectedStatus();
+
+            if (currentStatus == "Completed")
+            {
+                MessageBox.Show("This job order is already completed.",
+                    "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            using (var form = new UpdateJobOrderForm(selectedJobOrderId))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                    LoadJobOrders(txtSearch.Text, cboxRepairsStatus.SelectedItem.ToString());
+            }
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            if (selectedJobOrderId == -1)
+            {
+                MessageBox.Show("Please select a job order to mark as done.",
+                    "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string currentStatus = GetSelectedStatus();
+
+            if (currentStatus == "Completed")
+            {
+                MessageBox.Show("This job order is already completed.",
+                    "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DialogResult confirm = MessageBox.Show(
+                "Mark this job order as Completed?",
+                "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm == DialogResult.Yes)
+                MarkAsDone(selectedJobOrderId);
+        }
+
+        private string GetSelectedStatus()
+        {
+            foreach (DataGridViewRow row in dataGridOrderList.Rows)
+            {
+                if (row.Cells["JobOrderID"].Value?.ToString() == selectedJobOrderId.ToString())
+                    return row.Cells["Status"].Value?.ToString() ?? "";
+            }
+            return "";
+        }
+
         private void dataGridOrderList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
 
             DataGridViewRow row = dataGridOrderList.Rows[e.RowIndex];
-            int jobOrderId = int.Parse(row.Cells["JobOrderID"].Value.ToString());
+            selectedJobOrderId = int.Parse(row.Cells["JobOrderID"].Value.ToString());
 
-            if (e.ColumnIndex == dataGridOrderList.Columns["Update"].Index)
-            {
-                string currentStatus = row.Cells["Status"].Value.ToString();
-                if (currentStatus == "Completed")
-                {
-                    MessageBox.Show("This job order is already completed.",
-                        "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                string newStatus = currentStatus == "Pending" ? "In Progress" : "In Progress";
-
-                using (var form = new UpdateJobOrderForm(jobOrderId))
-                {
-                    if (form.ShowDialog() == DialogResult.OK)
-                        LoadJobOrders(txtSearch.Text, cboxRepairsStatus.SelectedItem.ToString());
-                }
-                return;
-            }
-
-            if (e.ColumnIndex == dataGridOrderList.Columns["Done"].Index)
-            {
-                string currentStatus = row.Cells["Status"].Value.ToString();
-                if (currentStatus == "Completed")
-                {
-                    MessageBox.Show("This job order is already completed.",
-                        "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                DialogResult confirm = MessageBox.Show(
-                    "Mark this job order as Completed?",
-                    "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (confirm == DialogResult.Yes)
-                {
-                    MarkAsDone(jobOrderId);
-                }
-                return;
-            }
-
-            ShowJobOrderDetails(jobOrderId);
+            ShowJobOrderDetails(selectedJobOrderId);
         }
+
         private void ShowJobOrderDetails(int jobOrderId)
         {
             try
@@ -198,7 +221,6 @@ namespace SusanBigbikeShop
                 {
                     conn.Open();
 
-                    // 1. Fetch the Job Order Details
                     string joQuery = @"SELECT customer_name, parts_used, labor_cost, mechanic_id, motorcycle_id 
                                FROM JobOrder WHERE job_order_id = @id";
 
@@ -224,7 +246,6 @@ namespace SusanBigbikeShop
                         }
                     }
 
-                    // 2. Get Customer ID
                     int customerId = 0;
                     string custQuery = "SELECT TOP 1 customer_id FROM Customer WHERE full_name = @name";
                     using (SqlCommand cmd = new SqlCommand(custQuery, conn))
@@ -234,7 +255,6 @@ namespace SusanBigbikeShop
                         if (res != null) customerId = Convert.ToInt32(res);
                     }
 
-                    // 3. Process Parts and calculate costs
                     double totalPartsCost = 0;
                     List<Tuple<int, double>> partsToInsert = new List<Tuple<int, double>>();
 
@@ -263,7 +283,6 @@ namespace SusanBigbikeShop
 
                     double grandTotal = laborCost + totalPartsCost;
 
-                    // 4. Insert into Sales
                     int saleId = 0;
                     string insertSale = @"INSERT INTO Sales (customer_id, sale_date, total_amount, payment_method, mechanic_id)
                                   OUTPUT INSERTED.sale_id
@@ -281,7 +300,7 @@ namespace SusanBigbikeShop
                     {
                         string insertItemQuery = @"INSERT INTO SalesItem (sale_id, item_id, quantity, unit_price, subtotal)
                                            VALUES (@saleId, @itemId, 1, @price, @price)";
-                        using (SqlCommand cmdInsert = new SqlCommand(insertItemQuery, conn)) // Use a new name
+                        using (SqlCommand cmdInsert = new SqlCommand(insertItemQuery, conn))
                         {
                             cmdInsert.Parameters.AddWithValue("@saleId", saleId);
                             cmdInsert.Parameters.AddWithValue("@itemId", part.Item1);
@@ -290,7 +309,7 @@ namespace SusanBigbikeShop
                         }
 
                         string deductInvQuery = "UPDATE Inventory SET quantity_in_stock = quantity_in_stock - 1 WHERE item_id = @itemId";
-                        using (SqlCommand cmdDeduct = new SqlCommand(deductInvQuery, conn)) // Use a new name
+                        using (SqlCommand cmdDeduct = new SqlCommand(deductInvQuery, conn))
                         {
                             cmdDeduct.Parameters.AddWithValue("@itemId", part.Item1);
                             cmdDeduct.ExecuteNonQuery();
@@ -305,24 +324,44 @@ namespace SusanBigbikeShop
                     }
                 }
 
-                MessageBox.Show("Job order completed! Sales record generated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Job order completed! Sales record generated.", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                selectedJobOrderId = -1;
                 panelJobDetails.Visible = false;
                 LoadJobOrders(txtSearch.Text, cboxRepairsStatus.SelectedItem.ToString());
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error completing job: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error completing job: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            LoadJobOrders(txtSearch.Text, cboxRepairsStatus.SelectedItem.ToString());
+            if (txtSearch.Text == "Enter keyword...") return;
+
+            LoadJobOrders(
+                txtSearch.Text,
+                cboxRepairsStatus.SelectedItem.ToString()
+            );
         }
 
         private void cboxRepairsStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadJobOrders(txtSearch.Text, cboxRepairsStatus.SelectedItem.ToString());
         }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Enter keyword...")
+                txtSearch.Text = "";
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+                txtSearch.Text = "Enter keyword...";
+        }   
     }
 }

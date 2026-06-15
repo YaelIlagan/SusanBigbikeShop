@@ -19,7 +19,6 @@ namespace SusanBigbikeShop
             LoadCategories();
             LoadProducts();
             txtProductID.ReadOnly = true;
-            txtQty.ReadOnly = true;
         }
 
         private void LoadCategories()
@@ -49,11 +48,12 @@ namespace SusanBigbikeShop
                     conn.Open();
 
                     string query = @"SELECT item_id, item_name, category,
-                                    unit_price, quantity_in_stock, description
-                                    FROM Inventory
-                                    WHERE (@category = 'All' OR category = @category)
-                                    AND item_name LIKE @search
-                                    ORDER BY item_name";
+                            unit_price, description
+                            FROM Inventory
+                            WHERE is_deleted = 0
+                            AND (@category = 'All' OR category = @category)
+                            AND item_name LIKE @search
+                            ORDER BY item_name";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -69,7 +69,6 @@ namespace SusanBigbikeShop
                                     reader["item_name"].ToString(),
                                     reader["category"].ToString(),
                                     Convert.ToDouble(reader["unit_price"]).ToString("N2"),
-                                    reader["quantity_in_stock"].ToString(),
                                     reader["description"].ToString()
                                 );
                             }
@@ -79,12 +78,8 @@ namespace SusanBigbikeShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    "Error loading products: " + ex.Message,
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
+                MessageBox.Show("Error loading products: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -112,18 +107,6 @@ namespace SusanBigbikeShop
                     MessageBoxIcon.Warning
                 );
                 txtPrice.Focus();
-                return false;
-            }
-
-            if (!int.TryParse(txtQty.Text, out int qty) || qty < 0)
-            {
-                MessageBox.Show(
-                    "Stock Quantity must be a valid number.", 
-                    "Validation Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-                txtQty.Focus();
                 return false;
             }
 
@@ -166,7 +149,6 @@ namespace SusanBigbikeShop
             txtProductID.Clear();
             txtProductName.Clear();
             txtPrice.Clear();
-            txtQty.Clear();
             txtDescription.Clear();
             cboBoxCategory.SelectedIndex = 0;
         }
@@ -182,34 +164,47 @@ namespace SusanBigbikeShop
                 {
                     conn.Open();
 
+                    string checkQuery = @"SELECT COUNT(1) FROM Inventory 
+                                  WHERE item_name = @itemName 
+                                  AND category = @category 
+                                  AND is_deleted = 0";
+
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@itemName", txtProductName.Text.Trim());
+                        checkCmd.Parameters.AddWithValue("@category", cboBoxCategory.SelectedItem.ToString());
+
+                        int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            MessageBox.Show(
+                                "A product with the same name and category already exists.",
+                                "Duplicate Product",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                            );
+                            return;
+                        }
+                    }
+
                     string query = @"INSERT INTO Inventory
-                                    (item_name, category, description,
-                                    quantity_in_stock, unit_price)
-                                    VALUES
-                                    (@itemName, @category, @description, 1
-                                    , @price)";
+                            (item_name, category, description,
+                            quantity_in_stock, unit_price)
+                            VALUES
+                            (@itemName, @category, @description, 0, @price)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@itemName",
-                            txtProductName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@category",
-                            cboBoxCategory.SelectedItem.ToString());
-                        cmd.Parameters.AddWithValue("@description",
-                            txtDescription.Text.Trim());
-                        cmd.Parameters.AddWithValue("@price",
-                            double.Parse(txtPrice.Text));
-
+                        cmd.Parameters.AddWithValue("@itemName", txtProductName.Text.Trim());
+                        cmd.Parameters.AddWithValue("@category", cboBoxCategory.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@description", txtDescription.Text.Trim());
+                        cmd.Parameters.AddWithValue("@price", double.Parse(txtPrice.Text));
                         cmd.ExecuteNonQuery();
                     }
                 }
 
-                MessageBox.Show(
-                    "Product added successfully!",
-                    "Success",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
+                MessageBox.Show("Product added successfully!", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 ClearForm();
                 LoadProducts(
@@ -219,12 +214,8 @@ namespace SusanBigbikeShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    "Error adding product: " + ex.Message,
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
+                MessageBox.Show("Error adding product: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -254,7 +245,6 @@ namespace SusanBigbikeShop
                                     item_name = @itemName,
                                     category = @category,
                                     description = @description,
-                                    quantity_in_stock = @qty,
                                     unit_price = @price
                                     WHERE item_id = @itemId";
 
@@ -266,8 +256,6 @@ namespace SusanBigbikeShop
                             cboBoxCategory.SelectedItem.ToString());
                         cmd.Parameters.AddWithValue("@description",
                             txtDescription.Text.Trim());
-                        cmd.Parameters.AddWithValue("@qty",
-                            int.Parse(txtQty.Text));
                         cmd.Parameters.AddWithValue("@price",
                             double.Parse(txtPrice.Text));
                         cmd.Parameters.AddWithValue("@itemId",
@@ -302,12 +290,8 @@ namespace SusanBigbikeShop
         {
             if (string.IsNullOrWhiteSpace(txtProductID.Text))
             {
-                MessageBox.Show(
-                    "Please select a product to delete.",
-                    "No Selection",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+                MessageBox.Show("Please select a product to delete.", "No Selection",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -322,39 +306,32 @@ namespace SusanBigbikeShop
             {
                 try
                 {
-                    using (SqlConnection conn =
-                        new SqlConnection(DBConnection.ConnectionString))
+                    using (SqlConnection conn = new SqlConnection(DBConnection.ConnectionString))
                     {
                         conn.Open();
 
-                        string query = "DELETE FROM Inventory WHERE item_id = @itemId";
+                        string query = "UPDATE Inventory SET is_deleted = 1 WHERE item_id = @itemId";
 
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
-                            cmd.Parameters.AddWithValue("@itemId",
-                                int.Parse(txtProductID.Text));
+                            cmd.Parameters.AddWithValue("@itemId", int.Parse(txtProductID.Text));
                             cmd.ExecuteNonQuery();
                         }
                     }
 
-                    MessageBox.Show(
-                        "Product deleted successfully!",
-                        "Success",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
+                    MessageBox.Show("Product deleted successfully!", "Success",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     ClearForm();
-                    LoadProducts(cboBoxCategorySearch.SelectedItem.ToString(),txtSearchProduct.Text == "Enter keyword..." ? "" : txtSearchProduct.Text);
+                    LoadProducts(
+                        cboBoxCategorySearch.SelectedItem.ToString(),
+                        txtSearchProduct.Text == "Enter keyword..." ? "" : txtSearchProduct.Text
+                    );
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(
-                        "Error deleting product: " + ex.Message,
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error
-                    );
+                    MessageBox.Show("Error deleting product: " + ex.Message, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -376,12 +353,11 @@ namespace SusanBigbikeShop
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridProductList.Rows[e.RowIndex];
-                txtProductID.Text = row.Cells["ProductID"].Value.ToString();
-                txtProductName.Text = row.Cells["ProductName"].Value.ToString();
-                txtPrice.Text = row.Cells["UnitPrice"].Value.ToString().Replace(",", "");
-                txtQty.Text = row.Cells["Stock"].Value.ToString();
-                txtDescription.Text = row.Cells["Description"].Value.ToString();
-                cboBoxCategory.SelectedItem = row.Cells["Category"].Value.ToString();
+                txtProductID.Text = row.Cells["ProductID"].Value?.ToString() ?? "";
+                txtProductName.Text = row.Cells["ProductName"].Value?.ToString() ?? "";
+                cboBoxCategory.SelectedItem = row.Cells["Category"].Value?.ToString() ?? "";
+                txtPrice.Text = row.Cells["UnitPrice"].Value?.ToString().Replace(",", "") ?? "";
+                txtDescription.Text = row.Cells["Description"].Value?.ToString() ?? "";
             }
         }
 
@@ -428,16 +404,6 @@ namespace SusanBigbikeShop
         {
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
                 e.Handled = true;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

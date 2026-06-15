@@ -9,7 +9,7 @@ namespace SusanBigbikeShop
 {
     public class DBConnection
     {
-        public static string ConnectionString = "Server=(localdb)\\MSSQLLocalDB;Database=SusanBigBikeShop;Integrated Security=True;";
+        public static string ConnectionString = "Server=localhost\\SQLEXPRESS;Database=SusanBigBikeShop;Integrated Security=True;TrustServerCertificate=True;";
 
         public SqlConnection GetConnection()
         {

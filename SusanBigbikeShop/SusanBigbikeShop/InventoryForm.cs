@@ -20,6 +20,7 @@ namespace SusanBigbikeShop
             LoadStatusFilter();
             LoadMetrics();
             LoadInventory("All", "All", "");
+            txtInventorySearch.Text = "Enter keyword...";
         }
         private void LoadCategoryFilter()
         {
@@ -56,7 +57,8 @@ namespace SusanBigbikeShop
                         SUM(CASE WHEN quantity_in_stock > low_stock_threshold
                             THEN 1 ELSE 0 END) as ok,
                         SUM(CASE WHEN quantity_in_stock = 0 THEN 1 ELSE 0 END) as out
-                        FROM Inventory";
+                        FROM Inventory
+                        WHERE is_deleted = 0";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -68,7 +70,6 @@ namespace SusanBigbikeShop
                             label6.Text = reader["ok"].ToString();
                             lblOutStockQty.Text = reader["out"].ToString();
 
-                            // Update label colors
                             lblTotalItemQty.ForeColor = Color.White;
                             lblTotalItem.ForeColor = Color.White;
                             lblLowStockQty.ForeColor = Color.Orange;
@@ -80,12 +81,13 @@ namespace SusanBigbikeShop
                         }
                     }
 
-                    // Load alert details for low stock items
                     string alertQuery = @"SELECT item_name, quantity_in_stock,
-                                        low_stock_threshold
-                                        FROM Inventory
-                                        WHERE quantity_in_stock <= low_stock_threshold
-                                        ORDER BY quantity_in_stock ASC";
+                                low_stock_threshold
+                                FROM Inventory
+                                WHERE is_deleted = 0
+                                AND quantity_in_stock <= low_stock_threshold
+                                ORDER BY quantity_in_stock ASC";
+
 
                     string alertText = "";
                     using (SqlCommand cmd = new SqlCommand(alertQuery, conn))
@@ -128,21 +130,22 @@ namespace SusanBigbikeShop
                     conn.Open();
 
                     string query = @"SELECT item_id, item_name, category,
-                                    quantity_in_stock, unit_price, low_stock_threshold
-                                    FROM Inventory
-                                    WHERE (@category = 'All' OR category = @category)
-                                    AND item_name LIKE @search
-                                    AND (
-                                        @status = 'All'
-                                        OR (@status = 'Low Stock'
-                                            AND quantity_in_stock <= low_stock_threshold
-                                            AND quantity_in_stock > 0)
-                                        OR (@status = 'OK'
-                                            AND quantity_in_stock > low_stock_threshold)
-                                        OR (@status = 'Out of Stock'
-                                            AND quantity_in_stock = 0)
-                                    )
-                                    ORDER BY item_name";
+                    quantity_in_stock, unit_price, low_stock_threshold
+                    FROM Inventory
+                    WHERE is_deleted = 0
+                    AND (@category = 'All' OR category = @category)
+                    AND item_name LIKE @search
+                    AND (
+                        @status = 'All'
+                        OR (@status = 'Low Stock'
+                            AND quantity_in_stock <= low_stock_threshold
+                            AND quantity_in_stock > 0)
+                        OR (@status = 'OK'
+                            AND quantity_in_stock > low_stock_threshold)
+                        OR (@status = 'Out of Stock'
+                            AND quantity_in_stock = 0)
+                    )
+                    ORDER BY item_name";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -175,7 +178,6 @@ namespace SusanBigbikeShop
                                     stockStatus
                                 );
 
-                                // Color the status cell
                                 if (stockStatus == "Out of Stock")
                                     dataGridInventoryList.Rows[rowIndex].Cells["Status"]
                                         .Style.ForeColor = Color.Red;
@@ -259,21 +261,28 @@ namespace SusanBigbikeShop
 
         private void txtInventorySearch_TextChanged(object sender, EventArgs e)
         {
+            if (txtInventorySearch.Text == "Enter keyword...") return;
+
             if (cboBoxCategorySearch.SelectedItem == null || cboBoxStatus.SelectedItem == null)
-            {
                 return;
-            }
-            LoadInventory(cboBoxCategorySearch.SelectedItem.ToString(), cboBoxStatus.SelectedItem.ToString(), txtInventorySearch.Text);
+
+            LoadInventory(
+                cboBoxCategorySearch.SelectedItem.ToString(),
+                cboBoxStatus.SelectedItem.ToString(),
+                txtInventorySearch.Text
+            );
         }
 
-        private void lblLowStock_Click(object sender, EventArgs e)
+        private void txtInventorySearch_Enter(object sender, EventArgs e)
         {
-
+            if (txtInventorySearch.Text == "Enter keyword...")
+                txtInventorySearch.Text = "";
         }
 
-        private void lblLowStockQty_Click(object sender, EventArgs e)
+        private void txtInventorySearch_Leave(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(txtInventorySearch.Text))
+                txtInventorySearch.Text = "Enter keyword...";
         }
     }
 }

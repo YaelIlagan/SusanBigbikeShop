@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlbooking = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -116,7 +116,7 @@
             this.label12.Location = new System.Drawing.Point(8, 6);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(437, 48);
+            this.label12.Size = new System.Drawing.Size(350, 39);
             this.label12.TabIndex = 4;
             this.label12.Text = "INVENTORY MANAGEMENT";
             // 
@@ -175,12 +175,12 @@
             // cboBoxStatus
             // 
             this.cboBoxStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboBoxStatus.Font = new System.Drawing.Font("Impact", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxStatus.Font = new System.Drawing.Font("Helvetica", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBoxStatus.FormattingEnabled = true;
             this.cboBoxStatus.Location = new System.Drawing.Point(468, 4);
             this.cboBoxStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cboBoxStatus.Name = "cboBoxStatus";
-            this.cboBoxStatus.Size = new System.Drawing.Size(223, 40);
+            this.cboBoxStatus.Size = new System.Drawing.Size(223, 32);
             this.cboBoxStatus.TabIndex = 53;
             this.cboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.cboBoxStatus_SelectedIndexChanged);
             // 
@@ -188,23 +188,25 @@
             // 
             this.txtInventorySearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtInventorySearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtInventorySearch.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInventorySearch.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInventorySearch.Location = new System.Drawing.Point(4, 4);
             this.txtInventorySearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtInventorySearch.Name = "txtInventorySearch";
-            this.txtInventorySearch.Size = new System.Drawing.Size(220, 40);
+            this.txtInventorySearch.Size = new System.Drawing.Size(220, 33);
             this.txtInventorySearch.TabIndex = 52;
             this.txtInventorySearch.TextChanged += new System.EventHandler(this.txtInventorySearch_TextChanged);
+            this.txtInventorySearch.Enter += new System.EventHandler(this.txtInventorySearch_Enter);
+            this.txtInventorySearch.Leave += new System.EventHandler(this.txtInventorySearch_Leave);
             // 
             // cboBoxCategorySearch
             // 
             this.cboBoxCategorySearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboBoxCategorySearch.Font = new System.Drawing.Font("Impact", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBoxCategorySearch.Font = new System.Drawing.Font("Helvetica", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBoxCategorySearch.FormattingEnabled = true;
             this.cboBoxCategorySearch.Location = new System.Drawing.Point(232, 4);
             this.cboBoxCategorySearch.Margin = new System.Windows.Forms.Padding(4);
             this.cboBoxCategorySearch.Name = "cboBoxCategorySearch";
-            this.cboBoxCategorySearch.Size = new System.Drawing.Size(228, 40);
+            this.cboBoxCategorySearch.Size = new System.Drawing.Size(228, 32);
             this.cboBoxCategorySearch.TabIndex = 52;
             this.cboBoxCategorySearch.SelectedIndexChanged += new System.EventHandler(this.cboBoxCategorySearch_SelectedIndexChanged);
             // 
@@ -223,7 +225,7 @@
             this.btnInventoryRestockItem.Padding = new System.Windows.Forms.Padding(5);
             this.btnInventoryRestockItem.Size = new System.Drawing.Size(184, 37);
             this.btnInventoryRestockItem.TabIndex = 3;
-            this.btnInventoryRestockItem.Text = "Restock Item";
+            this.btnInventoryRestockItem.Text = "Edit Stock";
             this.btnInventoryRestockItem.UseVisualStyleBackColor = false;
             this.btnInventoryRestockItem.Click += new System.EventHandler(this.btnInventoryRestockItem_Click);
             // 
@@ -234,14 +236,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridInventoryList.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridInventoryList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridInventoryList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridInventoryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridInventoryList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemID,
@@ -251,14 +253,14 @@
             this.UnitPrice,
             this.LowStockThreshold,
             this.Status});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridInventoryList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridInventoryList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridInventoryList.Location = new System.Drawing.Point(9, 57);
             this.dataGridInventoryList.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridInventoryList.Name = "dataGridInventoryList";
@@ -411,11 +413,11 @@
             // lblOutStockQty
             // 
             this.lblOutStockQty.AutoSize = true;
-            this.lblOutStockQty.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutStockQty.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOutStockQty.ForeColor = System.Drawing.Color.Transparent;
             this.lblOutStockQty.Location = new System.Drawing.Point(19, 55);
             this.lblOutStockQty.Name = "lblOutStockQty";
-            this.lblOutStockQty.Size = new System.Drawing.Size(34, 39);
+            this.lblOutStockQty.Size = new System.Drawing.Size(29, 32);
             this.lblOutStockQty.TabIndex = 1;
             this.lblOutStockQty.Text = "0";
             // 
@@ -427,7 +429,7 @@
             this.lblOutStock.Location = new System.Drawing.Point(-1, 0);
             this.lblOutStock.Name = "lblOutStock";
             this.lblOutStock.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.lblOutStock.Size = new System.Drawing.Size(191, 65);
+            this.lblOutStock.Size = new System.Drawing.Size(160, 57);
             this.lblOutStock.TabIndex = 0;
             this.lblOutStock.Text = "Out Of Stock";
             // 
@@ -444,14 +446,13 @@
             // lblLowStockQty
             // 
             this.lblLowStockQty.AutoSize = true;
-            this.lblLowStockQty.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLowStockQty.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLowStockQty.ForeColor = System.Drawing.Color.Transparent;
             this.lblLowStockQty.Location = new System.Drawing.Point(19, 55);
             this.lblLowStockQty.Name = "lblLowStockQty";
-            this.lblLowStockQty.Size = new System.Drawing.Size(34, 39);
+            this.lblLowStockQty.Size = new System.Drawing.Size(29, 32);
             this.lblLowStockQty.TabIndex = 1;
             this.lblLowStockQty.Text = "0";
-            this.lblLowStockQty.Click += new System.EventHandler(this.lblLowStockQty_Click);
             // 
             // lblLowStock
             // 
@@ -461,10 +462,9 @@
             this.lblLowStock.Location = new System.Drawing.Point(-1, 0);
             this.lblLowStock.Name = "lblLowStock";
             this.lblLowStock.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.lblLowStock.Size = new System.Drawing.Size(168, 65);
+            this.lblLowStock.Size = new System.Drawing.Size(141, 57);
             this.lblLowStock.TabIndex = 0;
             this.lblLowStock.Text = "Low Stock";
-            this.lblLowStock.Click += new System.EventHandler(this.lblLowStock_Click);
             // 
             // panel7
             // 
@@ -479,11 +479,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(20, 55);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 39);
+            this.label6.Size = new System.Drawing.Size(29, 32);
             this.label6.TabIndex = 1;
             this.label6.Text = "0";
             // 
@@ -495,7 +495,7 @@
             this.lblOkStock.Location = new System.Drawing.Point(0, 0);
             this.lblOkStock.Name = "lblOkStock";
             this.lblOkStock.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.lblOkStock.Size = new System.Drawing.Size(154, 65);
+            this.lblOkStock.Size = new System.Drawing.Size(131, 57);
             this.lblOkStock.TabIndex = 0;
             this.lblOkStock.Text = "OK Stock";
             // 
@@ -513,11 +513,11 @@
             // lblTotalItemQty
             // 
             this.lblTotalItemQty.AutoSize = true;
-            this.lblTotalItemQty.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalItemQty.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalItemQty.ForeColor = System.Drawing.Color.Transparent;
             this.lblTotalItemQty.Location = new System.Drawing.Point(20, 55);
             this.lblTotalItemQty.Name = "lblTotalItemQty";
-            this.lblTotalItemQty.Size = new System.Drawing.Size(34, 39);
+            this.lblTotalItemQty.Size = new System.Drawing.Size(29, 32);
             this.lblTotalItemQty.TabIndex = 1;
             this.lblTotalItemQty.Text = "0";
             // 
@@ -529,7 +529,7 @@
             this.lblTotalItem.Location = new System.Drawing.Point(0, 0);
             this.lblTotalItem.Name = "lblTotalItem";
             this.lblTotalItem.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.lblTotalItem.Size = new System.Drawing.Size(183, 65);
+            this.lblTotalItem.Size = new System.Drawing.Size(152, 57);
             this.lblTotalItem.TabIndex = 0;
             this.lblTotalItem.Text = "Total Items";
             // 

@@ -30,12 +30,12 @@
         {
             this.txtPlateNumber = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMotorcycleModel = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlitemdata = new System.Windows.Forms.Panel();
+            this.chkListParts = new System.Windows.Forms.CheckedListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSaveOrderJob = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlrestockbg = new System.Windows.Forms.Panel();
-            this.chkListParts = new System.Windows.Forms.CheckedListBox();
+            this.cboxModel = new System.Windows.Forms.ComboBox();
             this.pnlitemdata.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlrestockbg.SuspendLayout();
@@ -59,64 +59,55 @@
             // 
             // txtPlateNumber
             // 
-            this.txtPlateNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlateNumber.Location = new System.Drawing.Point(9, 307);
+            this.txtPlateNumber.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlateNumber.Location = new System.Drawing.Point(9, 298);
             this.txtPlateNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlateNumber.Name = "txtPlateNumber";
-            this.txtPlateNumber.Size = new System.Drawing.Size(392, 34);
+            this.txtPlateNumber.Size = new System.Drawing.Size(392, 28);
             this.txtPlateNumber.TabIndex = 45;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(4, 274);
+            this.label4.Location = new System.Drawing.Point(4, 272);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 36);
+            this.label4.Size = new System.Drawing.Size(151, 25);
             this.label4.TabIndex = 46;
             this.label4.Text = "Plate Number";
-            // 
-            // txtMotorcycleModel
-            // 
-            this.txtMotorcycleModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMotorcycleModel.Location = new System.Drawing.Point(9, 240);
-            this.txtMotorcycleModel.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMotorcycleModel.Name = "txtMotorcycleModel";
-            this.txtMotorcycleModel.Size = new System.Drawing.Size(392, 34);
-            this.txtMotorcycleModel.TabIndex = 22;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(4, 207);
+            this.label3.Location = new System.Drawing.Point(4, 205);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 36);
+            this.label3.Size = new System.Drawing.Size(197, 25);
             this.label3.TabIndex = 23;
             this.label3.Text = "Motorcycle Model";
             // 
             // txtCustomerName
             // 
-            this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(9, 104);
+            this.txtCustomerName.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.Location = new System.Drawing.Point(9, 95);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(392, 34);
+            this.txtCustomerName.Size = new System.Drawing.Size(392, 28);
             this.txtCustomerName.TabIndex = 18;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(4, 71);
+            this.label14.Location = new System.Drawing.Point(4, 69);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(190, 36);
+            this.label14.Size = new System.Drawing.Size(178, 25);
             this.label14.TabIndex = 19;
             this.label14.Text = "Customer Name";
             // 
@@ -136,6 +127,7 @@
             this.pnlitemdata.Controls.Add(this.label10);
             this.pnlitemdata.Controls.Add(this.btnCancel);
             this.pnlitemdata.Controls.Add(this.btnSaveOrderJob);
+            this.pnlitemdata.Controls.Add(this.cboxModel);
             this.pnlitemdata.Controls.Add(this.cboxType);
             this.pnlitemdata.Controls.Add(this.txtLaborCost);
             this.pnlitemdata.Controls.Add(this.txtIssueCocernsNote);
@@ -146,7 +138,6 @@
             this.pnlitemdata.Controls.Add(this.txtContactNumber);
             this.pnlitemdata.Controls.Add(this.txtPlateNumber);
             this.pnlitemdata.Controls.Add(this.label4);
-            this.pnlitemdata.Controls.Add(this.txtMotorcycleModel);
             this.pnlitemdata.Controls.Add(this.label3);
             this.pnlitemdata.Controls.Add(this.label2);
             this.pnlitemdata.Controls.Add(this.txtCustomerName);
@@ -159,6 +150,15 @@
             this.pnlitemdata.Padding = new System.Windows.Forms.Padding(5);
             this.pnlitemdata.Size = new System.Drawing.Size(831, 449);
             this.pnlitemdata.TabIndex = 1;
+            // 
+            // chkListParts
+            // 
+            this.chkListParts.Font = new System.Drawing.Font("Helvetica", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkListParts.FormattingEnabled = true;
+            this.chkListParts.Location = new System.Drawing.Point(418, 95);
+            this.chkListParts.Name = "chkListParts";
+            this.chkListParts.Size = new System.Drawing.Size(404, 52);
+            this.chkListParts.TabIndex = 66;
             // 
             // label10
             // 
@@ -203,27 +203,27 @@
             // 
             // cboxType
             // 
-            this.cboxType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxType.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxType.FormattingEnabled = true;
-            this.cboxType.Location = new System.Drawing.Point(418, 240);
+            this.cboxType.Location = new System.Drawing.Point(418, 251);
             this.cboxType.Margin = new System.Windows.Forms.Padding(4);
             this.cboxType.Name = "cboxType";
-            this.cboxType.Size = new System.Drawing.Size(404, 37);
+            this.cboxType.Size = new System.Drawing.Size(404, 28);
             this.cboxType.TabIndex = 61;
             // 
             // txtLaborCost
             // 
-            this.txtLaborCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLaborCost.Location = new System.Drawing.Point(418, 172);
+            this.txtLaborCost.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLaborCost.Location = new System.Drawing.Point(418, 183);
             this.txtLaborCost.Margin = new System.Windows.Forms.Padding(4);
             this.txtLaborCost.Name = "txtLaborCost";
-            this.txtLaborCost.Size = new System.Drawing.Size(404, 34);
+            this.txtLaborCost.Size = new System.Drawing.Size(404, 28);
             this.txtLaborCost.TabIndex = 60;
             // 
             // txtIssueCocernsNote
             // 
-            this.txtIssueCocernsNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIssueCocernsNote.Location = new System.Drawing.Point(418, 307);
+            this.txtIssueCocernsNote.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIssueCocernsNote.Location = new System.Drawing.Point(418, 315);
             this.txtIssueCocernsNote.Margin = new System.Windows.Forms.Padding(4);
             this.txtIssueCocernsNote.Multiline = true;
             this.txtIssueCocernsNote.Name = "txtIssueCocernsNote";
@@ -233,69 +233,69 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(416, 274);
+            this.label5.Location = new System.Drawing.Point(416, 289);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 36);
+            this.label5.Size = new System.Drawing.Size(170, 25);
             this.label5.TabIndex = 59;
             this.label5.Text = "Issue / Concern";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(413, 207);
+            this.label6.Location = new System.Drawing.Point(413, 225);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 36);
+            this.label6.Size = new System.Drawing.Size(63, 25);
             this.label6.TabIndex = 57;
             this.label6.Text = "Type";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(416, 139);
+            this.label7.Location = new System.Drawing.Point(416, 157);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 36);
+            this.label7.Size = new System.Drawing.Size(126, 25);
             this.label7.TabIndex = 55;
             this.label7.Text = "Labor Cost";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(413, 71);
+            this.label8.Location = new System.Drawing.Point(413, 69);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 36);
+            this.label8.Size = new System.Drawing.Size(126, 25);
             this.label8.TabIndex = 54;
             this.label8.Text = "Parts Used";
             // 
             // txtContactNumber
             // 
-            this.txtContactNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactNumber.Location = new System.Drawing.Point(9, 172);
+            this.txtContactNumber.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactNumber.Location = new System.Drawing.Point(9, 163);
             this.txtContactNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactNumber.Name = "txtContactNumber";
-            this.txtContactNumber.Size = new System.Drawing.Size(392, 34);
+            this.txtContactNumber.Size = new System.Drawing.Size(392, 28);
             this.txtContactNumber.TabIndex = 52;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(4, 139);
+            this.label2.Location = new System.Drawing.Point(4, 137);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 36);
+            this.label2.Size = new System.Drawing.Size(179, 25);
             this.label2.TabIndex = 21;
             this.label2.Text = "Contact Number";
             // 
@@ -335,13 +335,15 @@
             this.pnlrestockbg.Size = new System.Drawing.Size(876, 493);
             this.pnlrestockbg.TabIndex = 10;
             // 
-            // chkListParts
+            // cboxModel
             // 
-            this.chkListParts.FormattingEnabled = true;
-            this.chkListParts.Location = new System.Drawing.Point(418, 104);
-            this.chkListParts.Name = "chkListParts";
-            this.chkListParts.Size = new System.Drawing.Size(404, 38);
-            this.chkListParts.TabIndex = 66;
+            this.cboxModel.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxModel.FormattingEnabled = true;
+            this.cboxModel.Location = new System.Drawing.Point(9, 234);
+            this.cboxModel.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxModel.Name = "cboxModel";
+            this.cboxModel.Size = new System.Drawing.Size(392, 28);
+            this.cboxModel.TabIndex = 61;
             // 
             // NewJobOrderForm
             // 
@@ -364,7 +366,6 @@
 
         private System.Windows.Forms.TextBox txtPlateNumber;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMotorcycleModel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label14;
@@ -386,5 +387,6 @@
         private System.Windows.Forms.Button btnSaveOrderJob;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckedListBox chkListParts;
+        private System.Windows.Forms.ComboBox cboxModel;
     }
 }

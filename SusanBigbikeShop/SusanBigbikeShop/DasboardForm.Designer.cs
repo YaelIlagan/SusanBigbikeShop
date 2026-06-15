@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -130,6 +131,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.AutoScroll = true;
             this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.lblItemList);
             this.panel9.Controls.Add(this.lblStockList);
             this.panel9.Location = new System.Drawing.Point(3, 49);
@@ -141,11 +143,11 @@
             // lblItemList
             // 
             this.lblItemList.BackColor = System.Drawing.Color.White;
-            this.lblItemList.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemList.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItemList.ForeColor = System.Drawing.Color.Black;
             this.lblItemList.Location = new System.Drawing.Point(0, 0);
             this.lblItemList.Name = "lblItemList";
-            this.lblItemList.Size = new System.Drawing.Size(143, 383);
+            this.lblItemList.Size = new System.Drawing.Size(199, 383);
             this.lblItemList.TabIndex = 18;
             this.lblItemList.Text = "item 1";
             // 
@@ -153,11 +155,11 @@
             // 
             this.lblStockList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStockList.BackColor = System.Drawing.Color.White;
-            this.lblStockList.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockList.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStockList.ForeColor = System.Drawing.Color.Black;
-            this.lblStockList.Location = new System.Drawing.Point(142, 0);
+            this.lblStockList.Location = new System.Drawing.Point(205, -1);
             this.lblStockList.Name = "lblStockList";
-            this.lblStockList.Size = new System.Drawing.Size(76, 441);
+            this.lblStockList.Size = new System.Drawing.Size(54, 441);
             this.lblStockList.TabIndex = 19;
             this.lblStockList.Text = "0 left";
             // 
@@ -197,20 +199,28 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridRecentJobOrders.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridRecentJobOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridRecentJobOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridRecentJobOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridRecentJobOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CustomerName,
             this.Motorcycle,
             this.Status,
             this.Labor});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Helvetica", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridRecentJobOrders.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridRecentJobOrders.Location = new System.Drawing.Point(6, 49);
             this.dataGridRecentJobOrders.Name = "dataGridRecentJobOrders";
             this.dataGridRecentJobOrders.RowHeadersWidth = 51;
@@ -284,33 +294,33 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(5, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(205, 36);
+            this.label11.Size = new System.Drawing.Size(154, 26);
             this.label11.TabIndex = 7;
             this.label11.Text = "Ongoing Repairs";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(15, 120);
+            this.label1.Location = new System.Drawing.Point(15, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 24);
+            this.label1.Size = new System.Drawing.Size(91, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "job orders";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(16, 71);
+            this.label2.Location = new System.Drawing.Point(16, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 44);
+            this.label2.Size = new System.Drawing.Size(31, 35);
             this.label2.TabIndex = 5;
             this.label2.Text = "0";
             // 
@@ -330,33 +340,33 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(8, 25);
+            this.label13.Location = new System.Drawing.Point(6, 24);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(196, 36);
+            this.label13.Size = new System.Drawing.Size(148, 26);
             this.label13.TabIndex = 10;
             this.label13.Text = "Low Stock Items";
             // 
             // lblLowStock
             // 
             this.lblLowStock.AutoSize = true;
-            this.lblLowStock.Font = new System.Drawing.Font("Bernard MT Condensed", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLowStock.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLowStock.ForeColor = System.Drawing.Color.Transparent;
-            this.lblLowStock.Location = new System.Drawing.Point(16, 71);
+            this.lblLowStock.Location = new System.Drawing.Point(16, 65);
             this.lblLowStock.Name = "lblLowStock";
-            this.lblLowStock.Size = new System.Drawing.Size(38, 44);
+            this.lblLowStock.Size = new System.Drawing.Size(31, 35);
             this.lblLowStock.TabIndex = 7;
             this.lblLowStock.Text = "0";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(15, 120);
+            this.label4.Location = new System.Drawing.Point(15, 118);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 24);
+            this.label4.Size = new System.Drawing.Size(138, 19);
             this.label4.TabIndex = 9;
             this.label4.Text = "need restocking";
             // 
@@ -376,33 +386,33 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(12, 25);
+            this.label14.Location = new System.Drawing.Point(13, 25);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(135, 39);
+            this.label14.Size = new System.Drawing.Size(93, 26);
             this.label14.TabIndex = 13;
             this.label14.Text = "Bookings";
             // 
             // lblBookings
             // 
             this.lblBookings.AutoSize = true;
-            this.lblBookings.Font = new System.Drawing.Font("Bernard MT Condensed", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookings.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookings.ForeColor = System.Drawing.Color.Transparent;
-            this.lblBookings.Location = new System.Drawing.Point(16, 71);
+            this.lblBookings.Location = new System.Drawing.Point(16, 65);
             this.lblBookings.Name = "lblBookings";
-            this.lblBookings.Size = new System.Drawing.Size(38, 44);
+            this.lblBookings.Size = new System.Drawing.Size(31, 35);
             this.lblBookings.TabIndex = 10;
             this.lblBookings.Text = "0";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(15, 120);
+            this.label5.Location = new System.Drawing.Point(15, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 24);
+            this.label5.Size = new System.Drawing.Size(139, 19);
             this.label5.TabIndex = 12;
             this.label5.Text = "scheduled visits";
             // 
@@ -422,33 +432,33 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(12, 25);
+            this.label10.Location = new System.Drawing.Point(13, 24);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(183, 39);
+            this.label10.Size = new System.Drawing.Size(130, 26);
             this.label10.TabIndex = 2;
             this.label10.Text = "Today\'s Sales";
             // 
             // lblTotalTransaction
             // 
             this.lblTotalTransaction.AutoSize = true;
-            this.lblTotalTransaction.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalTransaction.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalTransaction.ForeColor = System.Drawing.Color.Transparent;
-            this.lblTotalTransaction.Location = new System.Drawing.Point(15, 120);
+            this.lblTotalTransaction.Location = new System.Drawing.Point(15, 118);
             this.lblTotalTransaction.Name = "lblTotalTransaction";
-            this.lblTotalTransaction.Size = new System.Drawing.Size(133, 24);
+            this.lblTotalTransaction.Size = new System.Drawing.Size(123, 19);
             this.lblTotalTransaction.TabIndex = 3;
             this.lblTotalTransaction.Text = "0 transactions";
             // 
             // lblTodaySales
             // 
             this.lblTodaySales.AutoSize = true;
-            this.lblTodaySales.Font = new System.Drawing.Font("Bernard MT Condensed", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTodaySales.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTodaySales.ForeColor = System.Drawing.Color.Transparent;
-            this.lblTodaySales.Location = new System.Drawing.Point(14, 71);
+            this.lblTodaySales.Location = new System.Drawing.Point(14, 65);
             this.lblTodaySales.Name = "lblTodaySales";
-            this.lblTodaySales.Size = new System.Drawing.Size(122, 44);
+            this.lblTodaySales.Size = new System.Drawing.Size(102, 35);
             this.lblTodaySales.TabIndex = 3;
             this.lblTodaySales.Text = "₱ 0.00";
             // 
@@ -477,7 +487,7 @@
             this.label12.Location = new System.Drawing.Point(8, 6);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(222, 48);
+            this.label12.Size = new System.Drawing.Size(181, 39);
             this.label12.TabIndex = 4;
             this.label12.Text = "DASHBOARD";
             // 

@@ -85,3 +85,11 @@ C:\Users\j0hnp\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBi
 C:\Users\j0hnp\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.csproj.CoreCompileInputs.cache
 C:\Users\j0hnp\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.exe
 C:\Users\j0hnp\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.pdb
+C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.CashPaymentForm.resources
+C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.OnlinePaymentForm.resources
+C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.SignUp.resources
+C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.ManageUsersForm.resources
+C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.ProductManagementForm.resources
+C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.ReceiptForm.resources
+C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.UpdateJobOrderForm.resources
+C:\Users\poble\source\repos\YaelIlagan\SusanBigbikeShop\SusanBigbikeShop\SusanBigbikeShop\obj\Debug\SusanBigbikeShop.UserAuth.resources

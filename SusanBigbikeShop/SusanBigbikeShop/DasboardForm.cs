@@ -166,6 +166,7 @@ namespace SusanBigbikeShop
                 {
                     items += row["item_name"].ToString() + "\n";
                     stocks += row["quantity_in_stock"].ToString() + " left\n";
+
                 }
 
                 lblItemList.Text = items.TrimEnd();

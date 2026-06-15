@@ -79,7 +79,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 22);
+            this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 8;
             this.label3.Text = "Overview";
             // 
@@ -158,7 +158,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(9, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 22);
+            this.label4.Size = new System.Drawing.Size(60, 19);
             this.label4.TabIndex = 15;
             this.label4.Text = "Records";
             // 
@@ -188,7 +188,7 @@
             this.btnBookingOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookingOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookingOwner.ForeColor = System.Drawing.Color.White;
-            this.btnBookingOwner.Location = new System.Drawing.Point(7, 219);
+            this.btnBookingOwner.Location = new System.Drawing.Point(7, 173);
             this.btnBookingOwner.Name = "btnBookingOwner";
             this.btnBookingOwner.Size = new System.Drawing.Size(208, 40);
             this.btnBookingOwner.TabIndex = 19;
@@ -205,7 +205,7 @@
             this.btnInventoryManagementOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventoryManagementOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventoryManagementOwner.ForeColor = System.Drawing.Color.White;
-            this.btnInventoryManagementOwner.Location = new System.Drawing.Point(7, 125);
+            this.btnInventoryManagementOwner.Location = new System.Drawing.Point(7, 79);
             this.btnInventoryManagementOwner.Name = "btnInventoryManagementOwner";
             this.btnInventoryManagementOwner.Size = new System.Drawing.Size(208, 40);
             this.btnInventoryManagementOwner.TabIndex = 18;
@@ -222,7 +222,7 @@
             this.btnRepairsAndMaintenanceOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRepairsAndMaintenanceOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRepairsAndMaintenanceOwner.ForeColor = System.Drawing.Color.White;
-            this.btnRepairsAndMaintenanceOwner.Location = new System.Drawing.Point(7, 77);
+            this.btnRepairsAndMaintenanceOwner.Location = new System.Drawing.Point(7, 219);
             this.btnRepairsAndMaintenanceOwner.Name = "btnRepairsAndMaintenanceOwner";
             this.btnRepairsAndMaintenanceOwner.Size = new System.Drawing.Size(208, 40);
             this.btnRepairsAndMaintenanceOwner.TabIndex = 16;
@@ -239,7 +239,7 @@
             this.btnProductManagementOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductManagementOwner.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductManagementOwner.ForeColor = System.Drawing.Color.White;
-            this.btnProductManagementOwner.Location = new System.Drawing.Point(7, 173);
+            this.btnProductManagementOwner.Location = new System.Drawing.Point(7, 127);
             this.btnProductManagementOwner.Name = "btnProductManagementOwner";
             this.btnProductManagementOwner.Size = new System.Drawing.Size(208, 40);
             this.btnProductManagementOwner.TabIndex = 17;
@@ -274,7 +274,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 22);
+            this.label1.Size = new System.Drawing.Size(78, 19);
             this.label1.TabIndex = 14;
             this.label1.Text = "Operations";
             // 

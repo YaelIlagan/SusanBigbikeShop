@@ -46,7 +46,8 @@ namespace SusanBigbikeShop
                     string query = @"SELECT item_id, item_name, category,
                                     unit_price, quantity_in_stock
                                     FROM Inventory
-                                    WHERE (@category = 'All' OR category = @category)
+                                    WHERE is_deleted = 0
+                                    AND (@category = 'All' OR category = @category)
                                     AND item_name LIKE @search
                                     AND quantity_in_stock > 0";
 

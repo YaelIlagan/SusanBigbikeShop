@@ -71,29 +71,35 @@ namespace SusanBigbikeShop
                 using (SqlConnection conn = new DBConnection().GetConnection())
                 {
                     conn.Open();
+
                     string query = "SELECT user_id, full_name FROM Users WHERE role = 'Staff' ORDER BY full_name";
+
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        var list = new System.Collections.Generic.List<dynamic>();
-                        while (reader.Read())
-                        {
-                            list.Add(new
-                            {
-                                user_id = reader.GetInt32(0),
-                                full_name = reader.GetString(1)
-                            });
-                        }
-                        cboxBookingMechanic.DataSource = list;
+                        DataTable dt = new DataTable();
+                        dt.Load(reader);
+
+                        DataRow defaultRow = dt.NewRow();
+                        defaultRow["user_id"] = 0; 
+                        defaultRow["full_name"] = "Anyone Available";
+
+                        dt.Rows.InsertAt(defaultRow, 0);
+
+                        cboxBookingMechanic.DataSource = null;
+                        cboxBookingMechanic.DataSource = dt;
                         cboxBookingMechanic.DisplayMember = "full_name";
                         cboxBookingMechanic.ValueMember = "user_id";
-                        cboxBookingMechanic.SelectedIndex = -1;
+
+                        cboxBookingMechanic.SelectedIndex = 0;
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                cboxBookingMechanic.DataSource = null;
                 cboxBookingMechanic.Items.Clear();
+                MessageBox.Show("Error loading mechanics: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

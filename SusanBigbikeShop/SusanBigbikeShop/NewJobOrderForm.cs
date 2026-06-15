@@ -18,6 +18,32 @@ namespace SusanBigbikeShop
             InitializeComponent();
             LoadTypeOptions();
             LoadPartsFromInventory();
+            LoadMotorcycleAutoComplete();
+        }
+
+        private void LoadMotorcycleAutoComplete()
+        {
+            cboxModel.Items.Clear();
+
+            string[] baseModels = new string[] {
+                "BMW R 1300 GS", "BMW S 1000 RR", "BMW M 1000 RR",
+                "Yamaha YZF-R1", "Yamaha YZF-R6", "Yamaha MT-10 SP", "Yamaha MT-09",
+                "Honda CBR1000RR-R Fireblade SP", "Honda CBR600RR", "Honda Africa Twin",
+                "Kawasaki Ninja H2", "Kawasaki Ninja ZX-10R", "Kawasaki Ninja ZX-6R",
+                "Ducati Panigale V4", "Ducati Streetfighter V4", "Ducati Multistrada V4",
+                "Suzuki Hayabusa", "Suzuki GSX-R1000R",
+                "KTM 1390 Super Duke R", "KTM 1290 Super Adventure",
+                "Triumph Rocket 3 R", "Triumph Speed Triple 1200 RS",
+                "Harley-Davidson Pan America 1250", "Harley-Davidson Street Glide"
+            };
+
+            int currentYear = DateTime.Now.Year;
+            for (int year = 2010; year <= currentYear + 1; year++)
+                foreach (string model in baseModels)
+                    cboxModel.Items.Add($"{year} {model}");
+
+            cboxModel.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cboxModel.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         private void LoadTypeOptions()
@@ -71,7 +97,7 @@ namespace SusanBigbikeShop
         private bool ValidateForm()
         {
             if (string.IsNullOrWhiteSpace(txtCustomerName.Text) ||
-                string.IsNullOrWhiteSpace(txtMotorcycleModel.Text) ||
+                string.IsNullOrWhiteSpace(cboxModel.Text) ||
                 string.IsNullOrWhiteSpace(txtPlateNumber.Text) ||
                 string.IsNullOrWhiteSpace(txtLaborCost.Text) ||
                 cboxType.SelectedIndex == -1)
@@ -111,7 +137,7 @@ namespace SusanBigbikeShop
         {
             txtCustomerName.Clear();
             txtContactNumber.Clear();
-            txtMotorcycleModel.Clear();
+            cboxModel.SelectedIndex = 0;
             txtPlateNumber.Clear();
             txtLaborCost.Clear();
             txtIssueCocernsNote.Clear();
@@ -145,7 +171,7 @@ namespace SusanBigbikeShop
                     {
                         cmd.Parameters.AddWithValue("@customerName", txtCustomerName.Text.Trim());
                         cmd.Parameters.AddWithValue("@contact", string.IsNullOrWhiteSpace(txtContactNumber.Text) ? "N/A" : txtContactNumber.Text.Trim());
-                        cmd.Parameters.AddWithValue("@model", txtMotorcycleModel.Text.Trim());
+                        cmd.Parameters.AddWithValue("@model", cboxModel.Text.Trim());
                         cmd.Parameters.AddWithValue("@plate", txtPlateNumber.Text.Trim());
                         cmd.Parameters.AddWithValue("@parts", GetSelectedParts());
                         cmd.Parameters.AddWithValue("@laborCost", double.Parse(txtLaborCost.Text));
