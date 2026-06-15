@@ -37,6 +37,9 @@ namespace SusanBigbikeShop
 
         public void LoadJobOrders(string search = "", string status = "All Status")
         {
+            if (search == "Enter keyword...")
+                search = "";
+
             dataGridOrderList.Rows.Clear();
 
             try
@@ -356,12 +359,17 @@ namespace SusanBigbikeShop
         {
             if (txtSearch.Text == "Enter keyword...")
                 txtSearch.Text = "";
+
+            LoadJobOrders("", cboxRepairsStatus.SelectedItem.ToString());
         }
 
         private void txtSearch_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtSearch.Text))
                 txtSearch.Text = "Enter keyword...";
-        }   
+
+            LoadJobOrders("", cboxRepairsStatus.SelectedItem.ToString());
+        }
+
     }
 }

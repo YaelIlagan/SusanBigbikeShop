@@ -412,8 +412,10 @@ namespace SusanBigbikeShop
                         cmd.Parameters.AddWithValue("@RequestedDate", requestedDate);
                         cmd.Parameters.AddWithValue("@PreferredTime", preferredTime);
                         cmd.Parameters.AddWithValue("@ServiceType", serviceType);
-                        cmd.Parameters.AddWithValue("@MechanicID", mechanicId);
-                        cmd.Parameters.AddWithValue("@Notes", txtBookingNotes.Text.Trim());
+                        if (mechanicId == 0)
+                            cmd.Parameters.AddWithValue("@MechanicID", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@MechanicID", mechanicId); cmd.Parameters.AddWithValue("@Notes", txtBookingNotes.Text.Trim());
                         cmd.Parameters.AddWithValue("@BookingID", _selectedBookingId);
                         cmd.ExecuteNonQuery();
                     }
@@ -599,8 +601,10 @@ namespace SusanBigbikeShop
                         cmd.Parameters.AddWithValue("@RequestedDate", requestedDate);
                         cmd.Parameters.AddWithValue("@PreferredTime", preferredTime);
                         cmd.Parameters.AddWithValue("@ServiceType", serviceType);
-                        cmd.Parameters.AddWithValue("@MechanicID", mechanicId);
-                        cmd.Parameters.AddWithValue("@Notes", txtBookingNotes.Text.Trim());
+                        if (mechanicId == 0)
+                            cmd.Parameters.AddWithValue("@MechanicID", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@MechanicID", mechanicId); cmd.Parameters.AddWithValue("@Notes", txtBookingNotes.Text.Trim());
                         cmd.ExecuteNonQuery();
                     }
                 }

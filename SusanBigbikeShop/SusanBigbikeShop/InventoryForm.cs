@@ -121,6 +121,9 @@ namespace SusanBigbikeShop
         private void LoadInventory(string category = "All",
             string status = "All", string search = "")
         {
+            if (search == "Enter keyword...")
+                search = "";
+
             dataGridInventoryList.Rows.Clear();
 
             try
@@ -277,12 +280,16 @@ namespace SusanBigbikeShop
         {
             if (txtInventorySearch.Text == "Enter keyword...")
                 txtInventorySearch.Text = "";
+            LoadInventory("All", "All", "");
+
         }
 
         private void txtInventorySearch_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtInventorySearch.Text))
                 txtInventorySearch.Text = "Enter keyword...";
+            LoadInventory("All", "All", "");
+
         }
     }
 }
